@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main",
+    "alert": "/component/alert/main"
+  },
+  "navigationBarTitleText": "贷款计算器",
+  "navigationBarBackgroundColor": "#2196f3"
+}

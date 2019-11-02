@@ -1,0 +1,58 @@
+@import 'style/icon.wxss';
+
+page {
+  --color-red: #f44336;
+  --color-blue: #2196f3;
+  --color-green: #4caf50;
+  --color-orange: #ff9800;
+  font-size: 10pt;
+}
+
+/* margin 外边距 */
+.margin {
+  margin: 40rpx;
+}
+.margin-bottom {
+  margin-bottom: 40rpx;
+}
+
+/* button 按钮 */
+.button {
+  --h: 100rpx;
+  min-width: 200rpx;
+  height: var(--h);
+  line-height: var(--h);
+  text-align: center;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  border-radius: 8rpx;
+  font-size: 11pt;
+}
+.button::after {
+  border: none;
+}
+.button:active {
+  transform: translate(1px, 1px);
+}
+.button_block {
+  display: block;
+}
+.button-color_blue {
+  color: #FFF;
+  background: #2196f3;
+}
+
+/* color 颜色 */
+.text-red {
+  color: var(--color-red);
+}
+.text-blue {
+  color: var(--color-blue);
+}
+.text-green {
+  color: var(--color-green);
+}
+.text-orange {
+  color: var(--color-orange);
+}

@@ -1,0 +1,15 @@
+<view class="cell custom">
+  <slot name="prefix" />
+  <view
+    class="cell-label"
+    style="width: {{labelWidth}}rpx"
+    wx:if="{{ !labelHide }}"
+  >{{ label }}</view>
+  <view
+    class="cell-content custom-content"
+    style="text-align: {{align}}"
+  >
+    <slot />
+  </view>
+  <slot name="suffix" />
+</view>

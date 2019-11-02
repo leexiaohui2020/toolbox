@@ -1,0 +1,16 @@
+<view class="cates">
+  <view class="cates-grid">
+    <view
+     class="cates-grid-item"
+     wx:for="{{ cates }}"
+     wx:key="{{ index }}"
+     data-id="{{ item.id }}"
+     bindtap="cateTapHandler"
+    >
+      <view class="cates-grid-item_icon">
+        <text class="icon-{{ item.icon }} text-{{ item.color }}"></text>
+      </view>
+      <view class="cates-grid-item_label">{{ item.name }}</view>
+    </view>
+  </view>
+</view>

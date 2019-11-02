@@ -1,0 +1,65 @@
+@import '../tool-655/main.wxss';
+.period {
+  display: flex;
+  align-items: center;
+}
+.period-year {
+  flex: 1;
+}
+.period-month {
+  width: 160rpx;
+}
+.period-cell {
+  padding-right: 0 !important;
+}
+
+.detail {
+  margin-top: 30rpx;
+  background: #FFF;
+}
+.detail-title {
+  --h: 100rpx;
+  font-size: 12pt;
+  font-weight: bold;
+  height: var(--h);
+  padding: 0 30rpx;
+  line-height: var(--h);
+  box-shadow: 0 2rpx 2rpx rgba(0, 0, 0, .2);
+  box-sizing: border-box;
+  background: #FFF;
+}
+.detail-title.fixed {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+.detail-container {
+  padding: 30rpx;
+}
+.detail-item {
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #D5D5D5;
+}
+.detail-item_title {
+  font-size: 10pt;
+  font-weight: bold;
+  margin-bottom: 30rpx;
+}
+.detail-item_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 80rpx;
+}
+.detail-item_month {
+  margin: 0 10rpx;
+  color: #2196f3;
+}
+.detail-item_label {
+  color: #666;
+}
+.detail-item_leiji {
+  color: #f44336;
+}

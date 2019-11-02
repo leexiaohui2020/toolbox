@@ -1,0 +1,141 @@
+<alert type="error" wx:if="{{tips}}">{{ tips }}</alert>
+<cell label="贷款金额" align="right">
+  <input
+    type="digit"
+    value="{{ amount }}"
+    placeholder="请输入贷款金额"
+    data-key="amount"
+    bindinput="inputHandler"
+  ></input>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+
+<cell label="贷款年利率" align="right">
+  <input
+    type="digit"
+    value="{{ rate }}"
+    placeholder="请输入贷款年利率"
+    data-key="rate"
+    bindinput="inputHandler"
+  ></input>
+  <text class="addon" slot="suffix">%</text>
+</cell>
+
+<cell label="贷款年限">
+  <view class="period">
+    <view class="period-year">
+      <cell custom="period-cell" align="right" label-hide>
+        <input
+          type="number"
+          value="{{ year }}"
+          data-key="year"
+          bindinput="inputHandler"
+        ></input>
+        <text class="addon" slot="suffix">年</text>
+      </cell>
+    </view>
+
+    <picker
+      class="period-month"
+      value="{{ monthIndex }}"
+      range="{{ monthList }}"
+      data-key="monthIndex"
+      bindchange="inputHandler"
+    >
+      <cell custom="period-cell" align="right" label-hide>
+        <text>{{ monthList[monthIndex] }}</text>
+        <text class="addon" slot="suffix">月</text>
+      </cell>
+    </picker>
+  </view>
+</cell>
+
+<picker
+  value="{{ typeIndex }}"
+  range="{{ typeList }}"
+  data-key="typeIndex"
+  bindchange="inputHandler"
+>
+  <cell label="贷款类型" align="right">
+    <text>{{ typeList[typeIndex] }}</text>
+  </cell>
+</picker>
+
+<button
+  class="margin button button_block button-color_blue"
+  bindtap="buttonHandler"
+>计算</button>
+
+<cell label="贷款期数" align="right">
+  <text>{{period}}</text>
+  <text class="addon" slot="suffix">月</text>
+</cell>
+<cell label="利息合计" align="right">
+  <text>{{rateTotal}}</text>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+<cell label="本息合计" align="right">
+  <text>{{total}}</text>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+
+<wxs src="main.wxs" module="toFixed" />
+<view class="detail" wx:if="{{ detail }}">
+  <view class="detail-title {{ detailTitleFixed ? 'fixed':'' }}">每月还款明细</view>
+  <view class="detail-container">
+    <view
+      class="detail-item"
+      wx:for="{{ detail }}"
+      wx:key="{{ index }}"
+    >
+      <view class="detail-item_title">
+        <text>第</text>
+        <text class="detail-item_month">{{ index + 1 }}</text>
+        <text>个月</text>
+      </view>
+      <view class="detail-item_info">
+        <view class="detail-item_row">
+          <view class="detail-item_label">本月还款</view>
+          <view class="detail-item_value">
+            {{toFixed(item.corpus)}}
+          </view>
+        </view>
+
+        <view class="detail-item_row">
+          <view class="detail-item_label">本月本金</view>
+          <view class="detail-item_value">
+            {{toFixed(item.benjin)}}
+          </view>
+        </view>
+        
+        <view class="detail-item_row">
+          <view class="detail-item_label">本月利息</view>
+          <view class="detail-item_value">
+            {{toFixed(item.lixi)}}
+          </view>
+        </view>
+        
+        <view class="detail-item_row">
+          <view class="detail-item_label">已还本金</view>
+          <view class="detail-item_value">
+            {{toFixed(item.benjinTotal)}}
+          </view>
+        </view>
+        
+        <view class="detail-item_row">
+          <view class="detail-item_label">已还利息</view>
+          <view class="detail-item_value">
+            {{toFixed(item.lixiTotal)}}
+          </view>
+        </view>
+        
+        <view class="detail-item_row">
+          <view class="detail-item_label">累计还款</view>
+          <view class="detail-item_value detail-item_leiji">
+            {{toFixed(item.leiji)}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

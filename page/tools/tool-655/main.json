@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main",
+    "alert": "/component/alert/main",
+    "wordcard": "/component/wordcard/main"
+  },
+  "navigationBarTitleText": "国债计算器",
+  "navigationBarBackgroundColor": "#2196f3"
+}

@@ -1,0 +1,42 @@
+.calc {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.calc-display {
+  flex: 1;
+  display: flex;
+  background: #354052;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 40rpx;
+}
+.calc-keybord-row {
+  --h: calc(750rpx / 4);
+  height: var(--h);
+  display: flex;
+}
+.calc-keybord-item {
+  width: var(--h);
+  height: var(--h);
+  line-height: var(--h);
+  text-align: center;
+  background: #FDFDFD;
+  cursor: pointer;
+}
+.calc-keybord_type-1 {
+  background: #EDF1F4;
+}
+.calc-keybord_type-2 {
+  background: #FFBA68;
+}
+.calc-express {
+  color: #FFBA68;
+  font-size: 20pt;
+}
+.calc-result {
+  color: #A5ACBA;
+  margin-top: 30rpx;
+}

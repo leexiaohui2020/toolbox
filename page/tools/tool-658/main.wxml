@@ -1,0 +1,14 @@
+<view class="editer">
+  <view class="editer-container">
+    <textarea
+      class="editer-input"
+      value="{{ originalText }}"
+      placeholder="请输入正文"
+      bindinput="inputHandler"
+    ></textarea>
+  </view>
+  <view class="editer-footer">
+    <view class="editer-tools"></view>
+    <view class="editer-footer_extra"></view>
+  </view>
+</view>

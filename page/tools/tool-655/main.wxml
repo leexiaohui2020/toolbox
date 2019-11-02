@@ -1,0 +1,58 @@
+<alert type="error" wx:if="{{tips}}">{{ tips }}</alert>
+
+<cell label="投资金额" align="right">
+  <input
+    type="digit"
+    class="input"
+    value="{{ amount }}"
+    data-key="amount"
+    bindinput="inputHandler"
+    placeholder="请输入投资金额"
+  ></input>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+
+<cell label="国债利率" align="right">
+  <input
+    type="digit"
+    class="input"
+    value="{{ rate }}"
+    data-key="rate"
+    bindinput="inputHandler"
+    placeholder="请输入国债利率"
+  ></input>
+  <text class="addon" slot="suffix">%</text>
+</cell>
+
+<picker
+  value="{{ yearIndex }}"
+  range="{{ yearList }}"
+  data-key="yearIndex"
+  bindchange="inputHandler"
+>
+  <cell label="规定存期" align="right">
+    <text>{{ yearList[yearIndex] }}</text>
+    <text class="addon" slot="suffix">年</text>
+  </cell>
+</picker>
+
+<button
+  class="margin button button_block button-color_blue"
+  bindtap="buttonHandler"
+>计算</button>
+
+<cell label="国债利息" align="right">
+  <text>{{ annualized }}</text>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+<cell label="本息合计" align="right">
+  <text>{{ summary }}</text>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+
+<wordcard
+  custom="margin"
+  title="{{ wordcard.title }}"
+  pinyin="{{ wordcard.pinyin }}"
+  content="{{ wordcard.content }}"
+/>

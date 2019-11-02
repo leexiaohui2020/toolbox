@@ -1,0 +1,23 @@
+<view class="calc">
+  <view class="calc-display">
+    <view class="calc-express">{{ express }}</view>
+    <view class="calc-result">{{ result }}</view>
+  </view>
+  <view class="calc-keybord">
+    <view
+      class="calc-keybord-row"
+      wx:for="{{ keybord }}"
+      wx:key="{{ index }}"
+    >
+      <view
+        class="calc-keybord-item calc-keybord_type-{{ v.type }}"
+        wx:for-item="v"
+        wx:for-index="k"
+        wx:for="{{ item }}"
+        wx:key="{{ k }}"
+        data-id="{{ v.id }}"
+        bindtap="clickHandler"
+      >{{ v.text }}</view>
+    </view>
+  </view>
+</view>

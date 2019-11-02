@@ -1,0 +1,30 @@
+page {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.input {
+  width: 100%;
+  background: #EDEDED;
+  border-radius: 10rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+
+.input-display {
+  --h: 100rpx;
+  height: var(--h);
+  line-height: var(--h);
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+}
+.input-display_text {
+  flex: 1;
+  font-size: 9pt;
+  color: #666;
+}
+.input-display_copy {
+  margin-left: 30rpx;
+  color: #2196f3;
+}

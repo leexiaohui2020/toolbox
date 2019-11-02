@@ -1,0 +1,15 @@
+<textarea
+  class="input margin-bottom"
+  placeholder="请输入"
+  bindinput="inputHandler"
+></textarea>
+
+<button
+  class="button button_block button-color_blue margin-bottom"
+  bindtap="buttonHandler"
+>加密</button>
+
+<view class="input input-display">
+  <view class="input-display_text">{{ ciphertText }}</view>
+  <view class="input-display_copy" bindtap="copy">复制</view>
+</view>

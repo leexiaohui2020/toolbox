@@ -1,0 +1,10 @@
+page {
+  font-size: 10pt;
+  background: #F0F0F0;
+}
+
+.addon {
+  width: 40rpx;
+  text-align: center;
+  margin-left: 30rpx;
+}

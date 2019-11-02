@@ -1,0 +1,5 @@
+<view class="wordcard custom">
+  <view class="wordcard-pinyin">[{{ pinyin }}]</view>
+  <view class="wordcard-title">{{ title }}</view>
+  <view class="wordcard-content">{{ content }}</view>
+</view>

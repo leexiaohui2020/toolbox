@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "page/home/main",
+    "page/tools/tool-658/main",
+    "page/tools/tool-657/main",
+    "page/tools/tool-656/main",
+    "page/tools/tool-655/main",
+    "page/tools/tool-654/main",
+    "page/toolcate/main"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#2196f3"
+  }
+}
