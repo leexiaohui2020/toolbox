@@ -74,5 +74,10 @@ export const tools = [
     id: 659,
     name: '金额数字转大写',
     cate: 106
+  },
+  {
+    id: 660,
+    name: 'UUID生成',
+    cate: 100
   }
 ]

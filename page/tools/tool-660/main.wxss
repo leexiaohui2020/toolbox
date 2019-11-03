@@ -1,0 +1,22 @@
+@import '../tool-657/main.wxss';
+page {
+  background: #F0F0F0;
+}
+.input {
+  background: #FFF;
+  font-size: 8pt;
+}
+
+.grid {
+  display: flex;
+  margin: 30rpx 0;
+}
+.grid-item {
+  flex: 1;
+}
+.grid-item:first-child {
+  margin-right: 15rpx;
+}
+.grid-item:last-child {
+  margin-left: 15rpx;
+}
