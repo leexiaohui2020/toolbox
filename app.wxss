@@ -17,10 +17,10 @@ page {
   margin-bottom: 40rpx;
 }
 .margin-left-xs {
-  margin-left: 20rpx;
+  margin-left: 10rpx;
 }
 .margin-right-xs {
-  margin-left: 20rpx;
+  margin-right: 10rpx;
 }
 
 /* button 按钮 */

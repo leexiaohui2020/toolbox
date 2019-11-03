@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main"
+  },
+  "navigationBarTitleText": "颜色值RGB/HEX转换"
+}
