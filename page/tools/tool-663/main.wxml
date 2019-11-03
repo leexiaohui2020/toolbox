@@ -1,0 +1,40 @@
+<picker
+  value="{{ lenIndex }}"
+  range="{{ lenList }}"
+  data-key="lenIndex"
+  bindchange="inputHandler"
+>
+  <cell label="密码长度" align="right">
+    <text>{{ lenList[lenIndex] }}</text>
+    <text class="addon" slot="suffix">位</text>
+  </cell>
+</picker>
+
+<checkbox-group bindchange="checkboxHandler">
+  <cell label="小写字母" align="right">
+    <checkbox value="lower" checked="{{ lower }}"></checkbox>
+  </cell>
+  <cell label="大写字母" align="right">
+    <checkbox value="upper" checked="{{ upper }}"></checkbox>
+  </cell>
+  <cell label="数字" align="right">
+    <checkbox value="number" checked="{{ number }}"></checkbox>
+  </cell>
+  <cell label="特殊字符" align="right">
+    <checkbox value="punctuation" checked="{{ punctuation }}"></checkbox>
+  </cell>
+</checkbox-group>
+
+<view class="margin">
+  <button
+    class="button button_block button-color_blue"
+    bindtap="buttonHandler"
+  >生成密码</button>
+</view>
+
+<cell label-hide>
+  <view>{{ result }}</view>
+  <view class="addon text-blue" slot="suffix" bindtap="copy">复制</view>
+</cell>
+
+<view class="margin wordcard">随机密码生成器可以实现在线生成随机密码、随机数，通过设置小写字母(a..z)、大写字母(A..Z)、数字(0..9)、特殊字符等来随机生成 6 到 30 位的密码。</view>

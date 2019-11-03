@@ -1,0 +1,23 @@
+<textarea
+ class="input margin-bottom"
+ value="{{ text1 }}"
+ placeholder="请输入"
+ bindinput="inputHandler"
+></textarea>
+
+<view class="flex margin-bottom">
+  <view class="flex-sub margin-right-xs">
+    <button class="button button_block button-color_blue" bindtap="encode">编码</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button class="button button_block button-color_blue" bindtap="decode">解码</button>
+  </view>
+</view>
+
+<textarea
+  class="input margin-bottom"
+  value="{{ text2 }}"
+  disabled
+></textarea>
+
+<button class="button button_block button-color_blue" bindtap="copy">复制</button>

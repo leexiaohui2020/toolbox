@@ -84,5 +84,15 @@ export const tools = [
     id: 661,
     name: '理财计算器',
     cate: 106
+  },
+  {
+    id: 663,
+    name: '随机密码生成',
+    cate: 100
+  },
+  {
+    id: 666,
+    name: 'URL编码/解码',
+    cate: 102
   }
 ]

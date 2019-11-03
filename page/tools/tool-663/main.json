@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main"
+  },
+  "navigationBarTitleText": "随机密码生成"
+}

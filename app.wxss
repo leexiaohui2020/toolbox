@@ -5,6 +5,7 @@ page {
   --color-blue: #2196f3;
   --color-green: #4caf50;
   --color-orange: #ff9800;
+  --color-brown: #795548;
   font-size: 10pt;
 }
 
@@ -14,6 +15,12 @@ page {
 }
 .margin-bottom {
   margin-bottom: 40rpx;
+}
+.margin-left-xs {
+  margin-left: 20rpx;
+}
+.margin-right-xs {
+  margin-left: 20rpx;
 }
 
 /* button 按钮 */
@@ -55,4 +62,33 @@ page {
 }
 .text-orange {
   color: var(--color-orange);
+}
+
+/* wordcard 词条组件 */
+.wordcard {
+  padding: 80rpx 30rpx 30rpx;
+  background: #FFF;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+  box-shadow: 2rpx 2rpx 2rpx rgba(0, 0, 0, .15);
+  line-height: 1.6;
+  text-align: justify;
+  position: relative;
+}
+.wordcard::before {
+  content: 'Tips';
+  padding: 8rpx 20rpx;
+  color: #FFF;
+  background: var(--color-brown);
+  position: absolute;
+  left: 0;
+  top: 10rpx;
+}
+
+/* flex */
+.flex {
+  display: flex;
+}
+.flex-sub {
+  flex: 1;
 }
