@@ -104,5 +104,19 @@ export const tools = [
     id: 670,
     name: 'Unicode编码转换',
     cate: 100
+  },
+  {
+    id: 671,
+    name: '中文简体繁体转换',
+    cate: 101
   }
 ]
+
+// 隐藏没有插件的分类
+cates.forEach(item => {
+  Object.defineProperty(item, 'hide', {
+    get() {
+      return !tools.find(v => v.cate == item.id)
+    }
+  })
+})

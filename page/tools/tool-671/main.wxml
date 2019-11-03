@@ -1,0 +1,43 @@
+<textarea
+  class="input margin-bottom"
+  value="{{ text1 }}"
+  placeholder="请输入"
+  data-key="text1"
+  bindinput="inputHandler"
+></textarea>
+
+<picker
+  class="margin-bottom"
+  value="{{ langIndex }}"
+  range="{{ langList }}"
+  data-key="langIndex"
+  bindchange="inputHandler"
+>
+  <cell label="地区" align="right">
+    <text>{{ langList[langIndex] || '--' }}</text>
+  </cell>
+</picker>
+
+<view class="flex margin-bottom">
+  <view class="flex-sub margin-right-xs">
+    <button class="button button_block button-color_blue" bindtap="toSimplified">转成简体中文</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button class="button button_block button-color_blue" bindtap="toTraditional">转成繁体中文</button>
+  </view>
+</view>
+
+<textarea
+  class="input margin-bottom"
+  value="{{ text2 }}"
+  disabled
+></textarea>
+
+<view class="flex">
+  <view class="flex-sub margin-right-xs">
+    <button class="button button_block button-color_blue" bindtap="copy">复制</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button class="button button_block button-color_red" bindtap="clear">清空</button>
+  </view>
+</view>
