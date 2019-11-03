@@ -1,0 +1,9 @@
+@import '../tool-657/main.wxss';
+page {
+  background: #F0F0F0;
+}
+
+.input {
+  height: 300rpx;
+  background: #FBFBFB;
+}

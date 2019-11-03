@@ -47,7 +47,11 @@ page {
 }
 .button-color_blue {
   color: #FFF;
-  background: #2196f3;
+  background: var(--color-blue);
+}
+.button-color_red {
+  color: #FFF;
+  background: var(--color-red);
 }
 
 /* color 颜色 */

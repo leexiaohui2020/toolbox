@@ -1,0 +1,42 @@
+<textarea
+  class="input margin-bottom"
+  value="{{ text1 }}"
+  placeholder="请输入"
+  bindinput="inputHandler"
+></textarea>
+<alert custom="margin-bottom" type="error" wx:if="{{ tips }}">{{ tips }}</alert>
+
+<view class="flex margin-bottom">
+  <view class="flex-sub margin-right-xs">
+    <button class="button button_block button-color_blue" bindtap="u2c">Unicode转中文</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button class="button button_block button-color_blue" bindtap="c2u">中文转Unicode</button>
+  </view>
+</view>
+
+<view class="flex margin-bottom">
+  <view class="flex-sub margin-right-xs">
+    <button class="button button_block button-color_blue" bindtap="u2a">Unicode转ASCII</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button class="button button_block button-color_blue" bindtap="a2u">ASCII转Unicode</button>
+  </view>
+</view>
+
+<textarea
+  class="input margin-bottom"
+  value="{{ text2 }}"
+  disabled
+></textarea>
+
+<view class="flex margin-bottom">
+  <view class="flex-sub margin-right-xs">
+    <button class="button button_block button-color_blue" bindtap="copy">复制</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button class="button button_block button-color_red" bindtap="clear">清空</button>
+  </view>
+</view>
+
+<view class="wordcard">在线Unicode编码转换工具为您提供ASCII与Unicode互转，Unicode与中文互转，在文本框里输入要转换的内容，然后点击要转换的类型按钮，转换完成后即可看到对应的内容。</view>

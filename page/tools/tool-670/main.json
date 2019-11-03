@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "alert": "/component/alert/main"
+  },
+  "navigationBarTitleText": "Unicode编码转换"
+}

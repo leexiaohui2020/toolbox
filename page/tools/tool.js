@@ -99,5 +99,10 @@ export const tools = [
     id: 668,
     name: '颜色值RGB/HEX转换',
     cate: 102
+  },
+  {
+    id: 670,
+    name: 'Unicode编码转换',
+    cate: 100
   }
 ]
