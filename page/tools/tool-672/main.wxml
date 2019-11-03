@@ -1,0 +1,33 @@
+<wxs src="main.wxs" module="tool" />
+<view class="countdown">
+  <picker
+    mode="multiSelector"
+    range="{{ pickerRange }}"
+    value="{{ pickerValue }}"
+    class="countdown-display"
+    disabled="{{ status !== 'ready' }}"
+    bindchange="pickerHandler"
+  >
+    <view wx:if="{{ status === 'ready' }}">
+      {{ tool.dsp1(pickerRange, pickerValue) }}
+    </view>
+    <view wx:else>
+      {{ tool.dsp2(countdown) }}
+    </view>
+  </picker>
+
+  <view class="countdown-grid">
+    <view class="countdown-grid-item" wx:if="{{ status === 'start' }}">
+      <button class="button button_block button-color_blue" bindtap="pause">暂停</button>
+    </view>
+    <view class="countdown-grid-item" wx:if="{{ status === 'pause' }}">
+      <button class="button button_block button-color_blue" bindtap="resume">继续</button>
+    </view>
+    <view class="countdown-grid-item" wx:if="{{ status === 'ready' }}">
+      <button class="button button_block button-color_orange" bindtap="start">开始</button>
+    </view>
+    <view class="countdown-grid-item" wx:else>
+      <button class="button button_block button-color_red" bindtap="reset">重置</button>
+    </view>
+  </view>
+</view>

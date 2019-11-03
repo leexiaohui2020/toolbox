@@ -109,6 +109,11 @@ export const tools = [
     id: 671,
     name: '中文简体繁体转换',
     cate: 101
+  },
+  {
+    id: 672,
+    name: '倒计时',
+    cate: 104
   }
 ]
 

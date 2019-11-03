@@ -1,0 +1,18 @@
+var exports = module.exports
+
+exports.dsp1 = function(list, indexes) {
+  var a = list[0][indexes[0]]
+  var b = list[1][indexes[1]]
+  return fill(a) + ':' + fill(b)
+}
+
+exports.dsp2 = function(countdown) {
+  var a = Math.floor(countdown / 60)
+  var b = countdown % 60
+  return fill(a) + ':' + fill(b)
+}
+
+function fill(n) {
+  n += ''
+  return n.length > 1 ? n : '0' + n
+}

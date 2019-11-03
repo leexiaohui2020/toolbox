@@ -53,6 +53,10 @@ page {
   color: #FFF;
   background: var(--color-red);
 }
+.button-color_orange {
+  color: #FFF;
+  background: var(--color-orange);
+}
 
 /* color 颜色 */
 .text-red {
