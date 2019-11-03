@@ -79,5 +79,10 @@ export const tools = [
     id: 660,
     name: 'UUID生成',
     cate: 100
+  },
+  {
+    id: 661,
+    name: '理财计算器',
+    cate: 106
   }
 ]

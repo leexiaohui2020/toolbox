@@ -1,0 +1,51 @@
+<alert type="error" wx:if="{{ tips }}">{{ tips }}</alert>
+<cell label="投资金额" align="right">
+  <input
+    type="digit"
+    class="input"
+    value="{{ amount }}"
+    data-key="amount"
+    bindinput="inputHandler"
+    placeholder="请输入投资金额"
+  ></input>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+
+<cell label="年化收益率" align="right">
+  <input
+    type="digit"
+    class="input"
+    value="{{ rate }}"
+    data-key="rate"
+    bindinput="inputHandler"
+    placeholder="请输入年化收益率"
+  ></input>
+  <text class="addon" slot="suffix">%</text>
+</cell>
+
+<cell label="投资天数" align="right">
+  <input
+    type="digit"
+    class="input"
+    value="{{ days }}"
+    data-key="days"
+    bindinput="inputHandler"
+    placeholder="请输入投资天数"
+  ></input>
+  <text class="addon" slot="suffix">天</text>
+</cell>
+
+<button
+  class="margin button button_block button-color_blue"
+  bindtap="buttonHandler"
+>计算</button>
+
+<wxs src="../tool-656/main.wxs" module="toFixed" />
+<cell label="收益金额" align="right">
+  <text>{{ toFixed(annualized || 0) }}</text>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+<cell label="本息总计" align="right">
+  <text>{{ toFixed(summary || 0) }}</text>
+  <text class="addon" slot="suffix">元</text>
+</cell>
