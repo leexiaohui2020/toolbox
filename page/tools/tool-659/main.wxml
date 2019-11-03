@@ -1,0 +1,20 @@
+<alert type="error" wx:if="{{ tips }}">{{ tips }}</alert>
+<cell label="金额数字" align="right">
+  <input
+    type="digit"
+    value="{{ amount }}"
+    placeholder="请输入金额数字"
+    bindinput="inputHandler"
+  ></input>
+  <text class="addon" slot="suffix">元</text>
+</cell>
+
+<button
+  class="margin button button_block button-color_blue"
+  bindtap="buttonHandler"
+>转换</button>
+
+<cell label-hide>
+  <text>{{ result }}</text>
+  <text class="addon text-blue" slot="suffix" bindtap="copy">复制</text>
+</cell>

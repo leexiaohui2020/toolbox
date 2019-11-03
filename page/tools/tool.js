@@ -69,5 +69,10 @@ export const tools = [
     id: 657,
     name: 'MD5加密',
     cate: 100
+  },
+  {
+    id: 659,
+    name: '金额数字转大写',
+    cate: 106
   }
 ]
