@@ -1,4 +1,4 @@
-const zhouqiList = Array(26).fill(20).map((v, k) => `${v + k}天`)
+import { toLocaleDateString } from '../../../utils/utils.js'
 
 Page({
 
@@ -7,10 +7,10 @@ Page({
 
   data: {
     tips: '',
-    zhouqiList,
-    zhouqiIndex: 0,
     datetext: '',
-    datepickerend: new Date().toLocaleDateString().replace(/\//g, '-'),
+    zhouqiIndex: 0,
+    zhouqiList: Array(26).fill(20).map((v, k) => `${v + k}天`),
+    datepickerend: toLocaleDateString(new Date()),
     result: null
   },
 
