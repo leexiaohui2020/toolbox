@@ -1,7 +1,8 @@
-Page({
+Page.createTool({
 
   toolId: 661,
   toolName: '理财计算器',
+  toolCate: [106],
 
   data: {
     amount: '',

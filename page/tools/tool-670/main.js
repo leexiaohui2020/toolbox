@@ -5,10 +5,11 @@ import {
   ChineseToUnicode
 } from 'crypto'
 
-Page({
+Page.createTool({
 
   toolId: 670,
   toolName: 'Unicode编码转换',
+  toolCate: [100],
 
   data: {
     text1: '',

@@ -1,9 +1,10 @@
 import calc from 'calculator'
 
-Page({
+Page.createTool({
 
   toolId: 656,
   toolName: '贷款计算器',
+  toolCate: [ 106 ],
 
   data: {
     amount: '200000',

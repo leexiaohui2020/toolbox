@@ -5,7 +5,11 @@ const STATUS = {
   PAUSE: 'pause'
 }
 
-Page({
+Page.createTool({
+
+  toolId: 672,
+  toolName: '倒计时',
+  toolCate: [104],
 
   data: {
     

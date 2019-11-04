@@ -1,18 +1,22 @@
-import { cates, tools } from '../tools/tool'
-
 Page({
 
   data: {
-    list: []
+    list: null
   },
 
   onLoad(opts) {
     const { id } = opts
-    const cate = cates.find(v => v.id == id)
-    const list = tools.filter(v => v.cate == id)
-    const title = cate.name
-    this.setData({ list })
-    wx.setNavigationBarTitle({ title })
+    this.getToolList(id)
+  },
+
+  getToolList(id) {
+    const cate = App.createTool.cates.find(v => v.id == id)
+    if (cate) {
+      const list = cate.tools
+      const title = cate.name
+      this.setData({ list })
+      wx.setNavigationBarTitle({ title })
+    }
   },
 
   toolTapHandler(e) {

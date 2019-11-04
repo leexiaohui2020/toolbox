@@ -1,9 +1,10 @@
 import keybord from 'keybord/main'
 
-Page({
+Page.createTool({
 
   toolId: 654,
   toolName: '计算器',
+  toolCate: [ 106 ],
   
   data: {
     result: '',

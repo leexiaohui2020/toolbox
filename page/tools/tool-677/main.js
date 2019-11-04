@@ -16,10 +16,11 @@ const createDayList = (Y, M) => {
   return list
 }
 
-Page({
+Page.createTool({
 
   toolId: 677,
   toolName: '万年历',
+  toolCate: [104],
 
   data: {
     pickYM: `${nowYear}-${nowMonth + 1}`,

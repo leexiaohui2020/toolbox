@@ -1,9 +1,10 @@
 import { toLocaleDateString } from '../../../utils/utils.js'
 
-Page({
+Page.createTool({
 
   toolId: 675,
   toolName: '预产期计算器',
+  toolCate: [104],
 
   data: {
     tips: '',

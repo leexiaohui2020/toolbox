@@ -3,7 +3,16 @@ import { cates } from '../tools/tool'
 Page({
 
   data: {
-    cates: cates.filter(v => !v.hide)
+    cates: null
+  },
+
+  onLoad() {
+    this.getShowCates()
+  },
+
+  getShowCates() {
+    const cates = App.createTool.cates.filter(v => v.tools.length)
+    this.setData({ cates })
   },
 
   cateTapHandler(e) {

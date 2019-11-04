@@ -1,9 +1,10 @@
 import transverter from 'transverter'
 
-Page({
+Page.createTool({
   
   toolId: 671,
   toolName: '中文简体繁体转换',
+  toolCate: [101],
 
   data: {
     text1: '',

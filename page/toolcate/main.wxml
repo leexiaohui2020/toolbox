@@ -1,4 +1,4 @@
-<view class="cate">
+<view class="cate" wx:if="{{ list }}">
   <cell
     wx:for="{{ list }}"
     wx:key="{{ index }}"

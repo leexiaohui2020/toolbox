@@ -1,7 +1,8 @@
-Page({
+Page.createTool({
 
   toolId: 668,
   toolName: '颜色值RGB/HEX转换',
+  toolCate: [102],
 
   data: {
     red: 117,

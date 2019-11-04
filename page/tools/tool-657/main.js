@@ -1,9 +1,10 @@
 import md5 from 'md5'
 
-Page({
+Page.createTool({
 
   toolId: 657,
   toolName: 'MD5加密',
+  toolCate: [100],
 
   data: {
     originalText: '',

@@ -1,10 +1,11 @@
 import * as wordcard from 'wordcard'
 import reList from 'regexp'
 
-Page({
+Page.createTool({
 
   toolId: 678,
   toolName: '正则表达式测试',
+  toolCate: [102],
 
   data: {
     tips: '',

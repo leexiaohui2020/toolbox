@@ -1,9 +1,10 @@
 import calculator from 'calculator'
 
-Page({
+Page.createTool({
 
   toolId: 659,
   toolName: '金额数字转大写',
+  toolCate: [106],
 
   data: {
     tips: '',

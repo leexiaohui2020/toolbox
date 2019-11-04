@@ -1,9 +1,10 @@
 import * as wordcard from 'wordcard'
 
-Page({
+Page.createTool({
   
   toolId: 655,
   toolName: '国债计算器',
+  toolCate: [ 106 ],
 
   data: {
     rate: '',

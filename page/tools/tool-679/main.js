@@ -1,7 +1,8 @@
-Page({
+Page.createTool({
 
   toolId: 679,
   toolName: '文本加密解密',
+  toolCate: [100],
 
   data: {
     text: '',

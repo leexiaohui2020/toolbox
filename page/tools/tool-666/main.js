@@ -1,7 +1,8 @@
-Page({
+Page.createTool({
 
   toolId: 666,
   toolName: 'URL编码/解码',
+  toolCate: [102],
 
   data: {
     text1: '',

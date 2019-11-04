@@ -1,4 +1,4 @@
-<view class="cates">
+<view class="cates" wx:if="{{ cates }}">
   <view class="cates-grid">
     <view
      class="cates-grid-item"

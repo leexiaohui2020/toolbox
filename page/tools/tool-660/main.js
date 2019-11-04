@@ -1,9 +1,10 @@
 import * as wordcard from 'wordcard'
 
-Page({
+Page.createTool({
 
   toolId: 660,
   toolName: 'UUID生成',
+  toolCate: [100],
 
   data: {
     uuid: '',
