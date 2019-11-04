@@ -1,0 +1,41 @@
+<wxs src="format.wxs" module="format" />
+<view class="calendar">
+  <view class="calendar-header">
+    <picker
+      mode="date"
+      fields="month"
+      value="{{ pickYM }}"
+      data-key="pickYM"
+      bindchange="inputHandler"
+    >{{ format.pickYM(pickYM) }} {{ dayList[pickIndex].ncWeek }}</picker>
+  </view>
+
+  <view class="calendar-container">
+    <view class="calendar-container_action icon-arrow-left" data-type="left" bindtap="actionHandler"></view>
+    <picker
+      class="calendar-container_number"
+      value="{{ pickIndex }}"
+      range="{{ dayList }}"
+      range-key="pickerText"
+      data-key="pickIndex"
+      bindchange="inputHandler"
+    >{{ dayList[pickIndex].cDay }}</picker>
+    <view class="calendar-container_action icon-arrow-right" data-type="right" bindtap="actionHandler"></view>
+  </view>
+
+  <view class="calendar-text">{{ dayList[pickIndex].IMonthCn }}{{ dayList[pickIndex].IDayCn }}</view>
+  <view class="calendar-text">{{ dayList[pickIndex].gzYear }}年 【{{ dayList[pickIndex].Animal }}年】</view>
+
+  <view class="calendar-st">
+    <view class="calendar-st_label">宜</view>
+    <view class="calendar-st_list">
+      <view class="calendar-st_item" wx:for="{{ dayList[pickIndex].suit }}" wx:key="{{ index }}">{{ item }}</view>
+    </view>
+  </view>
+  <view class="calendar-st">
+    <view class="calendar-st_label">忌</view>
+    <view class="calendar-st_list">
+      <view class="calendar-st_item" wx:for="{{ dayList[pickIndex].taboo }}" wx:key="{{ index }}">{{ item }}</view>
+    </view>
+  </view>
+</view>

@@ -119,6 +119,11 @@ export const tools = [
     id: 675,
     name: '预产期计算器',
     cate: 104
+  },
+  {
+    id: 677,
+    name: '万年历',
+    cate: 104
   }
 ]
 
