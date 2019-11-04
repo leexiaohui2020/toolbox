@@ -1,0 +1,16 @@
+@import '../tool-670/main.wxss';
+
+.richtext {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 40rpx;
+}
+
+.render {
+  color: #666;
+  line-height: 2;
+}
+
+.addon {
+  margin-left: 20rpx;
+}

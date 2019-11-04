@@ -13,7 +13,7 @@ page {
 
 .input-display {
   --h: 100rpx;
-  height: var(--h);
+  height: var(--h) !important;
   line-height: var(--h);
   padding: 0 30rpx;
   display: flex;

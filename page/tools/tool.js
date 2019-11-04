@@ -124,6 +124,11 @@ export const tools = [
     id: 677,
     name: '万年历',
     cate: 104
+  },
+  {
+    id: 678,
+    name: '正则表达式测试',
+    cate: 102
   }
 ]
 

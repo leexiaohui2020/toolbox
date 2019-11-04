@@ -1,0 +1,5 @@
+module.exports = function(re, reList) {
+  return reList.map(function(a) {
+    return a.regexp
+  }).indexOf(re)
+}

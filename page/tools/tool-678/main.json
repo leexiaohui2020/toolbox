@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main",
+    "alert": "/component/alert/main",
+    "wordcard": "/component/wordcard/main"
+  },
+  "navigationBarTitleText": "正则表达式测试"
+}

@@ -1,0 +1,49 @@
+<textarea
+  class="input"
+  value="{{ text }}"
+  placeholder="请输入待匹配文本"
+  data-key="text"
+  bindinput="inputHandler"
+></textarea>
+
+<wxs src="main.wxs" module="pickIndex" />
+
+<cell custom="margin-top" label-hide>
+  <input
+    value="{{ regexp }}"
+    placeholder="请输入正则表达式"
+    data-key="regexp"
+    bindinput="inputHandler"
+  ></input>
+  <view class="text-blue addon" slot="suffix">
+    <picker
+      value="{{ pickIndex(regexp, reList) }}"
+      range="{{ reList }}"
+      range-key="text"
+      bindchange="pickerHandler"
+    >
+      <text>常用</text>
+      <text class="icon-dropdown"></text>
+    </picker>
+  </view>
+</cell>
+
+<checkbox-group class="margin-top" bindchange="checkboxHandler">
+  <checkbox value="sGlobal" checked="{{ sGlobal }}">全局搜索</checkbox>
+  <checkbox class="margin-left-xs" value="sIgnore" checked="{{ sIgnore }}">忽略大小写</checkbox>
+</checkbox-group>
+
+<alert type="error" custom="margin-top" wx:if="{{ tips }}">{{ tips }}</alert>
+
+<button
+  class="margin-top button button_block button-color_blue"
+  bindtap="buttonHandler"
+>测试匹配</button>
+
+<rich-text nodes="<div class='input margin-top render'>{{ result }}</div>"></rich-text>
+
+<wordcard
+  custom="margin-top"
+  title="{{ wordcard.title }}"
+  content="{{ wordcard.content }}"
+/>
