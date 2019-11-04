@@ -13,6 +13,9 @@ page {
 .margin {
   margin: 40rpx;
 }
+.margin-top {
+  margin-top: 40rpx;
+}
 .margin-bottom {
   margin-bottom: 40rpx;
 }

@@ -1,0 +1,9 @@
+page {
+  background: #F0F0F0;
+}
+
+.arrow {
+  color: #666;
+  font-size: 8pt;
+  margin-left: 10rpx;
+}

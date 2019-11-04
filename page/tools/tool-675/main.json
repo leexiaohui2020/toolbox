@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main",
+    "alert": "/component/alert/main"
+  },
+  "navigationBarTitleText": "预产期计算器"
+}

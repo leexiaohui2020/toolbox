@@ -1,0 +1,48 @@
+<wxs src="main.wxs" module="format" />
+<alert type="error" wx:if="{{ tips }}">{{ tips }}</alert>
+
+<picker
+  value="{{ zhouqiIndex }}"
+  range="{{ zhouqiList }}"
+  data-key="zhouqiIndex"
+  bindchange="inputHandler"
+>
+  <cell label="您的平均月期周期" label-width="300" align="right">
+    <text>{{ zhouqiList[zhouqiIndex] }}</text>
+    <text class="arrow icon-dropdown" slot="suffix"></text>
+  </cell>
+</picker>
+
+<picker
+  mode="date"
+  end="{{ datepickerend }}"
+  value="{{ datetext }}"
+  data-key="datetext"
+  bindchange="inputHandler"
+>
+  <cell label="您的末次月经日期" label-width="300" align="right">
+    <text>{{ format.date(datetext) }}</text>
+    <text class="arrow icon-dropdown" slot="suffix"></text>
+  </cell>
+</picker>
+
+<view class="margin">
+  <button
+    class="button button_block button-color_blue"
+    bindtap="buttonHandler"
+  >计算</button>
+</view>
+
+<view class="margin-top" wx:if="{{ result }}">
+  <cell label="您的预产期是" label-width="300" align="right">
+    <text>{{result.year}}年{{result.month}}月{{result.date}}日</text>
+  </cell>
+  <cell label="您正处于孕期的" label-width="300" align="right">
+    <text>第 {{result.zhou}}周 第{{result.tian}}天</text>
+  </cell>
+  <cell label="距离宝宝出生还有" label-width="300" align="right">
+    <text>{{result.remainDay}}天</text>
+  </cell>
+</view>
+
+<view class="margin wordcard">预产期计算器可以根据您的月经周期，轻松准确地进行预产期计算！整个预产期约为40周（280天），预产期计算方法是按末次月经时间的第一日算起，月份加9，日数加7。例如：末次月经是1月1日，加9个月为10月1日，再加7天，为10月8日。但是实际分娩日期与推算的预产期可能会相差1～2周，如果孕妇的末次月经日期记忆不清或月经不准，就需要医生代为测算预产期。</view>

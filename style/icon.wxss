@@ -50,3 +50,10 @@
 .icon-arrow-right::before {
   content: '\e00e';
 }
+
+.icon-dropdown::before {
+  content: '\e00f';
+}
+.icon-dropup::before {
+  content: '\e00g';
+}

@@ -1,0 +1,9 @@
+var exports = module.exports
+
+exports.date = function(str) {
+  if (!str) return ''
+  var list = ['年', '月', '日']
+  return str.split('-').map(function(v, k) {
+    return v + list[k]
+  }).join('')
+}
