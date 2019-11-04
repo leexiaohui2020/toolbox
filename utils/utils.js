@@ -1,5 +1,7 @@
 import crypto from 'crypto'
+import * as tool from 'tool'
 export const CryptoJS = crypto
+export const Tool = tool
 
 export function copyText(data) {
   wx.setClipboardData({

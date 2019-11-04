@@ -58,10 +58,9 @@ Page({
     if (this.data.status !== STATUS.START) return
     const { countdown } = this.data
     if (countdown <= 0) return this.reset()
-
+    this.setData({ countdown: countdown - 1 })
     const tm = this.tm = setTimeout(() => {
       clearTimeout(tm)
-      this.setData({ countdown: countdown - 1 })
       this.go()
     }, 1000)
   }
