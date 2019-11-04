@@ -129,6 +129,11 @@ export const tools = [
     id: 678,
     name: '正则表达式测试',
     cate: 102
+  },
+  {
+    id: 679,
+    name: '文本加密解密',
+    cate: 100
   }
 ]
 

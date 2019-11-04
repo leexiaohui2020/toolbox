@@ -1,0 +1,4 @@
+@import '../tool-670/main.wxss';
+.input {
+  height: 260rpx;
+}

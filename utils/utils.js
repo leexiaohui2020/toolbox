@@ -1,3 +1,6 @@
+import crypto from 'crypto'
+export const CryptoJS = crypto
+
 export function copyText(data) {
   wx.setClipboardData({
     data,

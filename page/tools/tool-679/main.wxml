@@ -1,0 +1,68 @@
+<textarea
+  class="input margin-bottom"
+  value="{{ text }}"
+  placeholder="请输入明文或密文"
+  data-key="text"
+  bindinput="inputHandler"
+></textarea>
+
+<input
+  class="input input-display"
+  value="{{ pass }}"
+  placeholder="请输入密码"
+  data-key="pass"
+  bindinput="inputHandler"
+></input>
+
+<picker
+  class="margin-top"
+  value="{{ typeIndex }}"
+  range="{{ typeList }}"
+  data-key="typeIndex"
+  bindchange="inputHandler"
+>
+  <cell label="加密算法" align="right">
+    <text>{{ typeList[typeIndex] }}</text>
+    <text class="icon-dropdown margin-left-xs" slot="suffix"></text>
+  </cell>
+</picker>
+
+<view class="flex margin-top">
+  <view class="flex-sub margin-right-xs">
+    <button
+      class="button button_block button-color_blue"
+      data-key="encrypt"
+      bindtap="buttonHandler"
+    >加密</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button
+      class="button button_block button-color_blue"
+      data-key="decrypt"
+      bindtap="buttonHandler"
+    >解密</button>
+  </view>
+</view>
+
+<textarea
+  class="input margin-top"
+  value="{{ result }}"
+  disabled
+></textarea>
+
+<view class="flex margin-top">
+  <view class="flex-sub margin-right-xs">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="copy"
+    >复制</button>
+  </view>
+  <view class="flex-sub margin-left-xs">
+    <button
+      class="button button_block button-color_red"
+      bindtap="clear"
+    >清空</button>
+  </view>
+</view>
+
+<view class="margin-top wordcard">在线文本加密解密工具，提供AES、DES、RC4、Rabbit、TripleDes等多种算法。</view>
