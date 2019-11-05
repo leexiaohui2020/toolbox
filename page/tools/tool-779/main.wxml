@@ -1,6 +1,6 @@
 <view class="margin-bottom" wx:if="{{ source }}">
-  <image class="image" mode="widthFix" src="{{ source }}" wx:if="{{ sourceMode }}"></image>
-  <view wx:else>
+  <image class="image" mode="widthFix" src="{{ source }}" hidden="{{ !sourceMode }}"></image>
+  <view hidden="{{ sourceMode }}">
     <view class="flex flex-gutter-lg">
       <view class="flex-sub" wx:for="{{ cutPaths1 }}" wx:key="{{ index }}">
         <image class="image" mode="widthFix" src="{{ item.src }}"></image>
