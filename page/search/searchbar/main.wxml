@@ -1,0 +1,6 @@
+<view class="search custom">
+  <view class="search-bar" bindtap="tapHandler">
+    <text class="icon-search margin-right-xs"></text>
+    <text>搜索工具，本站共收录 {{ count }} 件工具</text>
+  </view>
+</view>

@@ -1,3 +1,5 @@
+<search-bar />
+
 <view class="cates" wx:if="{{ cates }}">
   <view class="cates-grid">
     <view

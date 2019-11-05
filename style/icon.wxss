@@ -57,3 +57,6 @@
 .icon-dropup::before {
   content: '\e00g';
 }
+.icon-search::before {
+  content: '\e611';
+}

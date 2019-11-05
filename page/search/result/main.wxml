@@ -1,0 +1,13 @@
+<view class="cate" wx:if="{{ tools.length }}">
+  <cell
+    wx:for="{{ tools }}"
+    wx:key="{{ index }}"
+    custom="cate-item"
+    data-id="{{ item.id }}"
+    bindtap="toolTapHandler"
+    label-hide
+  >
+    <text>{{ item.name }}</text>
+    <text class="icon-arrow-right" slot="suffix"></text>
+  </cell>
+</view>

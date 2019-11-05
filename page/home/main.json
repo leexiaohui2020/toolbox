@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "search-bar": "../search/searchbar/main"
+  },
   "navigationBarTitleText": "工具箱"
 }

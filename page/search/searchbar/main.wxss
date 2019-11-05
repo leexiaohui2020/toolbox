@@ -1,0 +1,14 @@
+.search {
+  padding: 30rpx 40rpx;
+  background-color: #2196f3;
+}
+.search-bar {
+  --h: 68rpx;
+  height: var(--h);
+  border-radius: 6rpx;
+  background-color: #FFF;
+  text-align: center;
+  line-height: var(--h);
+  color: #666;
+  font-size: 8pt;
+}

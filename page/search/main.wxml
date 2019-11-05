@@ -1,0 +1,31 @@
+<view class="search-bar">
+  <input
+    class="search-bar_input"
+    value="{{ keyword }}"
+    placeholder="请输入关键字"
+    data-key="keyword"
+    bindinput="inputHandler"
+    bindconfirm="buttonHandler"
+    auto-focus
+    confirm-type="search"
+  ></input>
+  <view class="search-bar_action text-blue" bindtap="buttonHandler">搜索</view>
+</view>
+
+<view class="search-his">
+  <view class="search-his_header">
+    <view class="search-his_title">历史搜索</view>
+    <view class="search-his_action" bindtap="actionHandler">清空历史</view>
+  </view>
+
+  <view class="search-his_list" wx:if="{{ history && history.length }}">
+    <view
+      class="search-his_item"
+      wx:for="{{ history }}"
+      wx:key="{{ index }}"
+      data-keyword="{{ item }}"
+      bindtap="tagTapHandler"
+    >{{ item }}</view>
+  </view>
+  <view class="search-his_nodata" wx:else>暂无搜索记录</view>
+</view>

@@ -9,6 +9,7 @@ page {
   border-radius: 10rpx;
   box-sizing: border-box;
   padding: 30rpx;
+  overflow: auto;
 }
 
 .input-display {

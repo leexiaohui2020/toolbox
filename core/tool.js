@@ -12,12 +12,12 @@ function createTool(opts = {}) {
     const func = methods[key]
     const funcType = getType(func)
     if (funcType === 'Function') {
-      config[key] = function () {
-        return func.call(this)
+      config[key] = function (...args) {
+        return func.call(this, ...args)
       }
     } else if (funcType === 'AsyncFunction') {
-      config[key] = async function () {
-        return await func.call(this)
+      config[key] = async function (...args) {
+        return await func.call(this, ...args)
       }
     }
   })

@@ -1,0 +1,83 @@
+<alert
+  custom="margin-bottom"
+  type="error"
+  wx:if="{{ tips }}"
+>{{ tips }}</alert>
+
+<textarea
+  class="input"
+  value="{{ text }}"
+  placeholder="请输入明文"
+  data-key="text"
+  bindinput="inputHandler"
+></textarea>
+
+<picker
+  class="margin-top"
+  value="{{ pickIndex }}"
+  range="{{ pickList }}"
+  range-key="name"
+  data-key="pickIndex"
+  bindchange="inputHandler"
+>
+  <cell label="散列/哈希算法" align="right">
+    <text>{{ pickList[pickIndex].name }}</text>
+    <text class="icon-dropdown" slot="suffix"></text>
+  </cell>
+</picker>
+
+<cell custom="margin-top" label="密钥" align="right" wx:if="{{ pickList[pickIndex].type === 2 }}">
+  <input
+    value="{{ pass }}"
+    placeholder="请输入密钥"
+    data-key="pass"
+    bindinput="inputHandler"
+  ></input>
+</cell>
+
+<block wx:if="{{ pickList[pickIndex].type === 3 }}">
+  <picker
+    class="margin-top"
+    value="{{ keySizeIndex }}"
+    range="{{ keySizeList }}"
+    range-key="name"
+    data-key="keySizeIndex"
+    bindchange="inputHandler"
+  >
+    <cell label="key长度" align="right">
+      <text>{{ keySizeList[keySizeIndex].name }}</text>
+      <text class="icon-dropdown" slot="suffix"></text>
+    </cell>
+  </picker>
+
+  <cell custom="margin-top" label="盐" align="right">
+    <input
+      value="{{ salt }}"
+      placeholder="请输入盐"
+      data-key="salt"
+      bindinput="inputHandler"
+    ></input>
+  </cell>
+  
+  <cell custom="margin-top" label="迭代次数" align="right">
+    <input
+      mode="number"
+      value="{{ iterations }}"
+      placeholder="请输入迭代次数"
+      data-key="iterations"
+      bindinput="inputHandler"
+    ></input>
+  </cell>
+</block>
+
+<button
+  class="margin-top button button_block button-color_blue"
+  bindtap="buttonHandler"
+>散列/哈希</button>
+
+<textarea
+  class="input margin-top"
+  value="{{ result }}"
+  placeholder="结果"
+  disabled
+></textarea>
