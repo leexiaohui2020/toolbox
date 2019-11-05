@@ -1,0 +1,49 @@
+<view class="margin-bottom" wx:if="{{ source }}">
+  <image class="image" mode="widthFix" src="{{ source }}" wx:if="{{ sourceMode }}"></image>
+  <view wx:else>
+    <view class="flex flex-gutter-lg">
+      <view class="flex-sub" wx:for="{{ cutPaths1 }}" wx:key="{{ index }}">
+        <image class="image" mode="widthFix" src="{{ item.src }}"></image>
+      </view>
+    </view>
+    <view class="flex flex-gutter-lg">
+      <view class="flex-sub" wx:for="{{ cutPaths2 }}" wx:key="{{ index }}">
+        <image class="image" mode="widthFix" src="{{ item.src }}"></image>
+      </view>
+    </view>
+    <view class="flex flex-gutter-lg">
+      <view class="flex-sub" wx:for="{{ cutPaths3 }}" wx:key="{{ index }}">
+        <image class="image" mode="widthFix" src="{{ item.src }}"></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="flex flex-gutter margin-bottom">
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="chooseImage"
+    >选择图片</button>
+  </view>
+
+  <view class="flex-sub" wx:if="{{ source }}">
+    <button
+      class="button button_block button-color_{{ sourceMode ? 'green' : 'red' }}"
+      bindtap="toggleMode"
+    >{{ sourceMode ? '看效果图' : '看原图' }}</button>
+  </view>
+</view>
+
+<button
+  wx:if="{{ source }}"
+  class="margin-bottom button button_block button-color_blue"
+  bindtap="saveCutImages"
+>保存效果图</button>
+
+<view class="wordcard">九宫切图是一款把照片裁切成九张图的在线工具，以方便您将其上传到您的微信朋友圈、微博、QQ空间以及其他社交网络。用它你就能够在社交网络上发布夺人眼球的震撼九宫格大图啦，实乃刷屏利器！微信、微博、QQ空间以及其他支持多图片相册的社交网络，任何支持9张图片3*3排列的地方都能用到它哦。</view>
+<canvas
+  canvas-id="canvas"
+  class="offscreen"
+  style="width: {{width}}px; height: {{height}}px"
+></canvas>

@@ -56,6 +56,10 @@ page {
   color: #FFF;
   background: var(--color-red);
 }
+.button-color_green {
+  color: #FFF;
+  background: var(--color-green);
+}
 .button-color_orange {
   color: #FFF;
   background: var(--color-orange);
@@ -106,3 +110,7 @@ page {
 .flex-gutter > view:not(:last-child) {
   margin-right: 10rpx;
 }
+.flex-gutter-lg > view:not(:last-child) {
+  margin-right: 20rpx;
+}
+

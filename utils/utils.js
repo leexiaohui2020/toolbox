@@ -22,3 +22,9 @@ export function toLocaleDateString(date) {
   const D = date.getDate()
   return [Y,M,D].join('-')
 }
+
+export function canvasToTempFilePathDelay(...args) {
+  setTimeout(() => {
+    wx.canvasToTempFilePath(...args)
+  }, 200)
+}

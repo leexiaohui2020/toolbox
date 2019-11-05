@@ -1,0 +1,15 @@
+page {
+  padding: 30rpx;
+  background: #F0F0F0;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+
+.offscreen {
+  top: 9999999rpx;
+  position: fixed;
+}
