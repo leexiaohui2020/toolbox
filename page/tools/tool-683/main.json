@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main",
+    "wordcard": "/component/wordcard/main"
+  },
+  "navigationBarTitleText": "二维码生成"
+}

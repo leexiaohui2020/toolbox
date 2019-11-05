@@ -1,0 +1,58 @@
+<textarea
+  class="input margin-bottom"
+  value="{{ word }}"
+  placeholder="请输入编码内容，支持网址、文本、电子邮箱等"
+  data-key="word"
+  bindinput="inputHandler"
+></textarea>
+
+<picker
+  id="sizepicker"
+  class="margin-bottom"
+  value="{{ sizeIndex }}"
+  range="{{ sizeList }}"
+  range-key="name"
+  data-key="sizeIndex"
+  bindchange="inputHandler"
+>
+  <cell label="尺寸" align="right">
+    <text>{{ sizeList[sizeIndex].name }}</text>
+    <text class="icon-dropdown" slot="suffix"></text>
+  </cell>
+</picker>
+
+<button
+  class="margin-bottom button button_block button-color_blue"
+  bindtap="buttonHandler"
+>生成二维码</button>
+
+<block wx:if="{{ tempFilePath }}">
+  <view
+    class="image margin-bottom"
+    style="background-image: url({{ tempFilePath }})"
+  ></view>
+
+  <view class="flex flex-gutter margin-bottom">
+    <view class="flex-sub">
+      <button
+        class="button button_block button-color_blue"
+        bindtap="save"
+      >保存二维码</button>
+    </view>
+    <view class="flex-sub">
+      <button
+        class="button button_block button-color_red"
+        bindtap="clear"
+      >清空</button>
+    </view>
+  </view>
+</block>
+
+<wordcard
+  title="{{ wordcard.title }}"
+  content="{{ wordcard.content }}"
+/>
+
+<view class="canvas">
+  <canvas class="canvas" canvas-id="canvas"></canvas>
+</view>

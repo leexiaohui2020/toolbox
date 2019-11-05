@@ -1,5 +1,8 @@
 import crypto from 'crypto'
+import qrcode from 'qrcode'
 export const CryptoJS = crypto
+export const Qrcode = qrcode
+
 export function copyText(data) {
   wx.setClipboardData({
     data,

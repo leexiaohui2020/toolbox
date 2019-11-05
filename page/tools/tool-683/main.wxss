@@ -1,0 +1,15 @@
+@import '../tool-670/main.wxss';
+.canvas {
+  top: 9999999rpx;
+  position: fixed;
+}
+.canvas > canvas {
+  width: 700px;
+  height: 700px;
+}
+
+.image {
+  width: 100%;
+  padding-top: 100%;
+  background-size: 100% 100%;
+}
