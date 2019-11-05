@@ -1,0 +1,37 @@
+<textarea
+  class="input margin-bottom"
+  value="{{ text1 }}"
+  placeholder="请输入明文"
+  data-key="text1"
+  bindinput="inputHandler"
+></textarea>
+
+<view class="flex flex-gutter margin-bottom">
+  <view class="flex-sub">
+    <button class="button button_block button-color_blue" bindtap="encode">Base64编码</button>
+  </view>
+  <view class="flex-sub">
+    <button class="button button_block button-color_blue" bindtap="decode">Base64解码</button>
+  </view>
+</view>
+
+<textarea
+  class="input margin-bottom"
+  value="{{ text2 }}"
+  placeholder="Base64"
+  disabled
+></textarea>
+
+<view class="flex flex-gutter margin-bottom">
+  <view class="flex-sub">
+    <button class="button button_block button-color_blue" bindtap="copy">复制</button>
+  </view>
+  <view class="flex-sub">
+    <button class="button button_block button-color_red" bindtap="clear">清空</button>
+  </view>
+</view>
+
+<wordcard
+  title="{{ wordcard.title }}"
+  content="{{ wordcard.content }}"
+/>
