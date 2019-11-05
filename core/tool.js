@@ -3,8 +3,25 @@ const tools = []
 
 function createTool(opts = {}) {
   const config = {}
+  const { methods = {} } = opts
 
+  delete opts.methods
   Object.assign(config, opts)
+
+  Object.keys(methods).forEach(key => {
+    const func = methods[key]
+    const funcType = getType(func)
+    if (funcType === 'Function') {
+      config[key] = function () {
+        return func.call(this)
+      }
+    } else if (funcType === 'AsyncFunction') {
+      config[key] = async function () {
+        return await func.call(this)
+      }
+    }
+  })
+  
   ensurePro(config, 'toolId', 'Number')
   ensurePro(config, 'toolName', 'String')
   ensurePro(config, 'toolCate', 'Array')
@@ -24,6 +41,11 @@ toolcate.forEach(item => {
 
 createTool.tools = tools
 createTool.cates = toolcate
+createTool.search = function(keyword) {
+  const re = RegExp(keyword)
+  return tools.filter(v => re.test(v.name))
+}
+
 App.createTool = createTool
 Page.createTool = createTool
 export default createTool

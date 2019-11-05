@@ -1,5 +1,3 @@
-import md5 from 'md5'
-
 Page.createTool({
 
   toolId: 657,
@@ -21,7 +19,7 @@ Page.createTool({
   },
 
   buttonHandler() {
-    const ciphertText = md5(this.data.originalText)
+    const ciphertText = App.$utils.CryptoJS.MD5(this.data.originalText).toString()
     this.setData({ ciphertText })
   }
 })
