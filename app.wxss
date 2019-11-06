@@ -8,6 +8,9 @@ page {
   --color-brown: #795548;
   font-size: 10pt;
 }
+.response {
+  width: 100%;
+}
 
 /* margin 外边距 */
 .margin {

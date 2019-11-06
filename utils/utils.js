@@ -39,21 +39,16 @@ export function chooseImageSecu(opts = {}) {
         const list = res.tempFilePaths.slice(0)
         const checkNext = (cb) => {
           if (list.length === 0) return cb()
-          fs.readFile({
-            encoding: 'base64',
-            filePath: list.shift(),
-            success: res => {
-              App.$api.security.image(`data:image/jpeg;base64,${res.data}`).then(({ data }) => {
-                if (data.status !== 'ok') {
-                  wx.hideLoading()
-                  wx.showToast({ title: data.errmsg })
-                  return reject(new Error(data.errmsg))
-                }
-                checkNext(cb)
-              }).catch(reject)
-            },
-            fail: reject
-          })
+          tempFilePathToBase64(list.shift()).then(img => {
+            App.$api.security.image(`data:image/jpeg;base64,${res.data}`).then(({ data }) => {
+              if (data.status !== 'ok') {
+                wx.hideLoading()
+                wx.showToast({ title: data.errmsg })
+                return reject(new Error(data.errmsg))
+              }
+              checkNext(cb)
+            }).catch(reject)
+          }).catch(reject)
         }
 
         wx.showLoading({ title: '安全检测中' })
@@ -63,5 +58,18 @@ export function chooseImageSecu(opts = {}) {
         })
       }
     }))
+  })
+}
+
+export function tempFilePathToBase64(filePath) {
+  return new Promise((resolve, reject) => {
+    wx.getFileSystemManager().readFile({
+      filePath,
+      encoding: 'base64',
+      fail: reject,
+      success: res => {
+        resolve(`data:image/jpeg;base64,${res.data}`)
+      }
+    })
   })
 }

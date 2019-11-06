@@ -1,0 +1,28 @@
+<image
+  class="response margin-bottom"
+  mode="widthFix"
+  src="{{ source }}"
+  wx:if="{{ source }}"
+></image>
+
+<button
+  class="margin-bottom button button_block button-color_blue"
+  bindtap="chooseImage"
+>选择图片</button>
+
+<block wx:if="{{ base64 }}">
+  <textarea
+    class="input margin-bottom"
+    value="{{ base64 }}"
+    maxlength="-1"
+    placeholder="Base64"
+    disabled
+  ></textarea>
+
+  <button
+    class="margin-bottom button button_block button-color_blue"
+    bindtap="copy"
+  >复制</button>
+</block>
+
+<view class="wordcard">图片的BASE64编码就是可以将一副图片数据编码成一串字符串，使用该字符串代替图像地址。</view>
