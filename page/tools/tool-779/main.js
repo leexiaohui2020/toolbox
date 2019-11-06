@@ -15,21 +15,20 @@ Page.createTool({
   },
 
   chooseImage() {
-    wx.chooseImage({
+    App.$utils.chooseImageSecu({
       count: 1,
-      success: res => {
-        const source = res.tempFilePaths[0]
-        wx.showLoading({ title: '图片处理中' })
-        this.cutImage(source, cutPaths => {
-          this.setData({
-            source,
-            cutPaths1: cutPaths.slice(0, 3),
-            cutPaths2: cutPaths.slice(3, 6),
-            cutPaths3: cutPaths.slice(6, 9),
-          })
-          wx.hideLoading()
-        }, e => console.info(e))
-      }
+    }).then(res => {
+      const source = res.tempFilePaths[0]
+      wx.showLoading({ title: '图片处理中' })
+      this.cutImage(source, cutPaths => {
+        this.setData({
+          source,
+          cutPaths1: cutPaths.slice(0, 3),
+          cutPaths2: cutPaths.slice(3, 6),
+          cutPaths3: cutPaths.slice(6, 9),
+        })
+        wx.hideLoading()
+      }, e => console.info(e))
     })
   },
 
