@@ -1,8 +1,8 @@
 Page.createTool({
 
   toolId: 682,
-  toolName: '图片转Base64',
-  toolCate: [105],
+  toolName: '图片转Base64编码',
+  toolCate: [100],
 
   data: {
     source: '',
