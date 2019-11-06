@@ -1,0 +1,19 @@
+<textarea
+  value="{{ result }}"
+  class="input margin-bottom"
+  placeholder="扫描结果"
+  maxlength="-1"
+  disabled
+></textarea>
+
+<cell
+  custom="margin-bottom"
+  label="识别类型"
+  align="right"
+  wx:if="{{ type }}"
+>{{ type }}</cell>
+
+<button
+  class="button button_block button-color_blue"
+  bindtap="buttonHandler"
+>扫码</button>
