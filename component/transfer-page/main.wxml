@@ -1,0 +1,21 @@
+<block wx:for="{{ data }}" wx:key="{{ index }}">
+  <cell label="{{ item.title }}({{ item.id }})" align="right">
+    <input
+      value="{{ item.value }}"
+      placeholder="请输入{{ item.title }}({{ item.id }})"
+      data-key="{{ index }}"
+      bindinput="inputHandler"
+    ></input>
+    <text
+      class="addon text-blue"
+      data-key="{{ index }}"
+      slot="suffix"
+      bindtap="actionHandler"
+    >换算</text>
+  </cell>
+</block>
+
+<button
+  class="margin button button_block button-color_red"
+  bindtap="clear"
+>清空</button>
