@@ -1,0 +1,116 @@
+<cell label="天" align="right">
+  <input
+    type="digit"
+    value="{{ day }}"
+    placeholder="请输入天"
+    data-key="day"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="day"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="小时" align="right">
+  <input
+    type="digit"
+    value="{{ hour }}"
+    placeholder="请输入小时"
+    data-key="hour"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="hour"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="周" align="right">
+  <input
+    type="digit"
+    value="{{ week }}"
+    placeholder="请输入周"
+    data-key="week"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="week"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="分" align="right">
+  <input
+    type="digit"
+    value="{{ min }}"
+    placeholder="请输入分"
+    data-key="min"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="min"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="秒" align="right">
+  <input
+    type="digit"
+    value="{{ sec }}"
+    placeholder="请输入秒"
+    data-key="sec"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="sec"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="毫秒" align="right">
+  <input
+    type="digit"
+    value="{{ ms }}"
+    placeholder="请输入毫秒"
+    data-key="ms"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="ms"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="年" align="right">
+  <input
+    type="digit"
+    value="{{ year }}"
+    placeholder="请输入年"
+    data-key="year"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="year"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<button
+  class="margin button button_block button-color_red"
+  bindtap="clear"
+>清空</button>
