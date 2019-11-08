@@ -9,5 +9,13 @@ export default (net, config) => {
     }
   })
 
+  modules.msg = (content) => net({
+    url: `${config.hostname}/weixin/msgSecCheck`,
+    method: 'POST',
+    data: {
+      content
+    }
+  })
+
   return modules
 }

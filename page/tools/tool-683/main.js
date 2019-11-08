@@ -29,19 +29,21 @@ Page.createTool({
   buttonHandler() {
     const { word, sizeIndex, sizeList } = this.data
     const { size } = sizeList[sizeIndex]
-    console.info(size)
-    App.$utils.Qrcode.api.draw(word, 'canvas', size, size)
-    wx.canvasToTempFilePath({
-      width: size,
-      height: size,
-      canvasId: 'canvas',
-      success: (res) => {
-        const { tempFilePath } = res
-        this.setData({ tempFilePath }, () => {
-          wx.pageScrollTo({ selector: '#sizepicker' })
-        })
-      }
-    })
+    const secCheckPass = () => {
+      App.$utils.Qrcode.api.draw(word, 'canvas', size, size)
+      wx.canvasToTempFilePath({
+        width: size,
+        height: size,
+        canvasId: 'canvas',
+        success: (res) => {
+          const { tempFilePath } = res
+          this.setData({ tempFilePath }, () => {
+            wx.pageScrollTo({ selector: '#sizepicker' })
+          })
+        }
+      })
+    }
+    App.$utils.msgSecCheck(word, secCheckPass)
   },
 
   clear() {

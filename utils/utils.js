@@ -73,3 +73,21 @@ export function tempFilePathToBase64(filePath) {
     })
   })
 }
+
+/** 检测对一段文本是否含有敏感内容 */
+export function msgSecCheck(content, callback) {
+  wx.showLoading({ title: '文本安全检测' })
+  return App.$api.security.msg(content).then(({ data }) => {
+    if (data.status !== 'ok') {
+      throw new Error(data.errmsg)
+    }
+    return callback()
+  }).catch(() => {
+    wx.showModal({
+      title: '提示',
+      content: '您输入的文本含有敏感词汇'
+    })
+  }).finally(() => {
+    wx.hideLoading()
+  })
+}
