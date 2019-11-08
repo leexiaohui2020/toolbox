@@ -30,7 +30,8 @@
     "page/tools/tool-654/main",
     "page/toolcate/main",
     "page/search/main",
-    "page/search/result/main"
+    "page/search/result/main",
+    "page/tools/tool-796/main"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196f3"
