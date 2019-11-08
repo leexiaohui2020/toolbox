@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "transfer-page": "/component/transfer-page/main"
+  },
+  "navigationBarTitleText": "电流换算"
+}

@@ -1,7 +1,8 @@
+<wxs src="main.wxs" module="tool" />
 <block wx:for="{{ data }}" wx:key="{{ index }}">
   <cell label="{{ item.title }}({{ item.id }})" align="right">
     <input
-      value="{{ item.value }}"
+      value="{{ tool.toFixed(item.value, 12) }}"
       placeholder="请输入{{ item.title }}({{ item.id }})"
       data-key="{{ index }}"
       bindinput="inputHandler"
