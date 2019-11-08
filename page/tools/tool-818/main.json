@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main"
+  },
+  "navigationBarTitleText": "必应(Bing)每日壁纸"
+}

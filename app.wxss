@@ -20,6 +20,9 @@ page {
 .margin-top {
   margin-top: 40rpx;
 }
+.margin-left {
+  margin-left: 30rpx;
+}
 .margin-bottom {
   margin-bottom: 40rpx;
 }

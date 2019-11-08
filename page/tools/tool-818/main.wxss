@@ -1,0 +1,8 @@
+page {
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+image {
+  max-height: 700rpx;
+}

@@ -1,0 +1,48 @@
+<image
+  class="response margin-bottom"
+  mode="aspectFit"
+  src="{{imgURL}}"
+  wx:if="{{imgURL}}"
+></image>
+
+<picker
+  mode="date"
+  end="{{ endDate }}"
+  value="{{ date }}"
+  data-key="date"
+  bindchange="inputHandler"
+  class="margin-bottom"
+>
+  <cell label="日期" align="right">
+    <text>{{ date }}</text>
+    <text class="margin-left icon-dropdown" slot="suffix"></text>
+  </cell>
+</picker>
+
+<picker
+  value="{{ sizeIndex }}"
+  range="{{ sizeList }}"
+  data-key="sizeIndex"
+  bindchange="inputHandler"
+  class="margin-bottom"
+>
+  <cell label="分辨率" align="right">
+    <text>{{ sizeList[sizeIndex] }}</text>
+    <text class="margin-left icon-dropdown" slot="suffix"></text>
+  </cell>
+</picker>
+
+<view class="flex flex-gutter">
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="getBingWallPaper"
+    >获取</button>
+  </view>
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="save"
+    >保存</button>
+  </view>
+</view>

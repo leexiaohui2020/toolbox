@@ -16,11 +16,11 @@ export function copyText(data) {
 }
 
 /** @param {Date} date */
-export function toLocaleDateString(date) {
+export function toLocaleDateString(date = new Date()) {
   const Y = date.getFullYear()
   const M = date.getMonth() + 1
   const D = date.getDate()
-  return [Y,M,D].join('-')
+  return [Y,M,D].map(v => v < 10 ? `0${v}` : v).join('-')
 }
 
 export function canvasToTempFilePathDelay(...args) {
@@ -89,5 +89,44 @@ export function msgSecCheck(content, callback) {
     })
   }).finally(() => {
     wx.hideLoading()
+  })
+}
+
+/**
+ * 保存图片到相册
+ * @param {String} filePath - 临时文件路径或永久文件路径 
+ */
+export function savePhoto(filePath) {
+  return new Promise((resolve, reject) => {
+    wx.saveImageToPhotosAlbum({
+      filePath,
+      success(res) {
+        resolve(res)
+      },
+      fail(e) {
+        wx.showModal({
+          title: '提示',
+          content: '图片保存失败'
+        })
+        reject(e)
+      }
+    })
+  })
+}
+
+/**
+ * 保存网络图片
+ */
+export function saveNetPhoto(src) {
+  return new Promise((resolve, reject) => {
+    wx.getImageInfo({
+      src,
+      success(res) {
+        savePhoto(res.path).then(resolve).catch(reject)
+      },
+      fail(e) {
+        reject(e)
+      }
+    })
   })
 }
