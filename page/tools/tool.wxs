@@ -1,0 +1,7 @@
+var modules = module.exports
+
+modules.toFixed = function (num, n) {
+  var temp = Math.pow(10, n)
+  if (!num) return ''
+  return Math.round(num * temp) / temp
+}

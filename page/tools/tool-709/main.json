@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell": "/component/cell/main"
+  },
+  "navigationBarTitleText": "力换算"
+}

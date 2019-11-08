@@ -1,0 +1,118 @@
+<wxs src="../tool.wxs" module="tool" />
+
+<cell label="千克力(kgf)" align="right">
+  <input
+    type="digit"
+    value="{{ tool.toFixed(kgf, 6) }}"
+    placeholder="请输入千克力(kgf)"
+    data-key="kgf"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="kgf"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="牛(N)" align="right">
+  <input
+    type="digit"
+    value="{{ tool.toFixed(n, 6) }}"
+    placeholder="请输入牛(N)"
+    data-key="n"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="n"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="千牛(kN)" align="right">
+  <input
+    type="digit"
+    value="{{ tool.toFixed(kn, 6) }}"
+    placeholder="请输入千牛(kN)"
+    data-key="kn"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="kn"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="克力(gf)" align="right">
+  <input
+    type="digit"
+    value="{{ tool.toFixed(gf, 6) }}"
+    placeholder="请输入克力(gf)"
+    data-key="gf"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="gf"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="磅力(lbf)" align="right">
+  <input
+    type="digit"
+    value="{{ tool.toFixed(lbf, 6) }}"
+    placeholder="请输入磅力(lbf)"
+    data-key="lbf"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="lbf"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="千磅力(kip)" align="right">
+  <input
+    type="digit"
+    value="{{ tool.toFixed(kip, 6) }}"
+    placeholder="请输入千磅力(kip)"
+    data-key="kip"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="kip"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<cell label="公吨力(tf)" align="right">
+  <input
+    type="digit"
+    value="{{ tool.toFixed(tf, 6) }}"
+    placeholder="请输入公吨力(tf)"
+    data-key="tf"
+    bindinput="inputHandler"
+  ></input>
+  <text
+    class="addon text-blue"
+    data-key="tf"
+    bindtap="actionHandler"
+    slot="suffix"
+  >换算</text>
+</cell>
+
+<button
+  class="margin button button_block button-color_red"
+  bindtap="clear"
+>清空</button>
