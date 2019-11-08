@@ -7,6 +7,7 @@ Page.createTool({
     imgURL: '',
     date: '',
     endDate: '',
+    startDate: '2016-03-12',
     sizeList: [
       '1920x1080',
       '1280x768',
@@ -26,6 +27,7 @@ Page.createTool({
 
   onLoad() {
     const date = App.$utils.toLocaleDateString()
+    const now = new Date()
     this.setData({
       date,
       endDate: date
