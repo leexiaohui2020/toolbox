@@ -1,7 +1,9 @@
 {
   "pages": [
     "page/home/main",
+    "page/tools/tool-796/main",
     "page/tools/tool-795/main",
+    "page/tools/tool-794/main",
     "page/tools/tool-779/main",
     "page/tools/tool-725/main",
     "page/tools/tool-717/main",
@@ -30,8 +32,7 @@
     "page/tools/tool-654/main",
     "page/toolcate/main",
     "page/search/main",
-    "page/search/result/main",
-    "page/tools/tool-796/main"
+    "page/search/result/main"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196f3"
