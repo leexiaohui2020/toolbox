@@ -2,5 +2,5 @@
   "usingComponents": {
     "gif-page": "/component/gif-page/main"
   },
-  "navigationBarTitleText": "表情包生成器之不可能打工"
+  "navigationBarTitleText": "表情包生成器之谁赞成谁反对"
 }
