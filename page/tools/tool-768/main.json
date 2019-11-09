@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "gif-page": "/component/gif-page/main"
+  },
+  "navigationBarTitleText": "表情包生成器之曾小贤答题"
+}
