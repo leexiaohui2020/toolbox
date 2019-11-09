@@ -7,5 +7,13 @@ export default (net, config) => {
     })
   }
 
+  modules.createGif = (id, input) => net({
+    url: `${config.hostname}/proxy/createGif`,
+    method: 'POST',
+    data: {
+      id,
+      input: input.join('%25%23')
+    }
+  })
   return modules
 }

@@ -5,3 +5,5 @@ import 'core/tool'
 App({})
 App.$api = api
 App.$utils = utils
+
+console.info(this)

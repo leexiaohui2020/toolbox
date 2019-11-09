@@ -1,0 +1,32 @@
+<image
+  mode="widthFix"
+  src="{{ gifURL }}"
+  wx:if="{{ gifURL }}"
+  class="response margin-bottom"
+></image>
+
+<view class="margin-bottom" wx:for="{{ placeholders }}" wx:key="{{ index }}">
+  <cell label="第 {{ index + 1 }} 句" align="right">
+    <input
+      value="{{ values[index] }}"
+      placeholder="{{ item }}"
+      data-key="{{ index }}"
+      bindinput="inputHandler"
+    ></input>
+  </cell>
+</view>
+
+<view class="flex flex-gutter">
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="buttonHandler"
+    >生成表情包</button>
+  </view>
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_green"
+      bindtap="save"
+    >保存</button>
+  </view>
+</view>
