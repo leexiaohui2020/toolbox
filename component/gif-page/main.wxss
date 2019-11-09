@@ -2,3 +2,7 @@ page {
   box-sizing: border-box;
   padding: 30rpx;
 }
+
+.image {
+  height: 392rpx;
+}

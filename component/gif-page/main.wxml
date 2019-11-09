@@ -2,7 +2,7 @@
   mode="widthFix"
   src="{{ gifURL }}"
   wx:if="{{ gifURL }}"
-  class="response margin-bottom"
+  class="image response margin-bottom"
 ></image>
 
 <view class="margin-bottom" wx:for="{{ placeholders }}" wx:key="{{ index }}">

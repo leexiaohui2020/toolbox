@@ -6,8 +6,8 @@ Component({
 
   properties: {
 
-    id: {
-      type: String,
+    gifId: {
+      type: Number,
       value: ''
     },
 
@@ -23,6 +23,7 @@ Component({
   },
 
   attached() {
+    console.info(this.data)
     this.buttonHandler()
   },
 
@@ -34,12 +35,13 @@ Component({
     },
 
     buttonHandler() {
-      const { values, placeholders } = this.data
+      const { gifId, values, placeholders } = this.data
       const input = Array(placeholders.length).fill(0).map((v, k) => {
         return values[k] || placeholders[k]
       })
       wx.showLoading({ title: '动图生成中' })
-      App.$api.proxy.createGif(2, input).then(({ data }) => {
+      console.info()
+      App.$api.proxy.createGif(gifId, input).then(({ data }) => {
         if (data.status === 'ok') {
           const gifURL = data.data.path
           this.setData({ gifURL })
