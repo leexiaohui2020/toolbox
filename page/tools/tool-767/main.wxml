@@ -1,1 +1,1 @@
-<gif-page id="2" placeholders="{{ placeholders }}" />
+<gif-page gif-id="2" placeholders="{{ placeholders }}" />
