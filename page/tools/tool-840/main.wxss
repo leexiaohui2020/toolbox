@@ -1,0 +1,63 @@
+.clock {
+  height: 100vh;
+  color: #fff;
+  background: #365DA3;
+  font-size: 6pt;
+  position: relative;
+}
+.clock::before {
+  --size: 20rpx;
+  content: '';
+  top: calc(50% - var(--size) / 2);
+  left: calc(50% - var(--size) / 2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: var(--color-red);
+  position: absolute;
+}
+.clock::after {
+  content: '';
+  top: 50%;
+  right: 15rpx;
+  width: 360rpx;
+  height: 1px;
+  background: var(--color-red);
+  position: absolute;
+}
+
+.clock-pan {
+  top: calc(50% - var(--size) / 2);
+  left: calc(50% - var(--size) / 2);
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+}
+.clock-pan_sec {
+  --size: 720rpx;
+}
+.clock-pan_min {
+  --size: 520rpx;
+}
+.clock-pan_hour {
+  --size: 340rpx;
+}
+
+.clock-pan > view {
+  --h: 20rpx;
+  left: 0;
+  top: calc(50% - var(--h)/2);
+  width: 100%;
+  height: var(--h);
+  line-height: var(--h);
+  position: absolute;
+  text-align: right;
+}
+
+.close-year {
+  font-size: 12pt;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 100rpx;
+}

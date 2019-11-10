@@ -40,7 +40,6 @@ Component({
         return values[k] || placeholders[k]
       })
       wx.showLoading({ title: '动图生成中' })
-      console.info()
       App.$api.proxy.createGif(gifId, input).then(({ data }) => {
         if (data.status === 'ok') {
           const gifURL = data.data.path

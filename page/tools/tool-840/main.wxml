@@ -1,0 +1,36 @@
+<view class="clock">
+  <view
+    class="clock-pan clock-pan_sec"
+    style="transform: rotate({{ sec }}deg);{{ sec ? 'transition: all .3s' : '' }}"
+  >
+    <view
+      wx:for="{{ secMap }}"
+      wx:key="{{ index }}"
+      style="transform: rotate(-{{ 6 * index }}deg)"
+    >{{ item }}</view>
+  </view>
+
+  <view
+    class="clock-pan clock-pan_min"
+    style="transform: rotate({{ min }}deg);{{ min ? 'transition: all .3s' : '' }}"
+  >
+    <view
+      wx:for="{{ minMap }}"
+      wx:key="{{ index }}"
+      style="transform: rotate(-{{ 6 * index }}deg)"
+    >{{ item }}</view>
+  </view>
+
+  <view
+    class="clock-pan clock-pan_hour;{{ hour ? 'transition: all .3s' : '' }}"
+    style="transform: rotate({{ hour }}deg)"
+  >
+    <view
+      wx:for="{{ hourMap }}"
+      wx:key="{{ index }}"
+      style="transform: rotate(-{{ 15 * index }}deg)"
+    >{{ item }}</view>
+  </view>
+
+  <view class="close-year">{{ dateStr }}</view>
+</view>
