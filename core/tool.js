@@ -26,6 +26,14 @@ function createTool(opts = {}) {
   ensurePro(config, 'toolName', 'String')
   ensurePro(config, 'toolCate', 'Array')
   pushToTools(config.toolId, config.toolName, config.toolCate)
+
+  config.onShareAppMessage = function() {
+    return {
+      title: `${this.toolName} - Toolplus`,
+      path: `/page/tool/tool-${this.toolId}/main`,
+      imageUrl: '/img/share.png'
+    }
+  }
   return Page(config)
 }
 
