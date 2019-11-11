@@ -1,6 +1,7 @@
 {
   "pages": [
     "page/home/main",
+    "page/tools/tool-841/main",
     "page/tools/tool-840/main",
     "page/tools/tool-818/main",
     "page/tools/tool-803/main",

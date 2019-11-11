@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "avatar-page": "/component/avatar-page/main"
+  },
+  "navigationBarTitleText": "万圣节头像生成器",
+  "navigationBarBackgroundColor": "#3D3D3D"
+}
