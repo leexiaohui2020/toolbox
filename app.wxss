@@ -26,6 +26,9 @@ page {
 .margin-bottom {
   margin-bottom: 40rpx;
 }
+.margin-bottom-sm {
+  margin-bottom: 20rpx;
+}
 .margin-left-xs {
   margin-left: 10rpx;
 }

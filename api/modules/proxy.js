@@ -15,5 +15,7 @@ export default (net, config) => {
       input: input.join('%25%23')
     }
   })
+
+  modules.getImage = (path) => `${config.hostname}/public/image/${path}`
   return modules
 }

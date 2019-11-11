@@ -1,0 +1,117 @@
+.box {
+  color: #FFF;
+  background-color: #3D3D3D;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  padding: 60rpx 30rpx;
+  background-color: #505050;
+}
+.footer-image_list {
+  --h: 120rpx;
+  height: var(--h);
+  white-space: nowrap;
+}
+.footer-image_item {
+  width: var(--h);
+  height: var(--h);
+  box-sizing: border-box;
+  padding: 20rpx;
+  background-color: #FFF;
+  border-radius: 10rpx;
+}
+.footer-image_item +
+.footer-image_item {
+  margin-left: 30rpx;
+}
+.footer-image_item.selected {
+  background-color: var(--color-orange);
+}
+
+.workspace {
+  --w: 260px;
+  width: var(--w);
+  height: var(--w);
+  position: relative;
+}
+.workspace-avatar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.workspace-hat {
+  --size: 100px;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  border: 2px dashed var(--color-orange);
+}
+.workspace-handler {
+  --size: 20px;
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--color-green);
+}
+
+.canvas {
+  top: 9999px;
+  left: 9999px;
+  width: 0;
+  height: 0;
+  position: fixed;
+}
+
+.dialog-cover {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: rgba(0, 0, 0, .6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dialog {
+  width: 600rpx;
+  background: #FFF;
+  border-radius: 8rpx;
+  box-shadow: 0 0 2rpx rgba(0, 0, 0, .15);
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.dialog-header {
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid #D5D5D5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dialog-header > .title {
+  font-size: 12pt;
+  font-weight: bold;
+}
+.dialog-header > .close {
+  font-size: 8pt;
+  color: #aaa;
+}
+.dialog-container,
+.dialog-footer {
+  padding: 30rpx 0;
+}

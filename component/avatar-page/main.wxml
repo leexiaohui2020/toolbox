@@ -1,0 +1,106 @@
+<view class="box">
+  <view class="container">
+    <view
+      class="workspace"
+      wx:if="{{ avatarURL }}"
+      bindtouchstart="onTouchStart"
+      bindtouchmove="onTouchMove"
+      bindtouchend="onTouchEnd"
+    >
+      <image
+        class="workspace-avatar"
+        src="{{ avatarURL }}"
+        mode="aspectFit"
+      ></image>
+
+      <image
+        class="workspace-hat"
+        src="{{ imgList[imgIndex] }}"
+        mode="aspectFit"
+        style="left: {{centerX - 52}}px;top:{{centerY - 52}}px;transform:rotate({{rotate}}deg) scale({{scale}})"
+        data-id="hat"
+      ></image>
+      <view
+        class="workspace-handler"
+        style="left: {{handleX - 10}}px;top:{{handleY - 10}}px"
+        data-id="handle"
+      ></view>
+    </view>
+  </view>
+
+  <view class="footer">
+    <scroll-view
+      class="footer-image_list margin-bottom"
+      scroll-into-view="img{{ scrollIndex }}"
+      scroll-with-animation
+      scroll-x
+    >
+      <image
+        id="img{{ index }}"
+        class="footer-image_item {{ imgIndex === index ? 'selected' : '' }}"
+        wx:for="{{ imgList }}"
+        wx:key="{{ index }}"
+        src="{{ item }}"
+        mode="aspectFit"
+        data-index="{{ index }}"
+        bindtap="selectImage"
+      ></image>
+    </scroll-view>
+
+    <view class="flex flex-gutter-lg margin-bottom-sm">
+      <view class="flex-sub">
+        <button
+          class="button button_block button-color_blue"
+          bindtap="chooseImage"
+        >选择图片</button>
+      </view>
+      <view class="flex-sub">
+        <button
+          open-type="getUserInfo"
+          class="button button_block button-color_blue"
+          bindgetuserinfo="getWeiXinAvatar"
+        >使用微信头像</button>
+      </view>
+    </view>
+
+    <view class="flex flex-gutter-lg">
+      <view class="flex-sub">
+        <button
+          class="button button_block button-color_blue"
+          bindtap="randomChange"
+        >随机换</button>
+      </view>
+      <view class="flex-sub">
+        <button
+          class="button button_block button-color_green"
+          bindtap="generate"
+        >生成头像</button>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="canvas">
+  <canvas
+    canvas-id="canvas"
+    style="width:260px;height:260px"
+  ></canvas>
+</view>
+
+<view class="dialog-cover" wx:if="{{ result }}">
+  <view class="dialog">
+    <view class="dialog-header">
+      <view class="title">生成效果</view>
+      <view class="close" bindtap="closeDialog">关闭</view>
+    </view>
+    <view class="dialog-container">
+      <image class="response" src="{{result}}" mode="widthFix"></image>
+    </view>
+    <view class="dialog-footer">
+      <button
+        class="button button_block button-color_blue"
+        bindtap="saveResult"
+      >保存到相册</button>
+    </view>
+  </view>
+</view>
