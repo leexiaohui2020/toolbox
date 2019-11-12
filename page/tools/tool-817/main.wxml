@@ -1,0 +1,30 @@
+<image
+  class="response"
+  mode="widthFix"
+  src="{{ coverURL }}"
+  wx:if="{{ coverURL }}"
+></image>
+
+<cell custom="margin-bottom" label="AV号" align="right">
+  <input
+    value="{{ avNumber }}"
+    placeholder="请输入AV号"
+    data-key="avNumber"
+    bindinput="inputHandler"
+  ></input>
+</cell>
+
+<view class="flex flex-gutter-lg">
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="getCoverURL"
+    >获取</button>
+  </view>
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="save"
+    >保存</button>
+  </view>
+</view>

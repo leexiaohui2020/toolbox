@@ -17,5 +17,12 @@ export default (net, config) => {
   })
 
   modules.getImage = (path) => `${config.hostname}/public/image/${path}`
+  modules.getBilibiliCoverURL = (avNumber) => net({
+    url: `${config.hostname}/proxy/getBilibiliAvCover`,
+    method: 'POST',
+    data: {
+      avNumber
+    }
+  })
   return modules
 }

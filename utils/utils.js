@@ -131,8 +131,24 @@ export function saveNetPhoto(src) {
   })
 }
 
-
 /** 计算两点间距离 */
 export function computeDistance(x1, y1, x2, y2) {
   return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2))
+}
+
+/** 保存base64格式图片 */
+export function base64ToTempFilePath(data, etx) {
+  return new Promise((resolve, reject) => {
+    const fs = wx.getFileSystemManager()
+    const filePath = `${wx.env.USER_DATA_PATH}/base64ToTempFilePath.${etx}`
+    fs.writeFile({
+      data,
+      filePath,
+      encoding: 'base64',
+      success() {
+        resolve(filePath)
+      },
+      fail: reject
+    })
+  })
 }
