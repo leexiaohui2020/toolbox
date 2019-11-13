@@ -1,6 +1,10 @@
 {
   "pages": [
     "page/home/main",
+    "page/mine/main",
+    "page/search/main",
+    "page/search/result/main",
+    "page/toolcate/main",
     "page/tools/tool-841/main",
     "page/tools/tool-840/main",
     "page/tools/tool-818/main",
@@ -41,13 +45,29 @@
     "page/tools/tool-657/main",
     "page/tools/tool-656/main",
     "page/tools/tool-655/main",
-    "page/tools/tool-654/main",
-    "page/toolcate/main",
-    "page/search/main",
-    "page/search/result/main"
+    "page/tools/tool-654/main"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196f3"
+  },
+  "tabBar": {
+    "color": "#aaa",
+    "selectedColor": "#2196f3",
+    "backgroundColor": "FFF",
+    "list": [
+      {
+        "text": "工具箱",
+        "pagePath": "page/home/main",
+        "iconPath": "img/tabbar/home.png",
+        "selectedIconPath": "img/tabbar/home-select.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "page/mine/main",
+        "iconPath": "img/tabbar/mine.png",
+        "selectedIconPath": "img/tabbar/mine-select.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

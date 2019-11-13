@@ -60,3 +60,12 @@
 .icon-search::before {
   content: '\e611';
 }
+.icon-more::before {
+  content: '\e612';
+}
+.icon-sync::before {
+  content: '\e613';
+}
+.icon-history::before {
+  content: '\e614';
+}

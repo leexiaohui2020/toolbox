@@ -152,3 +152,17 @@ export function base64ToTempFilePath(data, etx) {
     })
   })
 }
+
+export function computedData(obj, opts) {
+  const options = {}, state = obj.$state = {}
+  Object.keys(opts).forEach(key => {
+    options[key] = {
+      get() {
+        return new Promise((resolve, reject) => {
+          opts[key].call(obj, state, resolve, reject)
+        })
+      }
+    }
+  })
+  Object.defineProperties(obj, options)
+}

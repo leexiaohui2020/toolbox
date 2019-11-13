@@ -6,7 +6,11 @@ Page({
 
   onLoad(opts) {
     const { id } = opts
-    this.getToolList(id)
+    if (id === 'logs') {
+      this.getToolLogs()
+    } else {
+      this.getToolList(id)
+    }
   },
 
   getToolList(id) {
@@ -17,6 +21,12 @@ Page({
       this.setData({ list })
       wx.setNavigationBarTitle({ title })
     }
+  },
+
+  getToolLogs() {
+    const list = App.createTool.getLogs()
+    this.setData({ list })
+    wx.setNavigationBarTitle({ title: '使用记录' })
   },
 
   toolTapHandler(e) {

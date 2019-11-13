@@ -1,0 +1,20 @@
+<block wx:if="{{ init }}">
+  <view class="user">
+    <image
+      mode="widthFix"
+      class="user-avatar"
+      src="{{ userInfo.avatarUrl }}"
+    ></image>
+    <view class="user-name">{{ userInfo.nickName }}</view>
+    <button
+      class="user-action"
+      open-type="getUserInfo"
+      bindgetuserinfo="onGotUserInfo"
+    >(点击更新头像、昵称)</button>
+  </view>
+
+  <cell label-hide bindtap="linkToolLogs">
+    <view>使用记录</view>
+    <view class="icon-arrow-right" slot="suffix"></view>
+  </cell>
+</block>

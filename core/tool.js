@@ -1,4 +1,5 @@
 import toolcate from 'toolcate'
+import * as logs from 'toollogs'
 const tools = []
 
 function createTool(opts = {}) {
@@ -34,6 +35,17 @@ function createTool(opts = {}) {
       imageUrl: '/img/share.png'
     }
   }
+
+  config.onLoad = function(opts) {
+    logs.add({
+      id: this.toolId,
+      name: this.toolName,
+      cate: this.toolCate
+    })
+    if (typeof opts.onLoad === 'function') {
+      opts.onLoad.call(this, opts)
+    }
+  }
   return Page(config)
 }
 
@@ -52,6 +64,9 @@ createTool.cates = toolcate
 createTool.search = function(keyword) {
   const re = RegExp(keyword)
   return tools.filter(v => re.test(v.name))
+}
+createTool.getLogs = function() {
+  return logs.getLogs()
 }
 
 App.createTool = createTool

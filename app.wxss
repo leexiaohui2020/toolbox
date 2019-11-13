@@ -23,6 +23,9 @@ page {
 .margin-left {
   margin-left: 30rpx;
 }
+.margin-right {
+  margin-right: 30rpx;
+}
 .margin-bottom {
   margin-bottom: 40rpx;
 }
