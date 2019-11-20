@@ -46,7 +46,6 @@ Component({
         if (!storeHistory.findOne({ no })) {
           storeHistory.addOne(detail, true)
         }
-        console.info(detail)
         this.setData({ detail, isLiked })
         this.triggerEvent('init', { no })
       }
@@ -80,7 +79,7 @@ Component({
     },
 
     updatePause() {
-      const pause = this.$audio.manager.paused
+      const pause = !!this.$audio.manager.paused
       this.setData({ pause })
     },
 

@@ -1,7 +1,7 @@
 <view class="comment" wx:if="{{ list.length }}">
   <view class="comment-header">精彩评论</view>
   <view class="comment-content">
-    <view class="comment-item" wx:for="{{ list }}" wx:key="{{ index }}">
+    <view class="comment-item" wx:for="{{ list }}" wx:key="nickName">
       <image
         class="comment-item_avatar"
         src="{{ item.avatarUrl }}"
