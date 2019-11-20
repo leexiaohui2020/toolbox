@@ -71,7 +71,7 @@ Component({
       }
 
       wx.showLoading({ title: '加载中' })
-      return App.$api.yudans.getDetail(songId)
+      return App.$api.yudans.getDetail(+songId)
         .then(onGotDetail)
         .then(onGotPicture)
         .then(onGotMp3)

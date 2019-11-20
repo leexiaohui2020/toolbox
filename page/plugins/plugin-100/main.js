@@ -41,7 +41,7 @@ Page({
   onShareAppMessage() {
     const { detail } = this.player.data
     const title = `【钢琴纯音乐】${detail.author} - ${detail.title}`
-    const path = `/page/plugins/plugin-00/main?no=${detail.no}`
+    const path = `/page/plugins/plugin-100/main?no=${detail.no}`
     const imageUrl = detail.pictureURL
     return { path, title, imageUrl }
   },
@@ -66,9 +66,14 @@ Page({
   },
 
   searchModalInitHandler() {
+    const { no } = this.options
+    if (no) {
+      return this.player.init(no)
+    }
+
     const song = storeHistory.findOne() || this.search.data.list[0]
     if (song) {
-      this.player.init(song.no)
+      this.player.init(this.options.no || song.no)
     }
   },
   playSong(e) {
