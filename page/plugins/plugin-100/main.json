@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "song": "component/song/main",
+    "player": "component/player/main",
+    "search": "component/search/main",
+    "bounce": "component/bounce/main",
+    "comment": "component/comment/main",
+    "drawer": "/component/base/drawer/main"
+  },
+  "navigationBarTitleText": "纯音乐频道",
+  "navigationBarBackgroundColor": "#222222"
+}

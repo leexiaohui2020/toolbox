@@ -1,3 +1,0 @@
-<view class="alert alert-type_{{ type }} custom">
-  <slot />
-</view>

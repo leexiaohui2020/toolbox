@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "song": "../song/main",
+    "drawer": "/component/base/drawer/main"
+  }
+}

@@ -2,6 +2,7 @@
   "pages": [
     "page/home/main",
     "page/mine/main",
+    "page/plugin/main",
     "page/search/main",
     "page/search/result/main",
     "page/toolcate/main",
@@ -45,7 +46,8 @@
     "page/tools/tool-657/main",
     "page/tools/tool-656/main",
     "page/tools/tool-655/main",
-    "page/tools/tool-654/main"
+    "page/tools/tool-654/main",
+    "page/plugins/plugin-100/main"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196f3"
@@ -62,6 +64,12 @@
         "selectedIconPath": "img/tabbar/home-select.png"
       },
       {
+        "text": "插件中心",
+        "pagePath": "page/plugin/main",
+        "iconPath": "img/tabbar/plugin.png",
+        "selectedIconPath": "img/tabbar/plugin-select.png"
+      },
+      {
         "text": "我的",
         "pagePath": "page/mine/main",
         "iconPath": "img/tabbar/mine.png",
@@ -69,5 +77,8 @@
       }
     ]
   },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
   "sitemapLocation": "sitemap.json"
 }

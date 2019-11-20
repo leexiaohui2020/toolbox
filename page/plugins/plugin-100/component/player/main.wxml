@@ -1,0 +1,28 @@
+<wxs src="main.wxs" module="local" />
+
+<block wx:if="{{ detail }}">
+  <view class="info">
+    <text class="info-author">{{ detail.author }}</text>
+    <text class="info-title">{{ detail.title }}</text>
+    <view class="info-type">
+      <text>{{ detail.type }}</text>
+    </view>
+  </view>
+
+  <image
+    mode="widthFix"
+    src="{{ detail.pictureURL }}"
+    class="table {{ pause ? '' : 'table-rotate' }}"
+  ></image>
+
+  <view class="action-group">
+    <view class="action icon-prev" data-role="prev" bindtap="onPrev"></view>
+    <view class="action icon-{{ pause ? 'play' : 'pause' }}" bindtap="toggleHandler"></view>
+    <view class="action icon-next" data-role="next" bindtap="onNext"></view>
+  </view>
+
+  <view class="btn-group">
+    <button class="btn icon-{{ isLiked ? 'likefill' : 'like' }}" bindtap="toggleLike">收藏</button>
+    <button class="btn icon-open" open-type="share">分享</button>
+  </view>
+</block>

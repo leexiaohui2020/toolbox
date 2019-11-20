@@ -1,0 +1,10 @@
+<cell
+  wx:for="{{ plugins }}"
+  wx:key="id"
+  link="{{ item.path }}"
+  label-hide
+>
+  <image class="plugin-image" src="{{ item.image }}" mode="widthFix" slot="prefix"></image>
+  <view>{{ item.name }}</view>
+  <view class="icon-arrow-right" slot="suffix"></view>
+</cell>

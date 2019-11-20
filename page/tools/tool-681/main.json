@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "wordcard": "/component/wordcard/main"
+    "wordcard": "/component/base/wordcard/main"
   },
   "navigationBarTitleText": "BASE64编码解码"
 }

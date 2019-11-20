@@ -1,0 +1,28 @@
+.modal {
+  background-color: #222;
+}
+
+.modal-search {
+  --h: 40rpx;
+  padding: 30rpx;
+  background: #333;
+  display: flex;
+  align-items: center;
+}
+.modal-search_icon {
+  width: var(--h);
+  height: var(--h);
+  text-align: center;
+  line-height: var(--h);
+  margin-right: 30rpx;
+}
+.modal-search_input {
+  height: var(--h);
+  line-height: var(--h);
+}
+.modal-scroll {
+  height: calc(100% - 100rpx);
+}
+.song-cover {
+  padding: 20rpx;
+}

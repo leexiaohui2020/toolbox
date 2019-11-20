@@ -1,0 +1,9 @@
+<wxs src="main.wxs" module="local" />
+<view class="drawer-cover drawer-state_{{ show }}" catchtap="close">
+  <view
+    class="drawer drawer-direction_{{ direction }}"
+    style="{{ local.drawerStyle(width, height, round, direction) }}"
+    bindtransitionend="onTransitionEnd"
+    catchtap="catchDrawerTap"
+  ><slot /></view>
+</view>

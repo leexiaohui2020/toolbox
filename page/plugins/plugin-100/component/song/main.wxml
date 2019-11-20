@@ -1,0 +1,24 @@
+<view class="song {{ currentNo === data.no ? 'active' : '' }}" catchtap="tapHandler">
+  <image
+    class="song-picture"
+    src="{{ data.pictureURL || pictureURL }}"
+    mode="aspectFit"
+    lazy-load
+  ></image>
+
+  <view class="song-info">
+    <rich-text nodes="<div class='song-info_title'>{{ data.titleHtml || data.title }}</div>"></rich-text>
+    <view class="song-info_author">
+      <rich-text
+        style="display: inline-block"
+        nodes="<div class='author'>{{ data.authorHtml || data.author }}</div>"
+      ></rich-text>
+      <text class="song-info_type">{{ data.type }}</text>
+    </view>
+  </view>
+
+  <view class="song-extra">
+    <view class="song-extra_action icon-like{{ isLiked ? 'fill text-theme' : '' }}" catchtap="toggleLiked"></view>
+    <view class="song-extra_action icon-remove" catchtap="removeHistory" wx:if="{{ showRemove }}"></view>
+  </view>
+</view>

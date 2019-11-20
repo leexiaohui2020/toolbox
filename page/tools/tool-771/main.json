@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "gif-page": "/component/gif-page/main"
+    "gif-page": "/component/service/gif-page/main"
   },
   "navigationBarTitleText": "表情包生成器之为所欲为"
 }

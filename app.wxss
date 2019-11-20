@@ -39,6 +39,11 @@ page {
   margin-right: 10rpx;
 }
 
+/* padding 内边距 */
+.padding {
+  padding: 30rpx;
+}
+
 /* button 按钮 */
 .button {
   --h: 100rpx;

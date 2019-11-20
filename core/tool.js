@@ -36,14 +36,14 @@ function createTool(opts = {}) {
     }
   }
 
-  config.onLoad = function(opts) {
+  config.onLoad = function(...args) {
     logs.add({
       id: this.toolId,
       name: this.toolName,
       cate: this.toolCate
     })
     if (typeof opts.onLoad === 'function') {
-      opts.onLoad.call(this, opts)
+      opts.onLoad.call(this, ...args)
     }
   }
   return Page(config)

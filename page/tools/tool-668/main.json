@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "cell": "/component/cell/main"
+    "cell": "/component/base/cell/main"
   },
   "navigationBarTitleText": "颜色值RGB/HEX转换"
 }

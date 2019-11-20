@@ -1,0 +1,14 @@
+<drawer id="drawer" custom="modal" direction="bottom" round>
+  <view class="modal-header">
+    <view class="modal-header_action"></view>
+    <view class="modal-header_content">
+      <text class="modal-header_title" wx:if="{{ title }}">{{ title }}</text>
+      <slot name="title" wx:else />
+    </view>
+    <view class="modal-header_action"></view>
+  </view>
+
+  <scroll-view class="modal-content custom-content" scroll-y>
+    <slot />
+  </scroll-view>
+</drawer>

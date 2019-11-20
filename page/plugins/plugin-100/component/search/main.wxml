@@ -1,0 +1,26 @@
+<drawer id="drawer" custom="modal">
+  <view class="modal-search">
+    <view class="modal-search_icon icon-search"></view>
+    <input
+      value="{{ keyword }}"
+      class="modal-search_input"
+      placeholder="查找歌手/歌曲名"
+      data-key="keyword"
+      bindinput="inputHandler"
+      bindconfirm="searchInputEnterHandler"
+      confirm-type="search"
+    ></input>
+  </view>
+
+  <scroll-view class="modal-scroll" scroll-y="true" bindscrolltolower="scrollHandler">
+    <view class="song-cover">
+      <song
+        wx:for="{{ list }}"
+        wx:key="no"
+        data="{{ item }}"
+        current-no="{{ currentNo }}"
+        bind:ontap="songTapHandler"
+      ></song>
+    </view>
+  </scroll-view>
+</drawer>

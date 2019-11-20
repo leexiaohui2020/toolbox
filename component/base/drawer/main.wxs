@@ -1,0 +1,38 @@
+var modules = module.exports
+
+modules.drawerStyle = function(width, height, round, direction) {
+  var isTop = direction === 'top'
+  var isLeft = direction === 'left'
+  var isRight = direction === 'right'
+  var isBottom = direction === 'bottom'
+  var style = {}
+
+  if (isTop || isBottom) {
+    style.left = 0
+    style.height = height
+  } else if(isLeft || isRight) {
+    style.top = 0
+    style.width = width
+  }
+
+  if (round) {
+    style['border-radius'] = isTop ?
+      '0 0 20rpx 20rpx' : isLeft ?
+      '0 20rpx 20rpx 0' : isRight ?
+      '20rpx 0 0 20rpx' : isBottom ?
+      '20rpx 20rpx 0 0' : null
+  }
+
+  isTop && (style.top = 0)
+  isLeft && (style.left = 0)
+  isRight && (style.right = 0)
+  isBottom && (style.bottom = 0)
+
+  var str = ''
+  var keys = ['width', 'height', 'top', 'left', 'bottom', 'right', 'border-radius']
+  keys.forEach(function(key) {
+    if (style[key] === undefined) return
+    str += key + ':' + style[key] + ';'
+  })
+  return str
+}

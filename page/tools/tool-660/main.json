@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "wordcard": "/component/wordcard/main"
+    "wordcard": "/component/base/wordcard/main"
   },
   "navigationBarTitleText": "UUID生成"
 }

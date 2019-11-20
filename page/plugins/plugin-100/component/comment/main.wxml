@@ -1,0 +1,20 @@
+<view class="comment" wx:if="{{ list.length }}">
+  <view class="comment-header">精彩评论</view>
+  <view class="comment-content">
+    <view class="comment-item" wx:for="{{ list }}" wx:key="{{ index }}">
+      <image
+        class="comment-item_avatar"
+        src="{{ item.avatarUrl }}"
+        mode="widthFix"
+        lazy-load
+        binderror="imageErrorHandler"
+      ></image>
+
+      <view class="comment-item_main">
+        <view class="comment-item_name">{{ item.nickName }}</view>
+        <rich-text class="comment-item_content" nodes="{{ item.content }}"></rich-text>
+      </view>
+    </view>
+  </view>
+  <view class="comment-loadend" wx:if="{{ loadEnd }}">- 到底了 -</view>
+</view>

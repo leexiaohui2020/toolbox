@@ -1,7 +1,17 @@
-import crypto from 'crypto'
-import qrcode from 'qrcode'
-export const CryptoJS = crypto
-export const Qrcode = qrcode
+import _Crypto from 'crypto'
+import _Qrcode from 'qrcode'
+import Storage from 'storage'
+import Audio from 'audio'
+export const CryptoJS = _Crypto
+export const Qrcode = _Qrcode
+
+export function createStorage(namespace, options) {
+  return new Storage(namespace, options)
+}
+
+export function createAudio(...args) {
+  return new Audio(...args)
+}
 
 export function copyText(data) {
   wx.setClipboardData({

@@ -1,0 +1,31 @@
+.modal {
+  background: #222;
+}
+.modal-header {
+  --h: 120rpx;
+  height: var(--h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #333;
+}
+.modal-header_action {
+  height: var(--h);
+  display: flex;
+  align-items: center;
+}
+.modal-header_content {
+  flex: 1;
+  width: 0;
+  height: var(--h);
+  margin: 0 30rpx;
+}
+.modal-header_title {
+  line-height: var(--h);
+}
+
+.modal-content {
+  width: 100%;
+  height: calc(100% - 122rpx);
+  box-sizing: border-box;
+}

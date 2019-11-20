@@ -1,0 +1,6 @@
+.plugin-image {
+  --w: 60rpx;
+  width: var(--w);
+  height: var(--w);
+  margin-right: 30rpx;
+}

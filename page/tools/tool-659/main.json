@@ -1,7 +1,7 @@
 {
   "usingComponents": {
-    "cell": "/component/cell/main",
-    "alert": "/component/alert/main"
+    "cell": "/component/base/cell/main",
+    "alert": "/component/base/alert/main"
   },
   "navigationBarTitleText": "金额数字转大写"
 }

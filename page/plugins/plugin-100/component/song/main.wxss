@@ -1,0 +1,68 @@
+.text-theme {
+  color: #ffcd32;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+  position: relative;
+}
+.song.active {
+  color: var(--color-theme);
+}
+.song-picture {
+  --size: 100rpx;
+  width: var(--size);
+  height: var(--size);
+  margin-right: 30rpx;
+  flex-shrink: 0;
+}
+
+.song-info {
+  flex: 1;
+  width: 0;
+  flex-shrink: 1;
+}
+.song-info_title {
+  margin-bottom: 10rpx;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.song-info_author {
+  font-size: 8pt;
+  display: flex;
+  align-items: center;
+}
+.author {
+  max-width: 200rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.song-info_type {
+  opacity: .7;
+}
+.song-info_type::before {
+  content: '-';
+  margin: 0 10rpx;
+}
+
+.song-extra {
+  margin-left: 30rpx;
+  display: flex;
+  align-items: center;
+  flex-shrink: 1;
+  color: #fff;
+}
+.song-extra_action {
+  --w: 60rpx;
+  width: var(--w);
+  height: var(--w);
+  line-height: var(--w);
+  text-align: center;
+  cursor: pointer;
+}

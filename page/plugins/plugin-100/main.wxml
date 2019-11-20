@@ -1,0 +1,81 @@
+<player id="player" bind:init="onPlayerInit" />
+<search
+  id="search"
+  current-no="{{ currentPlayNo }}"
+  bind:init="searchModalInitHandler"
+  bind:tapsong="playSong"
+/>
+<comment id="comment" no="{{ currentPlayNo }}" />
+
+<!-- Fixed Buttons -->
+<view class="fixed">
+  <button
+    class="btn btn-round icon-search"
+    bindtap="openSearch"
+  ></button>
+
+  <button
+    class="btn btn-round icon-like"
+    bindtap="openLikeBounce"
+  ></button>
+  
+  <button
+    class="btn btn-round icon-history"
+    bindtap="openHistoryBounce"
+  ></button>
+</view>
+
+<!-- Like Bounce -->
+<bounce
+  id="likebounce"
+  title="我的收藏({{ likes.length }})"
+  custom-content="padding"
+>
+  <block wx:if="{{ likes.length }}">
+    <song
+      wx:for="{{ likes }}"
+      wx:key="no"
+      data="{{ item }}"
+      current-no="{{ currentPlayNo }}"
+      bind:ontap="playSong"
+    />
+  </block>
+
+  <view class="default" wx:else>
+    <view class="default-icon">
+      <text class="icon-emptybox"></text>
+    </view>
+    <view class="default-label">
+      <text>点击</text>
+      <button class="btn btn-round icon-like"></button>
+      <text>收藏喜欢的纯音乐</text>
+    </view>
+  </view>
+</bounce>
+
+<!-- History Bounce -->
+<bounce
+  id="historybounce"
+  title="最近播放({{ history.length }})"
+  custom-content="padding"
+>
+  <block wx:if="{{ history.length }}">
+    <song
+      wx:for="{{ history }}"
+      wx:key="no"
+      data="{{ item }}"
+      current-no="{{ currentPlayNo }}"
+      show-remove
+      bind:ontap="playSong"
+    />
+  </block>
+
+  <view class="default" wx:else>
+    <view class="default-icon">
+      <text class="icon-emptybox"></text>
+    </view>
+    <view class="default-label">
+      <text>没有播放记录</text>
+    </view>
+  </view>
+</bounce>

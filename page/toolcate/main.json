@@ -1,5 +1,5 @@
 {
   "usingComponents": {
-    "cell": "/component/cell/main"
+    "cell": "/component/base/cell/main"
   }
 }

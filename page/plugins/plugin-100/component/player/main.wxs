@@ -1,0 +1,8 @@
+var modules = module.exports
+
+modules.duration = function(tm) {
+  if (!tm) return '--'
+  var min = Math.floor(tm / 60)
+  var sec = tm % min
+  return min + ':' + sec
+}

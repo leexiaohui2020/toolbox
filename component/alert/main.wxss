@@ -1,8 +1,0 @@
-.alert {
-  padding: 30rpx;
-  font-size: 9pt;
-}
-.alert-type_error {
-  color: #FFF;
-  background: #f44336;
-}

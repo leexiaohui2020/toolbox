@@ -1,0 +1,78 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.table {
+  --width: 300rpx;
+  --margin: calc(345rpx - var(--width) / 2);
+  width: var(--width);
+  height: var(--width);
+  margin: 50rpx var(--margin);
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: rotate 12s infinite linear;
+  animation-play-state: paused;
+}
+.table.table-rotate {
+  animation-play-state: running;
+}
+
+.info {
+  --h: 60rpx;
+  text-align: center;
+  font-size: 12pt;
+}
+.info-author::after {
+  content: '-';
+  margin: 0 10rpx;
+}
+.info-type {
+  font-size: 10pt;
+  margin: 20rpx 0;
+}
+
+.action-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40rpx;
+}
+.action {
+  --w: 70rpx;
+  width: var(--w);
+  height: var(--w);
+  text-align: center;
+  line-height: var(--w);
+  border: 2rpx solid #FFF;
+  border-radius: 50%;
+}
+.action + .action {
+  margin-left: var(--w);
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40rpx;
+  margin-top: 80rpx;
+}
+.btn {
+  --h: 80rpx;
+  width: calc(3 * var(--h));
+  height: var(--h);
+  line-height: var(--h);
+  background: transparent;
+  color: var(--color-theme);
+  border: 2rpx solid var(--color-theme);
+  border-radius: var(--h);
+  font-size: 10pt;
+  padding: 0;
+}
