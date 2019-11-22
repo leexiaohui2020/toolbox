@@ -1,0 +1,28 @@
+<block wx:if="{{ init }}">
+  <view class="detail">
+    <view class="detail-left">
+      <image class="detail-pic" src="{{ detail.pictureUrl }}" mode="widthFix"></image>
+      <view class="detail-score">{{ detail.score }}</view>
+    </view>
+
+    <view class="detail-content">
+      <view class="detail-title">{{ detail.title }}</view>
+      <view class="detail-author">{{ detail.author }}</view>
+      <view class="detail-desc">{{ detail.content }}</view>
+    </view>
+  </view>
+
+  <view class="bar">读者点评</view>
+  <view class="comments">
+    <comment wx:for="{{ comment }}" wx:key="Id" data="{{ item }}" />
+  </view>
+
+  <view class="fixed">
+    <button
+      class="btn btn-round icon-menu"
+      bindtap="openDirectory"
+    ></button>
+  </view>
+
+  <directory id="directory" list="{{ chapter }}" mid="{{ mid }}" />
+</block>

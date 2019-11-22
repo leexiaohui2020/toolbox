@@ -1,0 +1,32 @@
+<drawer
+  id="drawer"
+  width="450rpx"
+  custom="modal"
+  direction="right"
+>
+  <view class="modal-header">筛选</view>
+  <view class="modal-group" wx:for="{{ filter }}" wx:key="id">
+    <view class="modal-group-title">{{ item.title }}</view>
+    <view class="modal-list">
+      <view
+        class="modal-item {{ value[item.id] == 0 ? 'selected' : '' }}"
+        data-id="0"
+        data-key="{{ item.id }}"
+        bindtap="selectHandler"
+      >全部</view>
+      <view class="modal-item {{ value[item.id] == v.id ? 'selected' : '' }}"
+        wx:for="{{ item.group }}"
+        wx:key="id"
+        wx:for-item="v"
+        data-id="{{ v.id }}"
+        data-key="{{ item.id }}"
+        bindtap="selectHandler"
+      >{{ v.title }}</view>
+    </view>
+  </view>
+
+  <view class="modal-footer">
+    <button class="modal-footer-btn reset" bindtap="reset">重置</button>
+    <button class="modal-footer-btn" bindtap="confirm">确定</button>
+  </view>
+</drawer>

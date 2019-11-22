@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "catebar": "component/catebar/main",
+    "sortbar": "component/sortbar/main",
+    "cartoon": "component/cartoon/main",
+    "bounce": "component/bounce/main",
+    "filter-modal": "component/filter-modal/main"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarBackgroundColor": "#FD113A",
+  "navigationBarTitleText": "漫画频道"
+}

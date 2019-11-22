@@ -1,0 +1,19 @@
+<view class="comment {{ quote ? 'quote' : '' }}">
+  <image class="comment-avatar" src="{{ data.HeadUrl }}" mode="widthFix"></image>
+  <view class="comment-container">
+      <view class="comment-header">{{ data.Poster }}</view>
+      <view class="comment-quote" wx:if="{{ data.ToPostShowDataItems }}">
+        <block wx:for="{{ data.ToPostShowDataItems }}" wx:key="Id">
+          <comment data="{{ item }}" quote></comment>
+        </block>
+      </view>
+      <view class="comment-content">{{ data.PostContent }}</view>
+      <view class="comment-footer">
+        <view class="comment-time">{{ data.PostTime }}</view>
+        <view class="comment-support">
+          <text class="icon-likefill"></text>
+          <text>{{ data.PraiseCount }}</text>
+        </view>
+      </view>
+  </view>
+</view>

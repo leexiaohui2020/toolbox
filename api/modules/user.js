@@ -11,9 +11,6 @@ export default (net, config) => {
   modules.setUserInfo = data => net({
     url: getURL('/api/user/setUserInfo'),
     method: 'POST',
-    header: {
-      Cookie: App.$data.$state.cookie
-    },
     data
   })
   return modules

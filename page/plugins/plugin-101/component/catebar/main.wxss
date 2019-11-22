@@ -1,0 +1,32 @@
+.cates {
+  --h: 80rpx;
+  height: var(--h);
+  background: #FFF;
+  box-shadow: 0 2rpx 2rpx rgba(0, 0, 0, .15);
+  padding: 0 20rpx;
+  display: flex;
+}
+.cates-label {
+  line-height: var(--h);
+  padding-right: 20rpx;
+}
+.cates-scroll {
+  flex: 1;
+  width: 0;
+  height: var(--h);
+  white-space: nowrap;
+}
+.cates-item {
+  --w: 100rpx;
+  height: var(--h);
+  min-width: var(--w);
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  text-align: center;
+  line-height: var(--h);
+  display: inline-block;
+}
+.cates-item.selected {
+  color: var(--color-theme);
+  border-bottom: 4rpx solid var(--color-theme);
+}

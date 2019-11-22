@@ -1,0 +1,17 @@
+page {
+  --color-theme: #FD113A;
+}
+
+.container {
+  height: calc(100vh - 160rpx);
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15rpx;
+}
+.item {
+  width: 50%;
+  box-sizing: border-box;
+  padding: 15rpx;
+}

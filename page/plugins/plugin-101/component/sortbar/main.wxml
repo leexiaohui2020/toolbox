@@ -1,0 +1,14 @@
+<view class="sortor">
+  <view
+    class="sortor-item {{ selectId === item.id ? 'selected' : '' }}"
+    wx:for="{{ sortor }}"
+    wx:key="id"
+    data-id="{{ item.id }}"
+    bindtap="selectHandler"
+  >
+    <text>{{ item.title }}</text>
+    <text class="icon-dropdown"></text>
+  </view>
+
+  <view class="sortor-action" bindtap="filterHandler">筛选</view>
+</view>

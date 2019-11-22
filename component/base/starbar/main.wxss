@@ -1,0 +1,7 @@
+.starbar {
+  display: flex;
+  align-items: center;
+}
+.star.icon-starfill {
+  color: var(--color-orange);
+}

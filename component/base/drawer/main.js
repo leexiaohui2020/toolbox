@@ -1,5 +1,9 @@
 Component({
 
+  externalClasses: [
+    'custom'
+  ],
+
   properties: {
 
     width: {

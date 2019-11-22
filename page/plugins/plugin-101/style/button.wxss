@@ -1,0 +1,27 @@
+.btn {
+  --h: 80rpx;
+  width: calc(3 * var(--h));
+  height: var(--h);
+  line-height: var(--h);
+  background: transparent;
+  color: var(--color-theme);
+  border: 2rpx solid var(--color-theme);
+  border-radius: var(--h);
+  font-size: 10pt;
+  padding: 0;
+  display: inline-block;
+}
+.btn::after {
+  display: none;
+}
+.btn-round {
+  width: var(--h);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 14pt;
+  font-weight: bold;
+  background: var(--color-theme);
+  color: #FFF;
+  box-shadow: 0 0 2rpx rgba(255,255,255,.15);
+  position: relative;
+}

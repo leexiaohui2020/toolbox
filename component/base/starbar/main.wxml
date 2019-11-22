@@ -1,0 +1,8 @@
+<view class="starbar custom">
+  <view
+    class="star {{ item.icon }}"
+    style="font-size: {{ size }}"
+    wx:for="{{ list }}"
+    wx:key="id">
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "drawer": "/component/base/drawer/main",
+    "starbar": "/component/base/starbar/main"
+  }
+}

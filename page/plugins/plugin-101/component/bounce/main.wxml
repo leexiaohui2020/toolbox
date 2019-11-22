@@ -1,0 +1,36 @@
+<wxs src="main.wxs" module="local" />
+<drawer
+  id="drawer"
+  height="auto"
+  custom="modal"
+  direction="bottom"
+  round
+>
+  <block wx:if="{{ cartoon }}">
+    <image class="modal-cover" src="{{ cartoon.ShowConver }}" mode="widthFix"></image>
+    <view class="modal-container">
+      <view class="modal-header">
+        <view class="modal-header_title">{{ cartoon.Title }}</view>
+        <view class="modal-header_star">
+          <starbar total="5" star="{{ cartoon.Star }}" size="12pt" />
+        </view>
+      </view>
+
+      <view class="modal-control">
+        <view class="modal-control_label">作者</view>
+        <view class="modal-control_value">{{ local.author(cartoon.Author) }}</view>
+      </view>
+      <view class="modal-control">
+        <view class="modal-control_label">最新</view>
+        <view class="modal-control_value">{{ cartoon.ShowLastPartName }}</view>
+      </view>
+
+      <view class="modal-desc">{{ cartoon.Content }}</view>
+
+      <button
+        class="button button_block button-color_theme"
+        bindtap="buttonHandler"
+      >开始阅读</button>
+    </view>
+  </block>
+</drawer>

@@ -1,0 +1,26 @@
+<block wx:if="{{ init }}">
+  <catebar cates="{{ cates }}" bind:select="onSelectCate" />
+
+  <sortbar
+    sortor="{{ sortor }}"
+    select-id="{{ sortor[1].id }}"
+    bind:select="onSelectSort"
+    bind:filter="openFilterModal"
+  />
+
+  <filter-modal
+    id="filter"
+    filter="{{ filter }}"
+    bind:confirm="onFilterConfirm"
+  />
+
+  <scroll-view class="container" scroll-y bindscrolltolower="onScrollBottom">
+    <view class="list">
+      <view class="item" wx:for="{{ list }}" wx:key="ID">
+        <cartoon data="{{ item }}" bind:ontap="openBounce" />
+      </view>
+    </view>
+  </scroll-view>
+
+  <bounce id="bounce" bind:read="openCartoonDetail" />
+</block>

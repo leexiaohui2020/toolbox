@@ -1,0 +1,5 @@
+var modules = module.exports
+
+modules.author = function(author) {
+  return author.join('/')
+}

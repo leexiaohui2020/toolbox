@@ -1,0 +1,16 @@
+<drawer id="drawer" custom="modal">
+  <view class="modal-header">目录</view>
+  <scroll-view class="modal-scroll" scroll-y>
+    <view class="modal-list">
+      <view
+        class="modal-item {{ selected === item.link ? 'selected' : '' }}"
+        wx:for="{{ list }}"
+        wx:key="link"
+        data-link="{{ item.link }}"
+        bindtap="selectHandler"
+      >
+        <text>{{ item.title }}</text>
+      </view>
+    </view>
+  </scroll-view>
+</drawer>

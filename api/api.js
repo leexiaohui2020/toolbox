@@ -1,4 +1,5 @@
 import config from 'api.config'
+import Cookie from 'cookie'
 
 export default new Proxy({}, {
   get(target, key) {
@@ -10,7 +11,18 @@ export default new Proxy({}, {
 })
 
 function request(opts = {}) {
-  return new Promise((success, fail) => {
-    wx.request(Object.assign(opts, { success, fail }))
+  return new Promise((resolve, fail) => {
+    const header = Object.assign({}, opts.headers, {
+      Cookie: Cookie.get()
+    })
+    opts.header = header
+    wx.request(Object.assign(opts, {
+      success(res) {
+        if (res.cookies) {
+          Cookie.set(res.cookies)
+        }
+        resolve(res)
+      }, fail
+    }))
   })
 }

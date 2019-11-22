@@ -1,0 +1,17 @@
+<view class="cates">
+  <scroll-view class="cates-scroll" scroll-x>
+    <view
+      class="cates-item {{ selectId === 0 ? 'selected' : '' }}"
+      data-id="0"
+      bindtap="selectHandler"
+    >全部</view>
+
+    <view
+      class="cates-item {{ selectId === item.id ? 'selected' : '' }}"
+      data-id="{{ item.id }}"
+      wx:for="{{ cates }}"
+      wx:key="id"
+      bindtap="selectHandler"
+    >{{ item.title }}</view>
+  </scroll-view>
+</view>

@@ -100,3 +100,15 @@
 .icon-remove::before {
   content: '\e61e';
 }
+.icon-starfill::before {
+  content: '\e61f';
+}
+.icon-starhalf::before {
+  content: '\e620';
+}
+.icon-star::before {
+  content: '\e621';
+}
+.icon-menu::before {
+  content: '\e622';
+}

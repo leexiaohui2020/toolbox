@@ -1,0 +1,45 @@
+.modal {
+  overflow: hidden;
+  background: #FFF;
+}
+.modal-cover {
+  width: 100%;
+}
+.modal-container {
+  padding: 30rpx;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.modal-header_title {
+  font-size: 12pt;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.modal-control {
+  display: flex;
+  line-height: 40rpx;
+}
+.modal-control_label {
+  width: 100rpx;
+}
+.modal-control_value {
+  flex: 1;
+  width: 0;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+.modal-desc {
+  color: #666;
+  margin: 30rpx 0;
+  text-align: justify;
+}

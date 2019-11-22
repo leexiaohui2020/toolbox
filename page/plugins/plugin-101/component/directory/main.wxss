@@ -1,0 +1,29 @@
+.modal {
+  background: #FFF;
+}
+.modal-header {
+  --h: 80rpx;
+  height: var(--h);
+  line-height: var(--h);
+  padding: 0 30rpx;
+  font-weight: bold;
+}
+.modal-scroll {
+  height: calc(100% - 80rpx);
+}
+.modal-list {
+  padding: 0 30rpx;
+}
+.modal-item {
+  --h: 100rpx;
+  height: var(--h);
+  line-height: var(--h);
+  cursor: pointer;
+  border-bottom: 2rpx solid #E5E5E5;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.modal-item.selected {
+  color: var(--color-theme);
+}

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "drawer": "/component/base/drawer/main",
+    "directory": "../component/directory/main"
+  },
+  "navigationBarBackgroundColor": "#FD113A",
+  "navigationBarTitleText": "漫画频道"
+}

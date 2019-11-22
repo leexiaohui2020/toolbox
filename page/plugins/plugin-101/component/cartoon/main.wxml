@@ -1,0 +1,21 @@
+<view class="cartoon" bindtap="tapHandler">
+  <image
+    src="{{ data.ShowPicUrlB }}"
+    mode="widthFix"
+    class="cartoon-pic"
+    hidden="{{ !loaded }}"
+    bindload="onImageLoad"
+  ></image>
+
+  <view class="cartoon-title">{{ data.Title }}</view>
+  <view class="cartoon-star">
+    <view class="cartoon-star_label">评分：</view>
+    <view class="cartoon-star_bar">
+      <starbar total="5" star="{{ data.Star }}" />
+    </view>
+  </view>
+  <view class="cartoon-new">
+    <view class="cartoon-new_label">最新：</view>
+    <view class="cartoon-new_title">{{ data.ShowLastPartName }}</view>
+  </view>
+</view>

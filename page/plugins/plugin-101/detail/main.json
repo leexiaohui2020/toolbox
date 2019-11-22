@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "comment": "../component/comment/main",
+    "directory": "../component/directory/main"
+  },
+  "navigationBarBackgroundColor": "#FD113A",
+  "navigationBarTitleText": "漫画详细"
+}

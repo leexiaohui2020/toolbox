@@ -1,0 +1,33 @@
+.sortor {
+  --h: 80rpx;
+  height: var(--h);
+  background: #FFF;
+  box-shadow: 0 2rpx 2rpx rgba(0, 0, 0, .15);
+  display: flex;
+}
+.sortor-item {
+  flex: 1;
+  width: 0;
+  height: var(--h);
+  text-align: center;
+  line-height: var(--h);
+}
+.sortor-item.selected {
+  color: var(--color-theme);
+}
+.sortor-action {
+  height: var(--h);
+  line-height: var(--h);
+  padding: 0 30rpx;
+  position: relative;
+  cursor: pointer;
+}
+.sortor-action::before {
+  content: '';
+  top: 30%;
+  left: 0;
+  width: 4rpx;
+  height: 40%;
+  position: absolute;
+  background: #D5D5D5;
+}

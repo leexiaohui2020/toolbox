@@ -47,7 +47,10 @@
     "page/tools/tool-656/main",
     "page/tools/tool-655/main",
     "page/tools/tool-654/main",
-    "page/plugins/plugin-100/main"
+    "page/plugins/plugin-100/main",
+    "page/plugins/plugin-101/main",
+    "page/plugins/plugin-101/pager/main",
+    "page/plugins/plugin-101/detail/main"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196f3"
@@ -68,12 +71,6 @@
         "pagePath": "page/plugin/main",
         "iconPath": "img/tabbar/plugin.png",
         "selectedIconPath": "img/tabbar/plugin-select.png"
-      },
-      {
-        "text": "我的",
-        "pagePath": "page/mine/main",
-        "iconPath": "img/tabbar/mine.png",
-        "selectedIconPath": "img/tabbar/mine-select.png"
       }
     ]
   },
