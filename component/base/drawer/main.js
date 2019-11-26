@@ -1,7 +1,8 @@
 Component({
 
   externalClasses: [
-    'custom'
+    'custom',
+    'custom-cover'
   ],
 
   properties: {

@@ -1,0 +1,23 @@
+.search {
+  background: var(--color-theme);
+  padding: 20rpx 30rpx;
+}
+.search-bar {
+  --h: 80rpx;
+  height: var(--h);
+  display: flex;
+  align-items: center;
+  background: #FFF;
+  padding: 0 30rpx;
+  border-radius: 4rpx;
+}
+.search-prefix {
+  margin-right: 30rpx;
+}
+.search-input {
+  flex: 1;
+}
+.search-action {
+  margin-left: 30rpx;
+  color: var(--color-theme);
+}

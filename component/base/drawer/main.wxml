@@ -1,5 +1,5 @@
 <wxs src="main.wxs" module="local" />
-<view class="drawer-cover drawer-state_{{ show }}" catchtap="close">
+<view class="drawer-cover drawer-state_{{ show }} custom-cover" catchtap="close">
   <view
     class="drawer drawer-direction_{{ direction }} custom"
     style="{{ local.drawerStyle(width, height, round, direction) }}"

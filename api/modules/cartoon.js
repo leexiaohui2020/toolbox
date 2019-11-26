@@ -1,42 +1,33 @@
-export default (net, config) => {
-  const modules = {}
-  const getURL = path => `${config.hostname}${path}`
+export function getOptions() {
+  return this.request.post(this.getURL('/cartoon/getOptions'))
+}
 
-  modules.getOptions = () => net({
-    url: getURL('/cartoon/getOptions'),
-    method: 'POST'
-  })
+export function getList(data) {
+  return this.request.post(this.getURL('/cartoon/getList'), data)
+}
 
-  modules.getList = data => net({
-    url: getURL('/cartoon/getList'),
-    method: 'POST',
-    data
-  })
+export function getUrlKey(mid) {
+  return this.request.post(this.getURL('/cartoon/getUrlKey'), { mid })
+}
 
-  modules.getUrlKey = mid => net({
-    url: getURL('/cartoon/getUrlKey'),
-    method: 'POST',
-    data: { mid }
-  })
+export function getChapter(mid) {
+  return this.request.post(this.getURL('/cartoon/getChapter'), { mid })
+}
 
-  modules.getChapter = mid => net({
-    url: getURL('/cartoon/getChapter'),
-    method: 'POST',
-    data: { mid }
-  })
-  
-  modules.getComment = data => net({
-    url: getURL('/cartoon/getComment'),
-    method: 'POST',
-    data
-  })
+export function getComment(data) {
+  return this.request.post(this.getURL('/cartoon/getComment'), data)
+}
 
-  modules.getPaper = data => net({
-    url: getURL('/cartoon/getPaper'),
-    method: 'POST',
-    data
-  })
+export function getPaper(data) {
+  return this.request.post(this.getURL('/cartoon/getPaper'), data)
+}
 
-  modules.getImage = (url, ua) => getURL(`/cartoon/getImage?url=${encodeURIComponent(url)}&userAgent=${encodeURIComponent(ua)}`)
-  return modules
+export function getSearch(data) {
+  return this.request.post(this.getURL('/cartoon/getSearch'), data)
+}
+
+export function getImage(url, ua) {
+  const eUa = encodeURIComponent(ua)
+  const eUrl = encodeURIComponent(url)
+  return this.getURL(`/cartoon/getImage?url=${eUrl}&userAgent=${eUa}`)
 }

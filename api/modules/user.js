@@ -1,17 +1,7 @@
-export default (net, config) => {
-  const modules = {}
-  const getURL = path => `${config.hostname}${path}`
+export function login(code) {
+  return this.request.post(this.getURL('/api/user/login'), { code })
+}
 
-  modules.login = code => net({
-    url: getURL('/api/user/login'),
-    method: 'POST',
-    data: { code }
-  })
-  
-  modules.setUserInfo = data => net({
-    url: getURL('/api/user/setUserInfo'),
-    method: 'POST',
-    data
-  })
-  return modules
+export function setUserInfo(data) {
+  return this.request.post(this.getURL('/api/user/setUserInfo'), data)
 }

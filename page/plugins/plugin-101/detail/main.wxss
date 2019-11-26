@@ -24,6 +24,7 @@ page {
 
 .detail-pic {
   width: 100%;
+  height: auto;
   margin-bottom: 20rpx;
 }
 .detail-score {
@@ -54,18 +55,6 @@ page {
   -webkit-line-clamp: 4;
   overflow: hidden;
   text-align: justify;
-}
-
-.fixed {
-  right: 20rpx;
-  bottom: 5%;
-  position: fixed;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-}
-.fixed > .btn + .btn {
-  margin-top: 20rpx;
 }
 
 .bar {

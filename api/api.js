@@ -1,28 +1,20 @@
-import config from 'api.config'
-import Cookie from 'cookie'
+import * as config from 'api.config'
+import request from 'libs/request'
 
 export default new Proxy({}, {
   get(target, key) {
+
     if (!target[key]) {
-      target[key] = require(`./modules/${key}`).default(request, config)
+      const modules = {}
+      const parts = require(`./modules/${key}`)
+      const getURL = url => `${config.hostname}${url}`
+      Object.keys(parts).forEach(key => {
+        if (typeof parts[key] !== 'function') return
+        modules[key] = parts[key].bind({ getURL, request, config })
+      })
+      target[key] = modules
     }
+
     return target[key]
   }
 })
-
-function request(opts = {}) {
-  return new Promise((resolve, fail) => {
-    const header = Object.assign({}, opts.headers, {
-      Cookie: Cookie.get()
-    })
-    opts.header = header
-    wx.request(Object.assign(opts, {
-      success(res) {
-        if (res.cookies) {
-          Cookie.set(res.cookies)
-        }
-        resolve(res)
-      }, fail
-    }))
-  })
-}

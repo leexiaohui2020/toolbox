@@ -1,21 +1,7 @@
-export default (net, config) => {
-  const modules = {}
+export function image(img) {
+  return this.request.post(this.getURL('/weixin/imgSecCheck'), { img })
+}
 
-  modules.image = (img) => net({
-    url: `${config.hostname}/weixin/imgSecCheck`,
-    method: 'POST',
-    data: {
-      img
-    }
-  })
-
-  modules.msg = (content) => net({
-    url: `${config.hostname}/weixin/msgSecCheck`,
-    method: 'POST',
-    data: {
-      content
-    }
-  })
-
-  return modules
+export function msg(content) {
+  return this.request.post(this.getURL('/weixin/msgSecCheck'), { content })
 }

@@ -1,31 +1,19 @@
-export default (net, config) => {
-  const modules = {}
-  const getURL = path => `${config.hostname}${path}`
+export function getList(data) {
+  return this.request.post(this.getURL('/yudans/list'), data)
+}
 
-  modules.getList = (data) => net({
-    url: getURL('/yudans/list'),
-    method: 'POST',
-    data
-  })
+export function getDetail(no) {
+  return this.request.post(this.getURL('/yudans/detail'), { no })
+}
 
-  modules.getDetail = no => net({
-    url: getURL('/yudans/detail'),
-    method: 'POST',
-    data: { no }
-  })
+export function getComment(data) {
+  return this.request.post(this.getURL('/yudans/comment'), data)
+}
 
-  modules.getComment = (data) => net({
-    url: getURL('/yudans/comment'),
-    method: 'POST',
-    data
-  })
-  
-  modules.getPic = id => net({
-    url: getURL(`/yudans/pic/${id}`)
-  })
+export function getPic(id) {
+  return this.request.get(this.getURL(`/yudans/pic/${id}`))
+}
 
-  modules.getMp3 = id => net({
-    url: getURL(`/yudans/mp3/${id}`)
-  })
-  return modules
+export function getMp3(id) {
+  return this.request.get(this.getURL(`/yudans/mp3/${id}`))
 }

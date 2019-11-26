@@ -1,3 +1,5 @@
+import { storeHistory } from 'store'
+
 Page({
 
   data: {
@@ -13,7 +15,8 @@ Page({
       usergroup: 0
     },
     list: [],
-    loadEnd: false
+    loadEnd: false,
+    keyword: ''
   },
 
   onLoad() {
@@ -24,6 +27,11 @@ Page({
       this.setData({ init: true })
       this.bounce = this.selectComponent('#bounce')
       this.filterModal = this.selectComponent('#filter')
+      this.logModal = this.selectComponent('#log-modal')
+
+      wx.nextTick(() => {
+        this.openLogModal()
+      })
     }).finally(() => {
       wx.hideLoading()
     })
@@ -52,9 +60,23 @@ Page({
   },
 
   async getList(page, pagesize, cover = false) {
-    const reqBody = Object.assign({ page, pagesize }, this.data.body)
-    const { data } = await App.$api.cartoon.getList(reqBody)
-    if (data.status === 'ok') {
+    if (this.data.keyword) {
+      const { keyword } = this.data
+      const { data } = await App.$api.cartoon.search({ page, keyword })
+      if (data.status !== 'ok') return
+      const dataObj = {}
+      dataObj.list = cover ? data.data.list : this.data.list.concat(data.data.list)
+      dataObj.loadEnd = data.data.countPage <= data.data.page
+      this.page = data.data.page
+      this.setData(dataObj, () => {
+        if (data.data.bounce) {
+          this.bounce.open(data.data.bounce)
+        }
+      })
+    } else {
+      const reqBody = Object.assign({ page, pagesize }, this.data.body)
+      const { data } = await App.$api.cartoon.getList(reqBody)
+      if (data.status !== 'ok') return
       const dataObj = {}
       dataObj.list = cover ? data.data.UpdateComicItems : this.data.list.concat(data.data.UpdateComicItems)
       dataObj.loadEnd = data.data.Count <= dataObj.list.length
@@ -116,5 +138,17 @@ Page({
     const { urlkey, mid } = e.detail
     const url = `./detail/main?mid=${mid}&urlkey=${urlkey}`
     wx.navigateTo({ url })
+  },
+
+  searchConfirmHandler(e) {
+    const keyword = e.detail.value
+    this.setData({ list: [], keyword }, () => {
+      this.refreshList()
+    })
+  },
+
+  openLogModal() {
+    const item = storeHistory.lastRead
+    item && this.logModal.open(item)
   }
 })

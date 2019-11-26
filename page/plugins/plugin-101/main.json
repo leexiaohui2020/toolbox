@@ -2,8 +2,10 @@
   "usingComponents": {
     "catebar": "component/catebar/main",
     "sortbar": "component/sortbar/main",
+    "searchbar": "component/searchbar/main",
     "cartoon": "component/cartoon/main",
     "bounce": "component/bounce/main",
+    "log-modal": "component/log-modal/main",
     "filter-modal": "component/filter-modal/main"
   },
   "enablePullDownRefresh": true,

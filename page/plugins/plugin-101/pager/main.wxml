@@ -14,6 +14,7 @@
         class="swiper-image"
         src="{{ item }}"
         mode="widthFix"
+        lazy-load
       ></image>
     </swiper-item>
   </swiper>

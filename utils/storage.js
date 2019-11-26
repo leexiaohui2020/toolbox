@@ -30,11 +30,17 @@ class Storage {
   }
 
   add(datas = [], before = false) {
+    const copyDatas = JSON.parse(JSON.stringify(datas)).map(item => {
+      item._createTime = new Date()
+      item._updateTime = new Date()
+      return item
+    })
+
     this[CACHE_KEY] = before ?
-      datas.concat(this[CACHE_KEY]) :
-      this[CACHE_KEY].concat(datas)
+      copyDatas.concat(this[CACHE_KEY]) :
+      this[CACHE_KEY].concat(copyDatas)
     this.save()
-    return datas.map(v => itemFactory(v, this, this[METHOD_KEY]))
+    return copyDatas.map(v => itemFactory(v, this, this[METHOD_KEY]))
   }
 
   find(query = {}) {
@@ -65,7 +71,7 @@ class Storage {
   }
 
   addOne(data, before = false) {
-    return this.add([data], before)
+    return this.add([data], before)[0]
   }
 
   findOne(query = {}) {
@@ -122,6 +128,7 @@ export default Storage
 function itemFactory(item, store, methods = {}) {
   const raw = Object.assign({}, item)
   return addUnEnumProp(raw, {
+
     index() {
       return store[CACHE_KEY].indexOf(item)
     },
@@ -136,6 +143,7 @@ function itemFactory(item, store, methods = {}) {
 
     update() {
       return (options = {}, save = true) => {
+        options._updateTime = new Date()
         Object.keys(item).forEach(key => {
           if (key in options) {
             item[key] = options[key]
@@ -145,6 +153,14 @@ function itemFactory(item, store, methods = {}) {
         save && store.save()
         return this
       }
+    },
+
+    createTime() {
+      return item._createTime ? new Date(item._createTime) : null
+    },
+
+    updateTime() {
+      return item._updateTime ? new Date(item._updateTime) : null
     },
 
     ...methods

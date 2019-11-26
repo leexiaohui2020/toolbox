@@ -25,3 +25,15 @@
   box-shadow: 0 0 2rpx rgba(255,255,255,.15);
   position: relative;
 }
+
+.fixed {
+  right: 20rpx;
+  bottom: 5%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+.fixed > .btn + .btn {
+  margin-top: 20rpx;
+}

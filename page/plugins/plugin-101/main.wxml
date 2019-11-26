@@ -1,20 +1,22 @@
 <block wx:if="{{ init }}">
-  <catebar cates="{{ cates }}" bind:select="onSelectCate" />
+  <searchbar bind:confirm="searchConfirmHandler"/>
 
-  <sortbar
-    sortor="{{ sortor }}"
-    select-id="{{ sortor[1].id }}"
-    bind:select="onSelectSort"
-    bind:filter="openFilterModal"
-  />
-
+  <block wx:if="{{ !keyword }}">
+    <catebar cates="{{ cates }}" bind:select="onSelectCate" />
+    <sortbar
+      sortor="{{ sortor }}"
+      select-id="{{ sortor[1].id }}"
+      bind:select="onSelectSort"
+      bind:filter="openFilterModal"
+    />
+  </block>
   <filter-modal
     id="filter"
     filter="{{ filter }}"
     bind:confirm="onFilterConfirm"
   />
 
-  <scroll-view class="container" scroll-y bindscrolltolower="onScrollBottom">
+  <scroll-view class="container {{ keyword?'is-search':'' }}" scroll-y bindscrolltolower="onScrollBottom">
     <view class="list">
       <view class="item" wx:for="{{ list }}" wx:key="ID">
         <cartoon data="{{ item }}" bind:ontap="openBounce" />
@@ -23,4 +25,12 @@
   </scroll-view>
 
   <bounce id="bounce" bind:read="openCartoonDetail" />
+  <log-modal id="log-modal" />
+
+  <view class="fixed">
+    <button
+      class="btn btn-round icon-history"
+      bindtap="openLogModal"
+    ></button>
+  </view>
 </block>

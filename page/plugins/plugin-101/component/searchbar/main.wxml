@@ -1,0 +1,14 @@
+<view class="search">
+  <view class="search-bar">
+    <view class="search-prefix icon-search"></view>
+    <input
+      value="{{ value }}"
+      class="search-input"
+      placeholder="搜漫画"
+      confirm-type="search"
+      bindinput="inputHandler"
+      bindconfirm="confirmHandler"
+    ></input>
+    <view class="search-action" wx:if="{{ value }}" bindtap="clear">清空</view>
+  </view>
+</view>

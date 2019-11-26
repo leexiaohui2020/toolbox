@@ -1,0 +1,17 @@
+<drawer
+  id="drawer"
+  height="auto"
+  direction="bottom"
+  custom="modal-paper"
+  custom-cover="modal-cover"
+>
+  <view class="modal" wx:if="{{ cartoon }}">
+    <image class="modal-pic" src="{{ cartoon.detail.pictureUrl }}" mode="widthFix"></image>
+    <view class="modal-info">
+      <view class="modal-label">最近阅读</view>
+      <view class="modal-title">{{ cartoon.title }}</view>
+      <view class="modal-tip">观看至第 {{ cartoon.current + 1 }} 页</view>
+    </view>
+    <view class="modal-action" bindtap="actionHandler">续读</view>
+  </view>
+</drawer>

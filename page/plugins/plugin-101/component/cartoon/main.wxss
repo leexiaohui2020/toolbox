@@ -3,6 +3,7 @@
 }
 .cartoon-pic {
   width: 100%;
+  height: auto;
 }
 .cartoon-title {
   font-weight: bold;

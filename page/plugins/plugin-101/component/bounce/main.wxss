@@ -4,6 +4,7 @@
 }
 .modal-cover {
   width: 100%;
+  max-height: 500rpx;
 }
 .modal-container {
   padding: 30rpx;

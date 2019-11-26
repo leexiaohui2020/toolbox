@@ -1,28 +1,16 @@
-export default (net, config) => {
-  const modules = {}
+export async function getBingWallPaper(data, size) {
+  return this.getURL(`/proxy/getBingWallPaper?date=${date}&size=${size}`)
+}
 
-  modules.getBingWallPaper = (date, size) => {
-    return new Promise((resolve) => {
-      resolve(`${config.hostname}/proxy/getBingWallPaper?date=${date}&size=${size}`)
-    })
-  }
+export function createGif(id, _input) {
+  const input = _input.join('%25%23')
+  return this.request.post(this.getURL('/proxy/createGif'), { id, input })
+}
 
-  modules.createGif = (id, input) => net({
-    url: `${config.hostname}/proxy/createGif`,
-    method: 'POST',
-    data: {
-      id,
-      input: input.join('%25%23')
-    }
-  })
+export function getImage(path) {
+  return this.getURL(`/public/image/${path}`)
+}
 
-  modules.getImage = (path) => `${config.hostname}/public/image/${path}`
-  modules.getBilibiliCoverURL = (avNumber) => net({
-    url: `${config.hostname}/proxy/getBilibiliAvCover`,
-    method: 'POST',
-    data: {
-      avNumber
-    }
-  })
-  return modules
+export function getBilibiliCoverURL(avNumber) {
+  return this.request.post(this.getURL(`/proxy/getBilibiliAvCover`), { avNumber })
 }
