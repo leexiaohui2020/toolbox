@@ -2,17 +2,17 @@
   <image class="image" mode="widthFix" src="{{ source }}" hidden="{{ !sourceMode }}"></image>
   <view hidden="{{ sourceMode }}">
     <view class="flex flex-gutter-lg">
-      <view class="flex-sub" wx:for="{{ cutPaths1 }}" wx:key="{{ index }}">
+      <view class="flex-sub" wx:for="{{ cutPaths1 }}" wx:key="src">
         <image class="image" mode="widthFix" src="{{ item.src }}"></image>
       </view>
     </view>
     <view class="flex flex-gutter-lg">
-      <view class="flex-sub" wx:for="{{ cutPaths2 }}" wx:key="{{ index }}">
+      <view class="flex-sub" wx:for="{{ cutPaths2 }}" wx:key="src">
         <image class="image" mode="widthFix" src="{{ item.src }}"></image>
       </view>
     </view>
     <view class="flex flex-gutter-lg">
-      <view class="flex-sub" wx:for="{{ cutPaths3 }}" wx:key="{{ index }}">
+      <view class="flex-sub" wx:for="{{ cutPaths3 }}" wx:key="src">
         <image class="image" mode="widthFix" src="{{ item.src }}"></image>
       </view>
     </view>

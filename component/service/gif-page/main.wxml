@@ -5,7 +5,7 @@
   class="image response margin-bottom"
 ></image>
 
-<view class="margin-bottom" wx:for="{{ placeholders }}" wx:key="{{ index }}">
+<view class="margin-bottom" wx:for="{{ placeholders }}" wx:key="*this">
   <cell label="第 {{ index + 1 }} 句" align="right">
     <input
       value="{{ values[index] }}"

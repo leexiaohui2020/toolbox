@@ -1,4 +1,4 @@
-import Storage from '../../utils/storage'
+import Storage from '../../utils/part/storage'
 
 function setCookie(cookies = []) {
   cookies.forEach(item => {

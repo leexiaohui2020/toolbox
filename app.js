@@ -1,7 +1,7 @@
 import * as data from 'data'
 import * as utils from 'utils/utils'
 import api from 'api/api.js'
-import 'core/tool'
+import 'core/tools'
 
 App({})
 App.$api = api

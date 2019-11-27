@@ -1,4 +1,5 @@
-import Crypto from 'crypto'
+import Crypto from '../libs/crypto'
+import { addUnEnumProp } from '../common'
 
 const CACHE_KEY = Symbol('Storage#Cache')
 const WATCH_KEY = Symbol('Storage#Watch')
@@ -165,21 +166,4 @@ function itemFactory(item, store, methods = {}) {
 
     ...methods
   })
-}
-
-/**
- * 增加不可枚举属性
- * @param {Object} obj
- * @param {Object} options
- */
-export function addUnEnumProp(obj, options) {
-  Object.keys(options).forEach(key => {
-    Object.defineProperty(obj, key, {
-      enumerable: false,
-      get() {
-        return options[key].call(obj)
-      }
-    })
-  })
-  return obj
 }

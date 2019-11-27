@@ -39,7 +39,7 @@
         id="img{{ index }}"
         class="footer-image_item {{ imgIndex === index ? 'selected' : '' }}"
         wx:for="{{ imgList }}"
-        wx:key="{{ index }}"
+        wx:key="*this"
         src="{{ item }}"
         mode="aspectFit"
         data-index="{{ index }}"

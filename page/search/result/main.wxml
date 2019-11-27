@@ -1,7 +1,7 @@
 <view class="cate" wx:if="{{ tools.length }}">
   <cell
     wx:for="{{ tools }}"
-    wx:key="{{ index }}"
+    wx:key="id"
     custom="cate-item"
     data-id="{{ item.id }}"
     bindtap="toolTapHandler"

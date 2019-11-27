@@ -1,12 +1,13 @@
-import { addUnEnumProp } from './storage'
+import { addUnEnumProp } from '../common'
 const MANAGER_KEY = Symbol('Audio#Manager')
 
 class Audio {
 
   constructor(initOptions = {}, statics = {}) {
-    this[MANAGER_KEY] = wx.getBackgroundAudioManager()
-    Object.assign(this[MANAGER_KEY], initOptions)
+    const manager = wx.getBackgroundAudioManager()
+    Object.assign(manager, initOptions)
     addUnEnumProp(this, statics)
+    this[MANAGER_KEY] = manager
   }
 
   bind(instance) {
@@ -33,7 +34,7 @@ class Audio {
     })
 
     lifetimeKeys.forEach(key => {
-      lifetimes[key] = function(...args) {
+      lifetimes[key] = function (...args) {
         if (typeof instance[key] === 'function') {
           instance[key](...args)
         }

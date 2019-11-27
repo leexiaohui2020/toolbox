@@ -86,7 +86,7 @@
     <view
       class="detail-item"
       wx:for="{{ detail }}"
-      wx:key="{{ index }}"
+      wx:key="benjinTotal"
     >
       <view class="detail-item_title">
         <text>第</text>

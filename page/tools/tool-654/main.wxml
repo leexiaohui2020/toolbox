@@ -7,14 +7,14 @@
     <view
       class="calc-keybord-row"
       wx:for="{{ keybord }}"
-      wx:key="{{ index }}"
+      wx:key="*this"
     >
       <view
         class="calc-keybord-item calc-keybord_type-{{ v.type }}"
         wx:for-item="v"
         wx:for-index="k"
         wx:for="{{ item }}"
-        wx:key="{{ k }}"
+        wx:key="id"
         data-id="{{ v.id }}"
         bindtap="clickHandler"
       >{{ v.text }}</view>

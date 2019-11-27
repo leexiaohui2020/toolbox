@@ -22,7 +22,7 @@
     <view
       class="search-his_item"
       wx:for="{{ history }}"
-      wx:key="{{ index }}"
+      wx:key="*this"
       data-keyword="{{ item }}"
       bindtap="tagTapHandler"
     >{{ item }}</view>

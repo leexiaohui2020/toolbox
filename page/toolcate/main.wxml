@@ -1,10 +1,9 @@
 <view class="cate" wx:if="{{ list }}">
   <cell
     wx:for="{{ list }}"
-    wx:key="{{ index }}"
+    wx:key="id"
     custom="cate-item"
-    data-id="{{ item.id }}"
-    bindtap="toolTapHandler"
+    link="/page/tools/tool-{{ item.id }}/main"
     label-hide
   >
     <text>{{ item.name }}</text>

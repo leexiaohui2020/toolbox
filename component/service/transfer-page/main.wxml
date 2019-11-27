@@ -1,5 +1,5 @@
 <wxs src="main.wxs" module="tool" />
-<block wx:for="{{ data }}" wx:key="{{ index }}">
+<block wx:for="{{ data }}" wx:key="id">
   <cell label="{{ item.title }}({{ item.id }})" align="right">
     <input
       value="{{ tool.toFixed(item.value, 12) }}"

@@ -5,7 +5,7 @@
   >
     <view
       wx:for="{{ secMap }}"
-      wx:key="{{ index }}"
+      wx:key="*this"
       style="transform: rotate(-{{ 6 * index }}deg)"
     >{{ item }}</view>
   </view>
@@ -16,7 +16,7 @@
   >
     <view
       wx:for="{{ minMap }}"
-      wx:key="{{ index }}"
+      wx:key="*this"
       style="transform: rotate(-{{ 6 * index }}deg)"
     >{{ item }}</view>
   </view>
@@ -27,7 +27,7 @@
   >
     <view
       wx:for="{{ hourMap }}"
-      wx:key="{{ index }}"
+      wx:key="*this"
       style="transform: rotate(-{{ 15 * index }}deg)"
     >{{ item }}</view>
   </view>

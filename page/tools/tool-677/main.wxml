@@ -29,13 +29,13 @@
   <view class="calendar-st">
     <view class="calendar-st_label">宜</view>
     <view class="calendar-st_list">
-      <view class="calendar-st_item" wx:for="{{ dayList[pickIndex].suit }}" wx:key="{{ index }}">{{ item }}</view>
+      <view class="calendar-st_item" wx:for="{{ dayList[pickIndex].suit }}" wx:key="*this">{{ item }}</view>
     </view>
   </view>
   <view class="calendar-st">
     <view class="calendar-st_label">忌</view>
     <view class="calendar-st_list">
-      <view class="calendar-st_item" wx:for="{{ dayList[pickIndex].taboo }}" wx:key="{{ index }}">{{ item }}</view>
+      <view class="calendar-st_item" wx:for="{{ dayList[pickIndex].taboo }}" wx:key="*this">{{ item }}</view>
     </view>
   </view>
 </view>

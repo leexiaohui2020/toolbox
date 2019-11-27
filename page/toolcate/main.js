@@ -27,11 +27,5 @@ Page({
     const list = App.createTool.getLogs()
     this.setData({ list })
     wx.setNavigationBarTitle({ title: '使用记录' })
-  },
-
-  toolTapHandler(e) {
-    const { id } = e.currentTarget.dataset
-    const url = `/page/tools/tool-${id}/main`
-    wx.navigateTo({ url })
   }
 })

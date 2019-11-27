@@ -1,7 +1,8 @@
-import _Crypto from 'crypto'
-import _Qrcode from 'qrcode'
-import Storage from 'storage'
-import Audio from 'audio'
+import _Crypto from 'libs/crypto'
+import _Qrcode from 'libs/qrcode'
+import Storage from 'part/storage'
+import Audio from 'part/audio'
+
 export const CryptoJS = _Crypto
 export const Qrcode = _Qrcode
 
