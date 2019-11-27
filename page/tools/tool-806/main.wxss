@@ -1,0 +1,4 @@
+@import '../tool.wxss';
+page {
+  padding: 30rpx;
+}

@@ -12,5 +12,9 @@ export function getImage(path) {
 }
 
 export function getBilibiliCoverURL(avNumber) {
-  return this.request.post(this.getURL(`/proxy/getBilibiliAvCover`), { avNumber })
+  return this.request.post(this.getURL('/proxy/getBilibiliAvCover'), { avNumber })
+}
+
+export function getChineseCommercialCode(content) {
+  return this.request.post(this.getURL('/proxy/getChineseCommercialCode'), { content })
 }

@@ -1,0 +1,24 @@
+<input
+  value="{{ value }}"
+  class="input margin-bottom"
+  placeholder="请输入要查询的汉字"
+  bindinput="inputHandler"
+></input>
+
+<button
+  class="button button_block button-color_blue margin-bottom"
+  bindtap="getResult"
+>查询</button>
+
+<view class="table" wx:if="{{ result.length }}">
+  <view class="table-header">
+    <view class="table-col">汉字</view>
+    <view class="table-col">对应电码</view>
+  </view>
+  <scroll-view class="table-body" style="max-height: 700rpx" scroll-y>
+    <view class="table-row" wx:for="{{ result }}" wx:key="code">
+      <view class="table-col">{{ item.character }}</view>
+      <view class="table-col">{{ item.code }}</view>
+    </view>
+  </scroll-view>
+</view>

@@ -2,6 +2,14 @@ page {
   box-sizing: border-box;
 }
 
+.input {
+  height: 100rpx;
+  border-radius: 10rpx;
+  background-color: #FFF;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
 .textarea {
   border-radius: 10rpx;
   background-color: #FFF;
@@ -11,4 +19,30 @@ page {
 
 .addon {
   margin-left: 30rpx;
+}
+
+/**********************
+ *        Table
+***********************/
+.table {
+  border-radius: 8rpx;
+  background-color: #FFF;
+  box-shadow: 4rpx 4rpx 4rpx rgba(0, 0, 0, .2);
+}
+.table-header,
+.table-row {
+  padding: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+.table-col {
+  flex: 1;
+  width: 0;
+}
+.table-header {
+  font-weight: bold;
+  box-shadow: 0 2rpx 2rpx rgba(0, 0, 0, .2);
+}
+.table-row:nth-child(even) {
+  background-color: rgb(220, 247, 234);
 }
