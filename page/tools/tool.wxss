@@ -1,3 +1,14 @@
+page {
+  box-sizing: border-box;
+}
+
+.textarea {
+  border-radius: 10rpx;
+  background-color: #FFF;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+
 .addon {
   margin-left: 30rpx;
 }

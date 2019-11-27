@@ -1,11 +1,11 @@
 {
   "pages": [
     "page/home/main",
-    "page/mine/main",
     "page/plugin/main",
     "page/search/main",
     "page/search/result/main",
     "page/toolcate/main",
+    "page/tools/tool-850/main",
     "page/tools/tool-841/main",
     "page/tools/tool-840/main",
     "page/tools/tool-818/main",

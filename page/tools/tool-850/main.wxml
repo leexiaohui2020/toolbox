@@ -1,0 +1,43 @@
+<textarea
+  value="{{ value }}"
+  class="textarea margin-bottom"
+  placeholder="请输入明文或密文"
+  bindinput="inputHandler"
+></textarea>
+
+<view class="flex flex-gutter-lg margin-bottom">
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="encode"
+    >加密</button>
+  </view>
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="decode"
+    >解密</button>
+  </view>
+</view>
+
+<textarea
+  value="{{ result }}"
+  class="textarea margin-bottom"
+  placeholder="加密/解密结果"
+  disabled
+></textarea>
+
+<view class="flex flex-gutter-lg">
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_blue"
+      bindtap="copy"
+    >复制</button>
+  </view>
+  <view class="flex-sub">
+    <button
+      class="button button_block button-color_red"
+      bindtap="clear"
+    >清空</button>
+  </view>
+</view>
