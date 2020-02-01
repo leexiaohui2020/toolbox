@@ -64,7 +64,8 @@ function createTool(opts = {}) {
   tools.push({
     id: config.toolId,
     name: config.toolName,
-    cates: config.toolCate
+    cates: config.toolCate,
+    isNew: Boolean(config.toolIsNew)
   })
 
   delete config.methods

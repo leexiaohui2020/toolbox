@@ -1,0 +1,26 @@
+/* 文本 */
+.text-red {
+  color: var(--color-red);
+}
+.text-blue {
+  color: var(--color-blue);
+}
+.text-green {
+  color: var(--color-green);
+}
+.text-orange {
+  color: var(--color-orange);
+}
+.text-theme {
+  color: var(--color-theme);
+}
+
+/* 背景色 */
+.bg-red {
+  color: #fff;
+  background-color: var(--color-red);
+}
+.bg-green {
+  color: #fff;
+  background-color: var(--color-green);
+}

@@ -1,4 +1,6 @@
 @import 'style/icon.wxss';
+@import 'style/tag.wxss';
+@import 'style/color.wxss';
 
 page {
   --color-red: #f44336;
@@ -85,23 +87,6 @@ page {
 .button-color_theme {
   color: #FFF;
   background: var(--color-theme);
-}
-
-/* color 颜色 */
-.text-red {
-  color: var(--color-red);
-}
-.text-blue {
-  color: var(--color-blue);
-}
-.text-green {
-  color: var(--color-green);
-}
-.text-orange {
-  color: var(--color-orange);
-}
-.text-theme {
-  color: var(--color-theme);
 }
 
 /* wordcard 词条组件 */

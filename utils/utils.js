@@ -2,9 +2,11 @@ import _Crypto from 'libs/crypto'
 import _Qrcode from 'libs/qrcode'
 import Storage from 'part/storage'
 import Audio from 'part/audio'
+import * as _sort from 'part/sort'
 
 export const CryptoJS = _Crypto
 export const Qrcode = _Qrcode
+export const sort = _sort
 
 export function createStorage(namespace, options) {
   return new Storage(namespace, options)

@@ -2,6 +2,7 @@ Page.createTool({
   toolId: 880,
   toolName: '戴口罩头像生成器',
   toolCate: [105],
+  toolIsNew: true,
 
   data: {
     maskImgList: Array(12).fill(

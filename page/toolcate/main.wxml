@@ -7,6 +7,7 @@
     label-hide
   >
     <text>{{ item.name }}</text>
+    <text class="tag margin-left-xs bg-green" wx:if="{{ item.isNew }}">新</text>
     <text class="icon-arrow-right" slot="suffix"></text>
   </cell>
 </view>

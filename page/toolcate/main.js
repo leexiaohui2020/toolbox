@@ -16,7 +16,7 @@ Page({
   getToolList(id) {
     const cate = App.createTool.cates.find(v => v.id == id)
     if (cate) {
-      const list = cate.tools
+      const list = cate.tools.sort(App.$utils.sort.isNew)
       const title = cate.name
       this.setData({ list })
       wx.setNavigationBarTitle({ title })
