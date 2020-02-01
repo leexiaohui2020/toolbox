@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "avatar-page": "/component/service/avatar-page/main"
+  },
+  "navigationBarTitleText": "戴口罩头像生成器",
+  "navigationBarBackgroundColor": "#3D3D3D"
+}
