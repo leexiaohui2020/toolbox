@@ -1,3 +1,7 @@
+export async function getIdenticon(text, size = 420) {
+  return this.getURL(`/identicon?text=${text}&size=${size}`)
+}
+
 export async function getBingWallPaper(data, size) {
   return this.getURL(`/proxy/getBingWallPaper?date=${date}&size=${size}`)
 }

@@ -29,8 +29,16 @@ Component({
         const dataObj = {}
         dataObj.list = this.data.list.concat(data.data.comments)
         dataObj.loadEnd = !data.data.token
-        this.nextpagetoken = data.data.token
-        this.setData(dataObj)
+        return Promise.all(dataObj.list.map(item => {
+          return new Promise(async resolve => {
+            item.identicon = await App.$api.proxy.getIdenticon(item.nickName)
+            resolve();
+          })
+        })).then(() => {
+          this.setData(dataObj)
+          this.nextpagetoken = data.data.token
+          console.info(dataObj);
+        })
       }).finally(() => wx.hideLoading())
     },
 
