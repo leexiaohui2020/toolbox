@@ -24,3 +24,5 @@
     <button class="button button_block button-color_red" bindtap="resetHandler">清空</button>
   </view>
 </view>
+
+<cuad custom="margin-top" />

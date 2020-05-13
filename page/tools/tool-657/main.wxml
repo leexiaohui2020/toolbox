@@ -13,3 +13,7 @@
   <view class="input-display_text">{{ ciphertText }}</view>
   <view class="input-display_copy" bindtap="copy">复制</view>
 </view>
+
+<!-- Banner广告位 -->
+<cuad custom="margin-top" />
+<!-- Banner广告位END -->

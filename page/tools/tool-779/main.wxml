@@ -47,3 +47,5 @@
   class="offscreen"
   style="width: {{width}}px; height: {{height}}px"
 ></canvas>
+
+<cuad custom="margin-top" />

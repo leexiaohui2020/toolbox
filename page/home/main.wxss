@@ -34,3 +34,7 @@ page {
   font-size: 18pt;
   margin-bottom: 10rpx;
 }
+
+.ad {
+  padding: 30rpx;
+}

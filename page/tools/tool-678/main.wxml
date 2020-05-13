@@ -47,3 +47,5 @@
   title="{{ wordcard.title }}"
   content="{{ wordcard.content }}"
 />
+
+<cuad custom="margin-top" />

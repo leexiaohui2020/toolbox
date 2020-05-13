@@ -25,4 +25,6 @@
       直接输入你想要展现的短信文字内容，点击生成按钮，长按图片保存即可。
     </view>
   </view>
+
+  <cuad custom="margin-top" />
 </view>

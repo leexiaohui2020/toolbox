@@ -41,3 +41,5 @@
 </view>
 
 <view class="margin wordcard">颜色值RGB转HEX工具用于将RGB颜色值与16进制字符串相互转换。你只需要在以下三个输入框：红(R)、绿(G)、蓝(B)中输入RGB的颜色值就会自动回转换16进制的颜色值字符串，反之你只想要在16进制输入框输入16进制字符即可转换为RGB颜色值。</view>
+
+<cuad margin />

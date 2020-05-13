@@ -56,3 +56,5 @@
   pinyin="{{ wordcard.pinyin }}"
   content="{{ wordcard.content }}"
 />
+
+<cuad margin />

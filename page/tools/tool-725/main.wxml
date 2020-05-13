@@ -17,3 +17,5 @@
   class="button button_block button-color_blue"
   bindtap="buttonHandler"
 >扫码</button>
+
+<cuad custom="margin-top" />

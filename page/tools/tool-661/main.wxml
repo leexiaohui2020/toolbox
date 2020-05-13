@@ -49,3 +49,5 @@
   <text>{{ toFixed(summary || 0) }}</text>
   <text class="addon" slot="suffix">元</text>
 </cell>
+
+<cuad margin />

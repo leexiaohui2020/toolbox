@@ -83,5 +83,8 @@
   "requiredBackgroundModes": [
     "audio"
   ],
+  "usingComponents": {
+    "cuad": "/component/base/ad/main"
+  },
   "sitemapLocation": "sitemap.json"
 }

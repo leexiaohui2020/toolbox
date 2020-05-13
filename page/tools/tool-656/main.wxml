@@ -79,6 +79,8 @@
   <text class="addon" slot="suffix">元</text>
 </cell>
 
+<cuad margin />
+
 <wxs src="main.wxs" module="toFixed" />
 <view class="detail" wx:if="{{ detail }}">
   <view class="detail-title {{ detailTitleFixed ? 'fixed':'' }}">每月还款明细</view>

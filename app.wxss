@@ -127,3 +127,8 @@ page {
   margin-right: 20rpx;
 }
 
+/* Banner广告位 */
+.ad {
+  position: relative;
+  box-sizing: border-box;
+}

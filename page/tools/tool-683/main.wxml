@@ -56,3 +56,5 @@
 <view class="canvas">
   <canvas class="canvas" canvas-id="canvas"></canvas>
 </view>
+
+<cuad custom="margin-top" />

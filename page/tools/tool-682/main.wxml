@@ -26,3 +26,5 @@
 </block>
 
 <view class="wordcard">图片的BASE64编码就是可以将一副图片数据编码成一串字符串，使用该字符串代替图像地址。</view>
+
+<cuad custom="margin-top" />

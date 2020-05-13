@@ -1,0 +1,3 @@
+<view class="ad custom" style="padding: {{ margin ? 30 : 0 }}rpx">
+  <ad unit-id="adunit-545666e7c0a575e4"></ad>
+</view>

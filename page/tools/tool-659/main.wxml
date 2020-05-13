@@ -18,3 +18,5 @@
   <text>{{ result }}</text>
   <text class="addon text-blue" slot="suffix" bindtap="copy">复制</text>
 </cell>
+
+<cuad margin />

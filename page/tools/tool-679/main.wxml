@@ -66,3 +66,5 @@
 </view>
 
 <view class="margin-top wordcard">在线文本加密解密工具，提供AES、DES、RC4、Rabbit、TripleDes等多种算法。</view>
+
+<cuad custom="margin-top" />

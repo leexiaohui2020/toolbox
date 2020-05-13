@@ -40,3 +40,5 @@
 </view>
 
 <view class="wordcard">在线Unicode编码转换工具为您提供ASCII与Unicode互转，Unicode与中文互转，在文本框里输入要转换的内容，然后点击要转换的类型按钮，转换完成后即可看到对应的内容。</view>
+
+<cuad custom="margin-top" />
