@@ -112,3 +112,46 @@
 .icon-menu::before {
   content: '\e622';
 }
+
+.icon-edit::before {
+  content: '\e623';
+}
+.icon-share::before {
+  content: '\e624';
+}
+.icon-close::before {
+  content: '\e625';
+}
+.icon-settings::before {
+  content: '\e626';
+}
+.icon-add::before {
+  content: '\e627';
+}
+.icon-check-circle::before {
+  content: '\e628';
+}
+.icon-close-circle::before {
+  content: '\e629';
+}
+.icon-palette::before {
+  content: '\e62a';
+}
+.icon-check::before {
+  content: '\e62b';
+}
+.icon-camera::before {
+  content: '\e62c';
+}
+.icon-eye-hide::before {
+  content: '\e62d';
+}
+.icon-eye::before {
+  content: '\e62e';
+}
+.icon-rotate-left::before {
+  content: '\e62f';
+}
+.icon-rotate-right::before {
+  content: '\e630';
+}

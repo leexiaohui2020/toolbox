@@ -46,3 +46,27 @@ page {
 .table-row:nth-child(even) {
   background-color: rgb(220, 247, 234);
 }
+
+/**********************
+ *     图片选择容器
+***********************/
+.chooseImage {
+  --size: 300rpx;
+  --color: #969798;
+  width: var(--size);
+  height: var(--size);
+  border: 2rpx dashed var(--color);
+  border-radius: 16rpx;
+  color:  var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.chooseImage-icon {
+  font-size: 30pt;
+  margin-bottom: 10rpx;
+}
+.chooseImage:active {
+  --color: var(--color-blue);
+}

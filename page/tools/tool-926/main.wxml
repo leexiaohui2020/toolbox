@@ -1,0 +1,35 @@
+<wxs src="../tool.wxs" module="tool" />
+<view class="content">
+  <button class="button button-color_blue button_block margin-bottom" bindtap="chooseImage">
+    {{ result ? '重新选择' : '选择图片' }}
+  </button>
+
+  <!-- 识别结果 -->
+  <view class="result" wx:if="{{ result }}">
+    <view class="result-item" wx:for="{{ result }}" wx:key="name">
+      <view class="result-caption">
+        <text class="result-title">{{ item.name }}</text>
+        <text class="result-score">相似度：{{ tool.filter.percent(item.score, 2) }}</text>
+      </view>
+      <view class="result-content" wx:if="{{ item.baike_info && item.baike_info.description }}">
+        <image
+          mode="widthFix"
+          class="result-image"
+          src="{{ item.baike_info.image_url }}"
+          wx:if="{{ item.baike_info.image_url }}"
+        ></image>
+        <text class="result-intro">{{ item.baike_info.description }}</text>
+      </view>
+    </view>
+    <button class="button button-color_blue button_block margin-top" bindtap="chooseImage">
+      {{ result ? '重新选择' : '选择图片' }}
+    </button>
+  </view>
+  <!-- 识别结果END -->
+
+  <view class="wordcard">
+    动物识别器是一款在线的动物图片识别工具，大自然的物种繁多，很多时候我们看到一些奇怪的动物的时候都不知道叫什么。
+    这款工具可以通过上传动物图片帮你识别动物名称和物种等信息，而且同一物种的不同品种也能识别出来，例如狗狗里的金毛、
+    泰迪等品种都可以通过这款工具识别。
+  </view>
+</view>

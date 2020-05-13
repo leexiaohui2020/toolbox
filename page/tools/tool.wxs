@@ -5,3 +5,11 @@ modules.toFixed = function (num, n) {
   if (!num) return ''
   return Math.round(num * temp) / temp
 }
+
+modules.filter = {
+
+  // 百分比格式化
+  percent: function(num, ln) {
+    return Math.ceil(num * Math.pow(10, ln + 2)) / Math.pow(10, ln) + '%' 
+  }
+}

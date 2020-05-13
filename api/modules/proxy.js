@@ -22,3 +22,8 @@ export function getBilibiliCoverURL(avNumber) {
 export function getChineseCommercialCode(content) {
   return this.request.post(this.getURL('/proxy/getChineseCommercialCode'), { content })
 }
+
+// 动物识别接口
+export function getAnimalClassifyInfo(img) {
+  return this.request.post(this.getURL('/proxy/getAnimalClassifyInfo'), { img })
+}

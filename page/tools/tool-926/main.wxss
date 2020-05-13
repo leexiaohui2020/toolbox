@@ -1,0 +1,51 @@
+@import '../tool.wxss';
+
+.content {
+  padding: 30rpx;
+}
+
+.result {
+  margin-bottom: 30rpx;
+}
+.result-item {
+  padding: 30rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  box-shadow: 2rpx 2rpx 2rpx rgba(0, 0, 0, .15);
+}
+.result-item:not(:first-child) {
+  margin-top: 30rpx;
+}
+.result-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.result-title {
+  font-weight: 600;
+  color: #757677;
+  font-size: 14pt;
+}
+.result-score {
+  font-size: 600;
+  color: var(--color-red);
+}
+.result-content {
+  margin-top: 30rpx;
+}
+.result-image {
+  width: 220rpx;
+  float: left;
+  clear: both;
+  margin-right: 20rpx;
+  margin-bottom: 10rpx;
+}
+.result-right {
+  flex: 1;
+  width: 0;
+  text-align: justify;
+}
+.result-intro {
+  text-align: justify;
+  line-height: 1.5;
+}
