@@ -65,7 +65,13 @@ function createTool(opts = {}) {
     id: config.toolId,
     name: config.toolName,
     cates: config.toolCate,
-    isNew: Boolean(config.toolIsNew)
+    createdAt: config.toolCreatedAt,
+    get isNew() {
+      if (!this.createdAt) {
+        return false;
+      }
+      return new Date() - this.createdAt <= 1000 * 60 * 60 * 24 * 30
+    }
   })
 
   delete config.methods

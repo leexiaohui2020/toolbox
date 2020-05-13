@@ -2,6 +2,7 @@ Page.createTool({
   toolId: 817,
   toolName: '哔哩哔哩视频封面获取',
   toolCate: [105],
+  toolCreatedAt: new Date('2019/11/12'),
 
   data: {
     avNumber: '',

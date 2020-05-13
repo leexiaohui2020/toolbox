@@ -19,6 +19,7 @@ Page.createTool({
   toolId: 840,
   toolName: '罗盘时钟',
   toolCate: [104],
+  toolCreatedAt: new Date('2019/11/10'),
 
   data: {
     secMap,

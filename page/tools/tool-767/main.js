@@ -2,6 +2,7 @@ Page.createTool({
   toolId: 767,
   toolName: '表情包生成器之真香',
   toolCate: [105],
+  toolCreatedAt: new Date('2019/11/9'),
 
   data: {
     placeholders: [

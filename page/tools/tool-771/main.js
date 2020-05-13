@@ -2,6 +2,7 @@ Page.createTool({
   toolId: 771,
   toolName: '表情包生成器之为所欲为',
   toolCate: [105],
+  toolCreatedAt: new Date('2019/11/9'),
 
   data: {
     placeholders: [

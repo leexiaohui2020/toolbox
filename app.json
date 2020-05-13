@@ -48,11 +48,12 @@
     "page/tools/tool-656/main",
     "page/tools/tool-655/main",
     "page/tools/tool-654/main",
+    "page/tools/tool-864/main",
+    "page/tools/tool-880/main",
     "page/plugins/plugin-100/main",
     "page/plugins/plugin-101/main",
     "page/plugins/plugin-101/pager/main",
-    "page/plugins/plugin-101/detail/main",
-    "page/tools/tool-880/main"
+    "page/plugins/plugin-101/detail/main"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196f3"

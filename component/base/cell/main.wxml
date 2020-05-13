@@ -1,4 +1,4 @@
-<view class="cell custom" catchtap="tapHandler">
+<view class="cell custom" bindtap="tapHandler">
   <slot name="prefix" />
   <view
     class="cell-label"

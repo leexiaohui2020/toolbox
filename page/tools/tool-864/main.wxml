@@ -1,0 +1,26 @@
+<textarea
+  class="textarea margin-bottom"
+  value="{{ value }}"
+  placeholder="输入要转换的语句"
+  bindinput="inputHandler"
+></textarea>
+
+<button class="button button_block button-color_blue margin-bottom"
+  bindtap="submitHandler"
+>生成抽象话</button>
+
+<textarea
+  class="textarea margin-bottom"
+  placeholder="转换结果"
+  value="{{ result }}"
+  disabled
+></textarea>
+
+<view class="flex flex-gutter margin-bottom">
+  <view class="flex-sub">
+    <button class="button button_block button-color_blue" bindtap="copyHandler">复制</button>
+  </view>
+  <view class="flex-sub">
+    <button class="button button_block button-color_red" bindtap="resetHandler">清空</button>
+  </view>
+</view>
