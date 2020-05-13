@@ -11,6 +11,7 @@ page {
 }
 
 .textarea {
+  width: 100%;
   border-radius: 10rpx;
   background-color: #FFF;
   box-sizing: border-box;

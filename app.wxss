@@ -109,6 +109,9 @@ page {
   left: 0;
   top: 10rpx;
 }
+.wordcard > view + view {
+  margin-top: 30rpx;
+}
 
 /* flex */
 .flex {

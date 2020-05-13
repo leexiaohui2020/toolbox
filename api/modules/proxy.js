@@ -32,3 +32,8 @@ export function getAnimalClassifyInfo(img) {
 export function getPlantClassifyInfo(img) {
   return this.request.post(this.getURL('/proxy/getPlantClassifyInfo'), { img })
 }
+
+// 诺基亚短信图片生成接口
+export function getNokiaMessageImage(sms) {
+  return this.request.post(this.getURL('/proxy/getNokiaMessageImage'), { sms })
+}

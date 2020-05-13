@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell": "/component/base/cell/main"
+  },
+  "navigationBarTitleText": "诺基亚短信图片生成器"
+}

@@ -1,0 +1,28 @@
+<view class="content">
+  <textarea
+    class="textarea margin-bottom"
+    value="{{ value }}"
+    placeholder="请输入短信内容"
+    bindinput="inputHandler"
+  ></textarea>
+  <button class="button button_block button-color_blue margin-bottom" bindtap="submitHandler">生成图片</button>
+
+  <!-- 生成结果 -->
+  <view class="result" wx:if="{{ imgDataUrl }}">
+    <image class="result-image" src="{{ imgDataUrl }}" mode="widthFix"></image>
+    <button class="button button_block button-color_blue margin-bottom" bindtap="saveToPhoto">保存至相册</button>
+  </view>
+  <!-- 生成结果END -->
+
+  <view class="wordcard">
+    <view>
+      诺基亚短信图片生成器可以快速生成复古诺基亚短信图片，短信的文本内容由用户自由编辑，生成各种有趣的图片发给小伙伴，十分的有趣。
+    </view>
+    <view>
+      斗图利器，一键生成，傻瓜操作；装逼必备，还可以用来表白哦。
+    </view>
+    <view>
+      直接输入你想要展现的短信文字内容，点击生成按钮，长按图片保存即可。
+    </view>
+  </view>
+</view>
