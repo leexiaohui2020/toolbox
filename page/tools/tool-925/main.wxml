@@ -1,0 +1,36 @@
+<wxs src="../tool.wxs" module="tool" />
+<view class="content">
+  <button class="button button-color_blue button_block margin-bottom" bindtap="chooseImage">
+    {{ result ? '重新选择' : '选择图片' }}
+  </button>
+
+  <!-- 识别结果 -->
+  <view class="result" wx:if="{{ result }}">
+    <view class="result-item" wx:for="{{ result }}" wx:key="name">
+      <view class="result-caption">
+        <text class="result-title">{{ item.name }}</text>
+        <text class="result-score">相似度：{{ tool.filter.percent(item.score, 2) }}</text>
+      </view>
+      <view class="result-content" wx:if="{{ item.baike_info && item.baike_info.description }}">
+        <image
+          mode="widthFix"
+          class="result-image"
+          src="{{ item.baike_info.image_url }}"
+          wx:if="{{ item.baike_info.image_url }}"
+        ></image>
+        <text class="result-intro">{{ item.baike_info.description }}</text>
+      </view>
+    </view>
+    <button class="button button-color_blue button_block margin-top" bindtap="chooseImage">
+      {{ result ? '重新选择' : '选择图片' }}
+    </button>
+  </view>
+  <!-- 识别结果END -->
+
+  <view class="wordcard">
+    当你在野外或者公园游玩时，邂逅一枝美丽的花儿，却不知道它的名字，它的特征，它的动人花语，这难道不是一件万分遗憾的事？
+    看到一株独特的草，或是一朵不认识却美丽的让你迫切的想知道名字的花，怎么办呢？
+    这时候植物识别工具就能帮你啦，你只需拍摄植物照片或选取手机或电脑图库中的植物图片，植物识别器将快速、精确地知道植物的
+    名字，并通过花语、药用价值等信息，讲述关于植物的小秘密，让你一秒变身植物达人!
+  </view>
+</view>

@@ -27,3 +27,8 @@ export function getChineseCommercialCode(content) {
 export function getAnimalClassifyInfo(img) {
   return this.request.post(this.getURL('/proxy/getAnimalClassifyInfo'), { img })
 }
+
+// 植物识别接口
+export function getPlantClassifyInfo(img) {
+  return this.request.post(this.getURL('/proxy/getPlantClassifyInfo'), { img })
+}
