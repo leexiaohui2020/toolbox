@@ -1,0 +1,92 @@
+<view class="content">
+  <!-- 隐藏的Canvas组件 -->
+  <canvas
+    class="canvas"
+    canvas-id="canvas"
+    style="width: {{ canvasWidth }}px; height: {{ canvasHeight }}px"
+  ></canvas>
+  <!-- 隐藏的Canvas组件END -->
+
+  <view class="flex margin-bottom">
+    <view class="flex-twice">
+      <button
+        class="button button_block button-color_blue"
+        bindtap="uploadImage"
+      >{{ imageSrc ? '重新上传' : '上传图片' }}</button>
+    </view>
+
+    <view class="flex-sub margin-left" wx:if="{{ imageSrc }}">
+      <button
+        class="button button_block button-color_green"
+        bindtap="switchImageShow"
+      >{{ showImage ? '隐藏图片' : '查看图片' }}</button>
+    </view>
+  </view>
+
+  <image
+    class="source"
+    src="{{ imageSrc }}"
+    mode="widthFix"
+    wx:if="{{ imageSrc && showImage }}"
+  ></image>
+
+  <view class="margin-bottom" wx:if="{{ imageSrc }}">
+    <textarea
+      class="textarea margin-bottom"
+      value="{{ hideText }}"
+      data-id="hideText"
+      bindinput="inputHandler"
+      placeholder="输入隐藏文字"
+    ></textarea>
+
+    <input
+      class="input margin-bottom"
+      value="{{ pass }}"
+      data-id="pass"
+      bindinput="inputHandler"
+      placeholder="输入密码"
+    ></input>
+
+    <view class="flex">
+      <view class="flex-sub margin-right">
+        <button
+          class="button button_block button-color_blue"
+          bindtap="encodeHandler"
+        >隐藏</button>
+      </view>
+
+      <view class="flex-sub">
+        <button
+          class="button button_block button-color_blue"
+          bindtap="decodeHandler"
+        >解密</button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 生成图片预览 -->
+  <view class="preview" wx:if="{{ geImageSrc }}">
+    <image
+      class="margin-bottom"
+      src="{{ geImageSrc }}"
+      mode="widthFix"
+    ></image>
+
+    <button
+      class="button button_block button-color_blue"
+      bindtap="savePhoto"
+    >保存到相册</button>
+  </view>
+
+  <!-- 广告 -->
+  <cuad custom="margin-bottom" />
+
+  <!-- Tips -->
+  <view class="wordcard">
+    <view>隐写术是一门关于信息隐藏的技巧与科学，所谓信息隐藏指的是不让除预期的接收者之外的任何人知晓信息的传递事件或者信息的内容。隐写术的英文叫做Steganography，来源于特里特米乌斯的一本讲述密码学与隐写术的著作Steganographia，该书书名源于希腊语，意为“隐秘书写”。</view>
+
+    <view>隐写术一般是指将秘密信息嵌入或隐藏到其他不受怀疑的公开信息之中的技术。隐写术的方法通常要依赖于隐秘通信的存在是不为其他人所知的这样的一种假设。它主要使用相互信任的两方进行点对点通信的方法。因此，从它的基本特征上能够看出，隐写术的方法一般是不稳健的，隐藏的信息也很难在载体数据被处理后进行有效地恢复</view>
+
+    <view>这个工具可以在图片中隐藏文字信息，并且不影响图片的显示，只有特殊的工具才能解密出图片的内容。图片隐写术的应用价值很广泛，有个成功案例就是大众点评通过这种方式，成功证明食神app对其图片的盗用，为自己的合法权益进行了有效维护。</view>
+  </view>
+</view>

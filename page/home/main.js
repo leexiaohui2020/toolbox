@@ -3,11 +3,19 @@ import { cates } from '../tools/tool'
 Page({
 
   data: {
-    cates: null
+    cates: null,
+    // 推荐工具
+    recommand: [699],
+    recommandCurrent: 0
   },
 
   onLoad() {
     this.getShowCates()
+    this.setData({
+      recommand: this.data.recommand.map(id => {
+        return Page.createTool.tools.find(v => v.id === id)
+      })
+    })
   },
 
   onShareAppMessage() {
@@ -27,5 +35,12 @@ Page({
     const { id } = e.currentTarget.dataset
     const url = `/page/toolcate/main?id=${id}`
     wx.navigateTo({ url })
+  },
+
+  recommandCurrentChangeHandler(e) {
+    const { current } = e.detail
+    this.setData({
+      recommandCurrent: Math.min(this.data.recommand.length - 1, current)
+    })
   }
 })

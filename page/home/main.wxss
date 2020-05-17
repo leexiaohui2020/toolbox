@@ -38,3 +38,27 @@ page {
 .ad {
   padding: 30rpx;
 }
+
+/* Recommand */
+.recommand {
+  height: calc(690rpx * 303 / 900);
+  position: relative;
+  overflow: hidden;
+}
+.recommand-image {
+  width: 100%;
+}
+.recommand-tip {
+  --height: 60rpx;
+  top: 30rpx;
+  right: 30rpx;
+  height: var(--height);
+  line-height: var(--height);
+  padding: 0 30rpx;
+  background-color: var(--color-green);
+  color: #FFF;
+  position: absolute;
+  font-size: 8pt;
+  font-weight: 600;
+  border-radius: var(--height) 0 0 var(--height);
+}

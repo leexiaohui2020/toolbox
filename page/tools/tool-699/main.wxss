@@ -1,0 +1,28 @@
+@import '../tool.wxss';
+
+.content {
+  padding: 30rpx;
+  overflow: hidden;
+  position: relative;
+}
+
+.canvas {
+  top: 0;
+  left: 0;
+  position: absolute;
+  transform: translate(-100%, -100%);
+  visibility: hidden;
+}
+
+.preview {
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.preview > image {
+  width: 100%;
+}
+
+.source {
+  width: 100%;
+  margin-bottom: 30rpx;
+}

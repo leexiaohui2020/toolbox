@@ -65,6 +65,7 @@ function createTool(opts = {}) {
     id: config.toolId,
     name: config.toolName,
     cates: config.toolCate,
+    cover: config.toolCover,
     createdAt: config.toolCreatedAt,
     get isNew() {
       if (!this.createdAt) {

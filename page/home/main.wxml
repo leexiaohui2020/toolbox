@@ -16,3 +16,31 @@
     </view>
   </view>
 </view>
+
+<!-- 推荐Banner -->
+<view class="padding" style="position: relative">
+  <swiper
+    class="recommand"
+    bindchange="recommandCurrentChangeHandler"
+    autoplay
+    circular
+  >
+    <swiper-item wx:for="{{ recommand }}">
+      <image
+        class="recommand-image"
+        src="{{ item.cover }}"
+        mode="widthFix"
+      ></image>
+    </swiper-item>
+    <!-- 广告 -->
+    <swiper-item>
+      <cuad />
+    </swiper-item>
+  </swiper>
+
+  <!-- 指示器 -->
+  <view class="recommand-tip">
+    最新上线 {{ recommandCurrent + 1 }}/{{ recommand.length }}
+  </view>
+</view>
+<!-- 推荐BannerEND -->

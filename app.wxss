@@ -120,6 +120,9 @@ page {
 .flex-sub {
   flex: 1;
 }
+.flex-twice {
+  flex: 2;
+}
 .flex-gutter > view:not(:last-child) {
   margin-right: 10rpx;
 }

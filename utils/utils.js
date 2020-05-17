@@ -179,3 +179,14 @@ export function computedData(obj, opts) {
   })
   Object.defineProperties(obj, options)
 }
+
+// 获取图片信息
+export function getImageInfo(src) {
+  return new Promise((resolve, reject) => {
+    wx.getImageInfo({
+      src,
+      fail: reject,
+      success: resolve
+    })
+  })
+}
