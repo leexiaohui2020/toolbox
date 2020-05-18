@@ -26,13 +26,18 @@ Page({
     wx.showLoading({ title: '正在加载' })
     const { data: res } = await App.$api.wish.list({
       page: Math.max(1, page),
-      pagesize: 2,
+      pagesize: 10,
       keyword: this.data.keyword
     })
     wx.hideLoading()
     if (res.status === 'ok') {
       const { data } = res;
       this.page = data.page
+
+      if (data.page === 1 || data.list.length > 0) {
+        data.list.push('ad')
+      }
+
       this.setData({
         loadEnd: data.list.length < data.pagesize,
         list: cover ? data.list : this.data.list.concat(data.list)

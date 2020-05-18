@@ -15,7 +15,10 @@
 
   <!-- 许愿列表 -->
   <view class="wish-list">
-    <wish-detail custom="wish-item" data="{{ item }}" wx:for="{{ list }}" wx:key="_id" />
+    <block wx:for="{{ list }}" wx:key="_id">
+      <cuad margin wx:if="{{ item === 'ad' }}" />
+      <wish-detail custom="wish-item" data="{{ item }}" wx:else />
+    </block>
     <view class="nomore" wx:if="{{ loadEnd }}">- 这是底线了 -</view>
   </view>
   <!-- 许愿列表END -->

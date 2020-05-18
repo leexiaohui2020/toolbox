@@ -13,7 +13,9 @@ Page({
     this.getShowCates()
     this.setData({
       recommand: this.data.recommand.map(id => {
-        return Page.createTool.tools.find(v => v.id === id)
+        if (typeof id === 'number') {
+          return Page.createTool.tools.find(v => v.id === id)
+        }
       })
     })
   },
@@ -42,5 +44,12 @@ Page({
     this.setData({
       recommandCurrent: Math.min(this.data.recommand.length - 1, current)
     })
+  },
+
+  // 点击推荐工具
+  recommandClickHandler(e) {
+    const { id } = e.currentTarget.dataset
+    const url = `/page/tools/tool-${id}/main`
+    wx.navigateTo({ url })
   }
 })

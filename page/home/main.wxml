@@ -30,6 +30,8 @@
         class="recommand-image"
         src="{{ item.cover }}"
         mode="widthFix"
+        data-id="{{ item.id }}"
+        bindtap="recommandClickHandler"
       ></image>
     </swiper-item>
     <!-- 广告 -->

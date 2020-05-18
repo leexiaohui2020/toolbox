@@ -60,11 +60,30 @@ Page({
   },
 
   onLoad() {
+
+    // 创建插屏广告
+    if (wx.createInterstitialAd) {
+      const interstitialAd = wx.createInterstitialAd({
+        adUnitId: 'adunit-138aa5333f7650da'
+      })
+      interstitialAd.onLoad(() => {})
+      interstitialAd.onError((err) => {})
+      interstitialAd.onClose(() => {})
+      this.interstitialAd = interstitialAd
+    }
+
     // 获取许愿表单弹窗实例
     this.wishDrawer = this.selectComponent('#wish')
     // 获取许愿详情弹窗示例
     this.detailDrawer = this.selectComponent('#detail')
     this.getWishList()
+  },
+
+  // 展示插屏广告
+  showInterstitialAd() {
+    return this.interstitialAd.show().catch(e => {
+      console.info('[许愿树插屏广告报错]', e.errMsg)
+    })
   },
 
   openWishDrawer() {
@@ -111,6 +130,7 @@ Page({
       if (res.status !== 'ok') return showErr(res.errmsg)
       wx.showToast({ title: '许愿成功' })
       this.resetWishDrawer()
+      this.showInterstitialAd()
       this.getWishList()
     })
   },

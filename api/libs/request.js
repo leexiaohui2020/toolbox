@@ -1,4 +1,5 @@
 import Cookie from 'cookie'
+import Crypto from '../../utils/libs/crypto'
 
 function request(opts = {}) {
 
@@ -23,12 +24,43 @@ function request(opts = {}) {
   })
 }
 
+const requestCache = Symbol('Request#Cache')
+const getKey = (data = {}, header = {}) => {
+  const objStr = JSON.stringify({ data, header })
+  return Crypto.SHA256(objStr).toString()
+}
+
 export default {
-  get(url, data = {}, header = {}) {
-    return request({ url, data, header })
+
+  [requestCache]: {
+    get: {},
+    post: {}
   },
 
-  post(url, data = {}, header = {}) {
-    return request({ url, data, header, method: 'POST' })
+  get(url, data = {}, header = {}, useCache = true) {
+    const key = getKey(data, header)
+    const getCache = this[requestCache].get
+    if (getCache[key] && useCache) {
+      return Promise.resolve(getCache[key])
+    }
+
+    return request({ url, data, header }).then(res => {
+      // 对GET请求进行缓存
+      useCache && (getCache[key] = res)
+      return res
+    })
+  },
+
+  post(url, data = {}, header = {}, useCache = true) {
+    const key = getKey(data, header)
+    const postCache = this[requestCache].post
+    if (postCache[key] && useCache) {
+      return Promise.resolve(postCache[key])
+    }
+
+    return request({ url, data, header, method: 'POST' }).then(res => {
+      useCache && (postCache[key] = res)
+      return res
+    })
   }
 }
