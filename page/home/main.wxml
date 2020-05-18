@@ -25,7 +25,7 @@
     autoplay
     circular
   >
-    <swiper-item wx:for="{{ recommand }}">
+    <swiper-item wx:for="{{ recommand }}" wx:key="id">
       <image
         class="recommand-image"
         src="{{ item.cover }}"
@@ -33,9 +33,9 @@
       ></image>
     </swiper-item>
     <!-- 广告 -->
-    <swiper-item>
+    <!-- <swiper-item>
       <cuad />
-    </swiper-item>
+    </swiper-item> -->
   </swiper>
 
   <!-- 指示器 -->

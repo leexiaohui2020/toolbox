@@ -1,0 +1,176 @@
+@import '../main.wxss';
+
+.content {
+  --btn-width: 400rpx;
+  --btn-height: calc(var(--btn-width) * 58 / 200);
+  --btn-top: 1090rpx;
+
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("http://m.life.httpcn.com/Content/images/wish/xuyuan-bj.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.btn {
+
+  top: var(--btn-top);
+  left: calc(50% - var(--btn-width) / 2);
+  width: var(--btn-width);
+  height: var(--btn-height);
+  background-image: url("http://m.life.httpcn.com/Content/images/wish/xuyuan-an.png");
+  background-size: cover;
+  position: absolute;
+}
+
+.tip {
+  top: calc(var(--btn-top) + var(--btn-height) + 30rpx);
+  width: 100%;
+  text-align: center;
+  color: var(--color-red);
+  position: absolute;
+}
+.tip-data {
+  color: var(--color-orange);
+  font-size: 12pt;
+  font-weight: 600;
+}
+
+.drawer {
+  --theme: #fed012;
+  --color: #886061;
+
+  padding: 40rpx;
+  box-sizing: border-box;
+  background-color: var(--theme);
+  display: flex;
+  flex-direction: column;
+  color: var(--color);
+}
+.drawer-title {
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 600;
+  margin-bottom: 40rpx;
+  letter-spacing: .2em;
+}
+.drawer-content {
+  flex: 1;
+  height: 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  background-color: #f1eed4;
+}
+
+.picker-list {
+  --h: 80rpx;
+
+  height: var(--h);
+  margin-bottom: 30rpx;
+  display: flex;
+}
+.picker-item {
+  flex: 1;
+  height: var(--h);
+  line-height: var(--h);
+  text-align: center;
+  border: 2rpx solid var(--color);
+  background-color: #FFF;
+  font-size: 8pt;
+}
+.picker-item:not(:first-child) {
+  margin-left: 10rpx;
+}
+
+
+.drawer-btn {
+  --h: calc(610rpx * 45 / 368);
+
+  height: var(--h);
+  background-image: url("http://m.life.httpcn.com/Content/images/wish/xie-wish-an.png");
+  background-size: cover;
+}
+
+.wish-list {
+  top: 28%;
+  left: 5%;
+  width: 90%;
+  height: 38%;
+  position: absolute;
+}
+.wish-tip {
+  --width: 80rpx;
+  --height: calc(var(--width) * 143 / 42);
+
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  background-image: url("http://m.life.httpcn.com/Content/images/wish/xuyuan-tiao.png");
+  background-size: cover;
+  position: absolute;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.wish-tip > text {
+  width: 8pt;
+  display: block;
+  font-size: 8pt;
+}
+
+.wish-tip[data-index="0"] {
+  top: 20%;
+  left: 6%;
+}
+.wish-tip[data-index="1"] {
+  top: 10%;
+  left: 18%;
+}
+.wish-tip[data-index="2"] {
+  top: 40%;
+  left: 32%;
+}
+.wish-tip[data-index="3"] {
+  top: 0%;
+  left: 36%;
+}
+.wish-tip[data-index="4"] {
+  top: 50%;
+  left: 46%;
+}
+.wish-tip[data-index="5"] {
+  top: 60%;
+  left: 78%;
+}
+.wish-tip[data-index="6"] {
+  top: 6%;
+  left: 50%;
+}
+.wish-tip[data-index="7"] {
+  top: 52%;
+  left: 12%;
+}
+.wish-tip[data-index="8"] {
+  top: 17%;
+  left: 60%;
+}
+.wish-tip[data-index="9"] {
+  top: 36%;
+  left: 70%;
+}
+.wish-tip[data-index="10"] {
+  top: 16%;
+  left: 80%;
+}
+.wish-tip[data-index="11"] {
+  top: 38%;
+  left: 90%;
+}
+
+.button-color_wish {
+  background-color: var(--color);
+  color: #FFF;
+}

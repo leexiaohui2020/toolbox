@@ -1,0 +1,55 @@
+@import '../../main.wxss';
+
+.detail-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.detail-name {
+  font-weight: 600;
+}
+.detail-action {
+  --h: 60rpx;
+  --icon-height: 40rpx;
+  --icon-width: calc(var(--icon-height) * 48 / 30);
+  
+  height: var(--h);
+  line-height: var(--h);
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+}
+.detail-action::before {
+  content: '';
+  width: var(--icon-width);
+  height: var(--icon-height);
+  background-image: url("http://m.life.httpcn.com/Content/images/wish/lianhua.png");
+  background-size: cover;
+  margin-right: 10rpx;
+}
+.detail-date {
+  font-size: 8pt;
+  margin-bottom: 30rpx;
+}
+
+.tag {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tag-item {
+  --margin: 5rpx;
+  --width: calc(100% / 3 - var(--margin) * 2);
+  --height: 60rpx;
+  
+  margin: 0 var(--margin);
+  margin-bottom: calc(2 * var(--margin));
+  width: var(--width);
+  height: var(--height);
+  line-height: var(--height);
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  font-size: 8pt;
+  background-color: #e9ddc3;
+  white-space: nowrap;
+}

@@ -1,0 +1,73 @@
+<wxs src="../utils.wxs" module="utils" />
+
+<view class="content">
+  <view class="btn" bindtap="openWishDrawer"></view>
+  <view class="tip" wx:if="{{ wishTotal }}">
+    自2020年以来共<text class="tip-data">{{ utils.totalFormat(wishTotal) }}</text>条在线许愿记录
+  </view>
+
+  <!-- 许愿条列表 -->
+  <view class="wish-list">
+    <view class="wish-tip" wx:for="{{ wishList }}" wx:key="_id" data-index="{{ index }}" bindtap="openDetailDrawer">
+      <text>{{ utils.wishTipFormat(item) }}</text>
+    </view>
+  </view>
+</view>
+
+<!-- 许愿表单弹窗 -->
+<drawer id="wish" custom="drawer" direction="bottom" height="auto" round>
+  <view class="drawer-title">写下愿望</view>
+  <view class="drawer-content">
+    <!-- Picker列表 -->
+    <view class="picker-list">
+      <picker
+        class="picker-item"
+        wx:for="{{ pickers }}"
+        wx:key="id"
+        mode="{{ item.mode || 'selector' }}"
+        range="{{ item.options }}"
+        value="{{ item.mode === 'date' ? item.value : utils.getIndex(item.value, item.options) }}"
+        end="{{ currentYear }}"
+        data-id="{{ item.id }}"
+        fields="year"
+        bindchange="pickerChangeHandler"
+      >{{ item.value || item.placeholder }}</picker>
+    </view>
+    <!-- Picker列表END -->
+
+    <input
+      class="input"
+      placeholder="许愿人姓名"
+      value="{{ name }}"
+      data-id="name"
+      bindinput="inputHandler"
+    ></input>
+
+    <textarea
+      class="input"
+      placeholder="输入你的祝福纸条内容(限制100个字)"
+      value="{{ content }}"
+      data-id="content"
+      bindinput="inputHandler"
+      maxlength="100"
+    ></textarea>
+
+    <view class="drawer-btn" bindtap="submitHandler"></view>
+  </view>
+</drawer>
+<!-- 许愿表单弹窗END -->
+
+<!-- 许愿详情弹窗 -->
+<drawer id="detail" custom="drawer" direction="bottom" height="auto" round>
+  <block wx:if="{{ wishDetailIndex !== -1 }}">
+    <view class="drawer-title">许愿详情</view>
+    <view class="drawer-content">
+      <wish-detail data="{{ wishList[wishDetailIndex] }}" />
+      <button
+        class="button button_block button-color_wish margin-top"
+        bindtap="linkToListPage"
+      >查看许愿列表</button>
+    </view>
+  </block>
+</drawer>
+<!-- 许愿详情弹窗END -->

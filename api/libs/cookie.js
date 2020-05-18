@@ -5,7 +5,7 @@ function setCookie(cookies = []) {
     item.split(/;\s*/).forEach(cookie => {
       const arr = cookie.split('=')
       const key = arr[0]
-      const val = arr.slice(1).join('=')
+      const value = arr.slice(1).join('=')
       const doc = this.findOne({ key })
       doc ? doc.update({ value }) : this.addOne({ key, value })
     })

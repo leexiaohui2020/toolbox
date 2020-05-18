@@ -1,0 +1,40 @@
+page {
+  --bg-color: #e9ddc3;
+  --color-theme: #741012;
+  --border-color: #e3d3bf;
+  --text-color: #ba8961;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* 搜索框 */
+.search {
+  --h: 80rpx;
+  
+  height: var(--h);
+  margin: 30rpx;
+  display: flex;
+  align-items: center;
+  background-color: #FFF;
+  border-radius: 8rpx;
+}
+.search-icon {
+  margin-left: 20rpx;
+}
+.search-input {
+  flex: 1;
+  width: 0;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+/* 许愿列表 */
+.wish-item {
+
+  padding: 30rpx;
+  border-top: 2rpx solid var(--border-color);
+  border-bottom: 2rpx solid var(--border-color);
+  margin-bottom: 30rpx;
+  background-color: #f2e9d4;
+}

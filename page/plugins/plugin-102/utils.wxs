@@ -1,0 +1,24 @@
+var exports = module.exports;
+
+// 计算value是options中的第几项
+exports.getIndex = function(value, options) {
+  if (!options) return -1;
+  return options.indexOf(value);
+};
+
+// 每三位加一个逗号
+exports.totalFormat = function(total) {
+  var re = getRegExp('(?=(?!\b)(\d{3})+$)', 'g');
+  return total.toString().replace(re, ',');
+};
+
+// 格式化愿望条内容
+exports.wishTipFormat = function(wish) {
+  return '☆' + wish.type + '☆' + wish.name;
+};
+
+// 计算年龄
+exports.getAge = function(year) {
+  var currentYear = getDate().getFullYear();
+  return currentYear - year + '岁';
+};

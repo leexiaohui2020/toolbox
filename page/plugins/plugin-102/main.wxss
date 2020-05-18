@@ -1,0 +1,15 @@
+.input {
+  --h: 100rpx;
+
+  height: var(--h);
+  padding: 0 20rpx;
+  border: 2rpx solid var(--color);
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+  background-color: #FFF;
+}
+textarea.input {
+  --h: 200rpx;
+  width: 100%;
+  padding: 20rpx;
+}

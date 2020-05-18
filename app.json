@@ -57,7 +57,9 @@
     "page/plugins/plugin-100/main",
     "page/plugins/plugin-101/main",
     "page/plugins/plugin-101/pager/main",
-    "page/plugins/plugin-101/detail/main"
+    "page/plugins/plugin-101/detail/main",
+    "page/plugins/plugin-102/home/main",
+    "page/plugins/plugin-102/detail/main"
   ],
   "window": {
     "navigationBarBackgroundColor": "#2196f3"

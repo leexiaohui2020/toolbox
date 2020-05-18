@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "drawer": "/component/base/drawer/main",
+    "wish-detail": "../components/wish-detail/main"
+  },
+  "navigationStyle": "custom"
+}

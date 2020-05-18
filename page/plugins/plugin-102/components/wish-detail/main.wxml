@@ -1,0 +1,32 @@
+<wxs src="../../utils.wxs" module="utils" />
+<view class="detail custom" wx:if="{{ data }}">
+  <!-- 许愿人与祝福操作 -->
+  <view class="detail-caption">
+    <view class="detail-name">许愿人：{{ data.name }}</view>
+    <view class="detail-action" bindtap="likeHandler">
+      <text wx:if="{{ data.likes.length }}">({{ data.likes.length }})</text>
+      <text>祝福</text>
+    </view>
+  </view>
+  <!-- 许愿人与祝福操作END -->
+
+  <textarea
+    class="input"
+    value="{{ data.content }}"
+    disabled
+  ></textarea>
+
+  <!-- 时间 -->
+  <view class="detail-date">{{ data.createdAt }}</view>
+  <!-- 时间END -->
+
+  <!-- 标签列表 -->
+  <view class="tag">
+    <view class="tag-item">类别：{{ data.type }}</view>
+    <view class="tag-item">地区：{{ data.city }}</view>
+    <view class="tag-item">年龄：{{ utils.getAge(data.born) }}</view>
+    <view class="tag-item">性别：{{ data.gender }}</view>
+    <view class="tag-item">星座：{{ data.conste }}</view>
+  </view>
+  <!-- 标签列表END -->
+</view>

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "wish-detail": "../components/wish-detail/main"
+  },
+  "navigationBarBackgroundColor": "#741012",
+  "navigationBarTitleText": "许愿列表",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#e9ddc3"
+}
