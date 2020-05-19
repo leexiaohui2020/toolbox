@@ -37,3 +37,8 @@ export function getPlantClassifyInfo(img) {
 export function getNokiaMessageImage(sms) {
   return this.request.post(this.getURL('/proxy/getNokiaMessageImage'), { sms })
 }
+
+// 随机获取文章的一句话
+export function getArticleRandOne(category) {
+  return this.request.post(this.getURL('/proxy/getArticleRandOne'), { category }, {}, false)
+}

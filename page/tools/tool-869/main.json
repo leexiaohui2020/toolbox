@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "typing": "/component/base/typing/main"
+  },
+  "navigationBarTitleText": "毒鸡汤"
+}

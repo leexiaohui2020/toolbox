@@ -1,0 +1,20 @@
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.typing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.typing-content {
+  text-align: left;
+}
+.typing-cursor {
+  opacity: 1;
+  font-weight: bold;
+  animation: blink .7s infinite;
+}

@@ -190,3 +190,12 @@ export function getImageInfo(src) {
     })
   })
 }
+
+// 辗转相除法求两个数的最大公约数
+export function getCommonDivisor(num1, num2) {
+  [num2, num1] = [num1, num2].sort()
+  while(num2 !== 0) {
+    [num1, num2] = [num2, num1 % num2]
+  }
+  return num1
+}

@@ -1,0 +1,6 @@
+<view class="typing custom">
+  <view class="typing-content">
+    <text>{{ showText }}</text>
+    <text class="typing-cursor" wx:if="{{ showCursor }}">|</text>
+  </view>
+</view>

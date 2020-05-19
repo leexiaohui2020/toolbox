@@ -1,0 +1,27 @@
+<view class="content">
+  <typing id="typing" custom="typing" clearTime="500" show-cursor />
+  <view class="flex margin-bottom">
+    <view class="flex-sub margin-right-xs">
+      <button class="button button_block button-color_blue" bindtap="getContent">换一换</button>
+    </view>
+    <view class="flex-sub">
+      <button class="button button_block button-color_green" bindtap="generatePoster">生成海报</button>
+    </view>
+  </view>
+
+  <view class="{{ showCanvas ? 'margin-bottom' : 'poster-hide' }}">
+    <!-- 生成海报 -->
+    <canvas class="poster" canvas-id="poster" />
+    <!-- 生成海报END -->
+    <button class="button button_block button-color_blue" bindtap="savePhoto">保存至相册</button>
+  </view>
+
+  <view class="wordcard margin-bottom">
+    毒鸡汤，精心熬制了有屎以来最毒1000多条经典毒鸡汤，句句“治愈”人心! 
+    只为了帮你更好的看清人生认识自己，直面现实,直面惨淡的人生,不给你励志,
+    不给你慰藉,像一根鞭猛的抽你一下,使你清醒,知道这个世界和你自己最真实的
+    一面,是青少年手机里的必备宝典。
+  </view>
+
+  <cuad />
+</view>

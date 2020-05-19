@@ -37,9 +37,9 @@ function createTool(opts = {}) {
 
   Object.assign(config, {
 
-    onLoad(opts) {
+    onLoad(query) {
       if (typeof opts.onLoad === 'function') {
-        opts.onLoad.call(this, opts)
+        opts.onLoad.call(this, query)
       }
       const storeItem = store.findOne({ id: this.toolId })
       if (!storeItem) {
