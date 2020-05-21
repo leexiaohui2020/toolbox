@@ -1,10 +1,16 @@
-<cell
-  wx:for="{{ plugins }}"
-  wx:key="id"
-  link="{{ item.path }}"
-  label-hide
->
-  <image class="plugin-image" src="{{ item.image }}" mode="widthFix" slot="prefix"></image>
-  <view>{{ item.name }}</view>
-  <view class="icon-arrow-right" slot="suffix"></view>
-</cell>
+<block wx:for="{{ plugins }}" wx:key="id">
+  <cell wx:if="{{ !item.hidden }}" link="{{ item.path }}" label-hide>
+    <image class="plugin-image" src="{{ item.image }}" mode="widthFix" slot="prefix"></image>
+    <view>{{ item.name }}</view>
+    <view class="icon-arrow-right" slot="suffix"></view>
+  </cell>
+</block>
+
+<!-- 没有插件时显示 -->
+<view class="default" style="height: 100vh" wx:if="{{ plugins.length === 0 }}">
+  <view class="default-icon icon-emptybox"></view>
+  <view class="default-label">
+    <view>一个插件都没有哦，试试</view>
+    <view class="default-action" bindtap="gotoPluginManager">管理我的插件</view>
+  </view>
+</view>

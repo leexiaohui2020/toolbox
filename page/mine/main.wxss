@@ -1,0 +1,4 @@
+.options-icon {
+  font-size: 12pt;
+  margin-right: 10rpx;
+}

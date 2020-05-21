@@ -1,7 +1,9 @@
 {
   "pages": [
-    "page/home/main",
     "page/plugin/main",
+    "page/plugin/manage/main",
+    "page/home/main",
+    "page/mine/main",
     "page/search/main",
     "page/search/result/main",
     "page/toolcate/main",
@@ -82,6 +84,12 @@
         "pagePath": "page/plugin/main",
         "iconPath": "img/tabbar/plugin.png",
         "selectedIconPath": "img/tabbar/plugin-select.png"
+      },
+      {
+        "text": "我的",
+        "pagePath": "page/mine/main",
+        "iconPath": "img/tabbar/mine.png",
+        "selectedIconPath": "img/tabbar/mine-select.png"
       }
     ]
   },

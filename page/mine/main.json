@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "cell": "/component/base/cell/main",
+    "user-card": "/component/service/user-card/main"
+  },
+  "navigationBarTitleText": "我的"
+}

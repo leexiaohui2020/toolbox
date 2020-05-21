@@ -1,0 +1,20 @@
+<view class="caption">
+  <view class="title">打开/关闭插件入口</view>
+  <view class="intro">关闭后，仅隐藏“插件中心”页该插件的入口，不会清空历史数据。</view>
+</view>
+
+<block wx:for="{{ plugins }}" wx:key="id">
+  <cell label-hide>
+    <!-- 图标 -->
+    <!-- 名称 -->
+    <image class="plugin-image" src="{{ item.image }}" mode="widthFix" slot="prefix"></image>
+    <view class="plugin-name">{{ item.name }}</view>
+    <switch
+      slot="suffix"
+      color="#2196f3"
+      checked="{{ !item.hidden }}"
+      data-id="{{ item.id }}"
+      bindchange="switchHandler"
+    ></switch>
+  </cell>
+</block>

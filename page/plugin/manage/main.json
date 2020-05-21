@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cell": "/component/base/cell/main"
+  },
+  "navigationBarTitleText": "插件管理"
+}

@@ -1,0 +1,17 @@
+<user-card custom="margin-bottom" />
+
+<!-- 操作卡片 -->
+<view class="options">
+  <cell
+    link="{{ item.link }}"
+    wx:for="{{ options }}"
+    wx:key="title"
+  >
+    <!-- 图标 -->
+    <text class="options-icon {{ item.icon }}" slot="prefix"></text>
+    <text>{{ item.title }}</text>
+    <!-- 箭头 -->
+    <text class="icon-arrow-right" slot="suffix"></text>
+  </cell>
+</view>
+<!-- 操作卡片END -->

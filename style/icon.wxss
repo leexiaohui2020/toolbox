@@ -155,3 +155,7 @@
 .icon-rotate-right::before {
   content: '\e630';
 }
+
+.icon-plugin::before {
+  content: '\e633';
+}

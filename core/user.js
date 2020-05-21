@@ -1,8 +1,11 @@
 import api from '../api/api'
 
-class User {
+import Observe from '../utils/libs/observe'
+
+class User extends Observe {
 
   constructor() {
+    super()
     this.$data = {}
     this.autoLogin()
   }
@@ -23,6 +26,7 @@ class User {
 
   setData(obj) {
     Object.assign(this.$data, obj)
+    this.runWatch()
   }
 }
 

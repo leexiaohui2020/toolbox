@@ -45,22 +45,3 @@ page {
 .fixed > .btn + .btn {
   margin-top: 20rpx;
 }
-
-.default {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.default-icon {
-  opacity: .3;
-  font-size: 100pt;
-}
-.default-label {
-  display: flex;
-  align-items: center;
-}
-.default-label > .btn {
-  margin: 0 20rpx;
-}

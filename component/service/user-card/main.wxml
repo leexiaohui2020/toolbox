@@ -1,0 +1,9 @@
+<view class="usercard custom">
+  <!-- 已授权展示用户卡片 -->
+  <block wx:if="{{ userInfo }}">
+    <image class="usercard-avatar" src="{{ userInfo.avatarUrl }}" mode="widthFix"></image>
+    <view class="usercard-name">{{ userInfo.nickName }}</view>
+  </block>
+  <!-- 未授权显示授权按钮 -->
+  <button class="button button-color_blue" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" wx:else>同步用户信息</button>
+</view>

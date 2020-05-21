@@ -1,0 +1,13 @@
+@import "../main.wxss";
+
+.caption {
+  padding: 30rpx;
+}
+.caption > .title {
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+.caption > .intro {
+  font-size: 8pt;
+  color: var(--color-gray);
+}

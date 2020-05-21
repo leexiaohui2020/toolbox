@@ -102,8 +102,9 @@ class Storage {
     return this
   }
 
-  watch(callback) {
+  watch(callback, run) {
     this[WATCH_KEY].add(callback)
+    if (run) callback(this)
     return this
   }
 

@@ -1,0 +1,21 @@
+.usercard {
+  padding: 80rpx 40rpx;
+  background-color: #FFF;
+  box-sizing: 0 2rpx 2rpx rgba(0, 0, 0, .15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.usercard-avatar {
+  --size: 140rpx;
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 100%;
+  margin-bottom: 30rpx;
+}
+.usercard-name {
+  font-size: 12pt;
+  font-weight: 600;
+}
