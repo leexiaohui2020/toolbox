@@ -5,7 +5,7 @@ Page({
   data: {
     cates: null,
     // 推荐工具
-    recommand: [869, 699],
+    recommand: [728, 869, 699],
     recommandCurrent: 0
   },
 

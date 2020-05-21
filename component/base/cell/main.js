@@ -7,7 +7,7 @@ Component({
     label: String,
     labelWidth: {
       type: String,
-      value: 220
+      value: '220rpx'
     },
     labelHide: {
       type: Boolean,
@@ -20,6 +20,10 @@ Component({
     link: {
       type: String,
       value: ''
+    },
+    height: {
+      type: String,
+      value: '120rpx'
     }
   },
 

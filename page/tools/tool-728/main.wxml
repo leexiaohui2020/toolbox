@@ -1,0 +1,66 @@
+<!-- 抽奖界面 -->
+<canvas class="canvas" canvas-id="canvas"></canvas>
+<view class="container" wx:if="{{ imgSrc }}">
+  <view class="container-canvas">
+    <image
+      class="container-image"
+      src="{{ imgSrc }}"
+      mode="widthFix"
+      animation="{{ canvasAnimation }}"
+      bindtransitionend="animationEndHandler"
+    ></image>
+    <!-- 按钮 -->
+    <view class="action" bindtap="actionHandler"></view>
+  </view>
+</view>
+<!-- 抽奖界面END -->
+
+<view class="content">
+  <button class="button button_block button-color_blue" bindtap="openSettingDrawer">开始吧</button>
+  <view class="wordcard margin-top">
+    <view>选择困难症者的助选神器，让选择变成娱乐。</view>
+    <view>本工具仅供娱乐，对结果不承担任何责任</view>
+  </view>
+</view>
+
+<!-- 抽奖设置弹窗 -->
+<drawer id="setting" direction="right" custom="drawer">
+  <scroll-view class="drawer-content" scroll-y>
+    <view class="padding">
+      <view class="drawer-label">抽奖主题</view>
+      <input
+        class="input margin-bottom-sm"
+        placeholder="请输入主题"
+        value="{{ setting.title }}"
+        data-key="setting.title"
+        bindinput="inputHandler"
+      ></input>
+
+      <view class="drawer-label">设置奖项(至少两项)</view>
+      <block wx:for="{{ setting.items }}" wx:key="index">
+        <cell custom="{{ index === 0 ? '' : 'margin-top-sm' }}" height="100rpx" label-hide>
+          <input
+            placeholder="输入新奖项(至多5个字符)"
+            maxlength="5"
+            value="{{ item }}"
+            data-key="{{ 'setting.items[' + index + ']' }}"
+            bindinput="inputHandler"
+          ></input>
+          <view
+            class="addon icon-remove"
+            slot="suffix"
+            data-index="{{ index }}"
+            bindtap="removeItem"
+          ></view>
+        </cell>
+      </block>
+    </view>
+  </scroll-view>
+  <!-- 操作选项区域 -->
+  <view class="drawer-options">
+    <view class="action button-color_blue" bindtap="addItems">新增</view>
+    <view class="action button-color_red" bindtap="confirmHandler">完成</view>
+  </view>
+  <!-- 操作选项区域END -->
+</drawer>
+<!-- 抽奖设置弹窗END -->

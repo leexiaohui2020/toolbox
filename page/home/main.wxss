@@ -55,7 +55,7 @@ page {
   height: var(--height);
   line-height: var(--height);
   padding: 0 30rpx;
-  background-color: var(--color-green);
+  background-color: var(--color-red);
   color: #FFF;
   position: absolute;
   font-size: 8pt;

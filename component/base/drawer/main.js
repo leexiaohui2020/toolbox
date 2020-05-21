@@ -36,10 +36,14 @@ Component({
   methods: {
 
     open() {
-      this.setData({ show: 'open' })
+      this.setData({ show: 'open' }, () => {
+        this.triggerEvent('opened')
+      })
     },
     close() {
-      this.setData({ show: '' })
+      this.setData({ show: '' }, () => {
+        this.triggerEvent('closed')
+      })
     },
     onTransitionEnd() {
       if (this.data.show !== 'open') {
