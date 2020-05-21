@@ -1,0 +1,25 @@
+var exports = module.exports = {};
+
+// 距离当前时间多少天
+exports.getDateDistance = function(dateStr) {
+  var date = getDate(dateStr);
+  var current = getDate();
+  var cha = Math.floor(Math.abs(current - date) / 1000);
+  var str = '';
+
+  if (date.getFullYear() !== current.getFullYear()) {
+    str = Math.abs(date.getFullYear() - current.getFullYear()) + '年';
+  } else if (date.getMonth() !== current.getMonth()) {
+    str = Math.abs(date.getMonth() - current.getMonth()) + '月';
+  } else if (date.getDate() !== current.getDate()) {
+    str = Math.abs(date.getDate() - current.getDate()) + '天';
+  } else {
+    if (cha < 60) str = cha + '秒';
+    else if (cha < 60 * 60) str = Math.floor(cha / 60) + '分钟';
+    else str = Math.floor(cha / 60 / 60) + '小时';
+  }
+
+  str += cha > 0 ? '前' : '后';
+  return str;
+};
+

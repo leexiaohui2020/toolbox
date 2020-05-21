@@ -1,0 +1,12 @@
+<wxs src="../common.wxs" module="common" />
+<block wx:for="{{ logs }}" wx:key="id">
+  <cell label="{{ item.name }}" align="right">
+    <text class="tag">{{ common.getDateDistance(item._updateTime) }}</text>
+    <text class="icon-arrow-right" slot="suffix"></text>
+  </cell>
+</block>
+
+<view class="default" wx:if="{{ logs.length === 0 }}">
+  <view class="default-icon icon-emptybox"></view>
+  <view class="default-label">暂无使用记录</view>
+</view>

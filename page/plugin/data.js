@@ -37,7 +37,10 @@ export default createStorage('plugins_manager', {
     bind() {
       return page => {
         const pluginWatcher = plugin => {
-          page.setData({ plugins: plugin.plugins })
+          page.setData({
+            plugins: plugin.plugins,
+            hasPlugin: plugin.plugins.filter(v => !v.hidden).length !== 0
+          })
         }
         this.watch(pluginWatcher, true)
         page.unbind = () => this.unwatch(pluginWatcher)

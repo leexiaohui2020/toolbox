@@ -1,11 +1,12 @@
 {
   "pages": [
-    "page/plugin/main",
-    "page/plugin/manage/main",
     "page/home/main",
     "page/mine/main",
+    "page/plugin/main",
+    "page/plugin/manage/main",
     "page/search/main",
     "page/search/result/main",
+    "page/history/main",
     "page/toolcate/main",
     "page/tools/tool-926/main",
     "page/tools/tool-925/main",

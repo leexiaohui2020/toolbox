@@ -3,7 +3,8 @@ import plugins from 'data'
 Page({
 
   data: {
-    plugins: []
+    plugins: [],
+    hasPlugin: false
   },
 
   onLoad() {

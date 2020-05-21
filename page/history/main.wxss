@@ -1,0 +1,11 @@
+.panel {
+  display: flex;
+  align-items: center;
+}
+.panel > .tag {
+  margin-left: 20rpx;
+}
+
+.default {
+  height: 100vh;
+}

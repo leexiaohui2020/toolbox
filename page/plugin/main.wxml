@@ -7,7 +7,7 @@
 </block>
 
 <!-- 没有插件时显示 -->
-<view class="default" style="height: 100vh" wx:if="{{ plugins.length === 0 }}">
+<view class="default" style="height: 100vh" wx:if="{{ !hasPlugin }}">
   <view class="default-icon icon-emptybox"></view>
   <view class="default-label">
     <view>一个插件都没有哦，试试</view>
