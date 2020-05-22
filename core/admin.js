@@ -8,13 +8,12 @@ export function createAdminPage(opts = {}) {
       App.$user.watch(this.userWatcher = user => {
         this.user = user
         this.token = user.$data.token
-        if (!this.token && opts.auth !== false) {
-          wx.redirectTo({ url: '/page/plugins/plugin-103/page/login/main' })
-        }
       }, true)
-
+      
       this.$api = App.$api.admin
-      if (typeof opts.onLoad === 'function') {
+      if (!this.token && opts.auth !== false) {
+        wx.redirectTo({ url: '/page/plugins/plugin-103/page/login/main' })
+      } else if (typeof opts.onLoad === 'function') {
         opts.onLoad.apply(this, arguments)
       }
     },

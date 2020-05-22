@@ -29,6 +29,7 @@ Page.createAdminPage({
     wx.hideLoading()
     if (res.status !== 'ok') return showError(res.errmsg)
     this.user.setData({ token: res.data.token })
+    this.$api.setHeader({ token: res.data.token })
     wx.redirectTo({ url: '../home/main' })
   }
 })

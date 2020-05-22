@@ -2,19 +2,20 @@ const { createStorage } = App.$utils
 
 const plugins = [
   {
-    id: 103,
-    name: '管理后台',
-    path: '/page/plugins/plugin-103/page/home/main'
-  },
-  {
-    id: 102,
-    name: '许愿树',
-    path: '/page/plugins/plugin-102/home/main'
-  },
-  {
     id: 101,
     name: '漫画屋'
   },
+  {
+    id: 103,
+    name: '管理后台',
+    path: '/page/plugins/plugin-103/page/home/main',
+    hidden: true
+  },
+  // {
+  //   id: 102,
+  //   name: '许愿树',
+  //   path: '/page/plugins/plugin-102/home/main'
+  // },
   // {
   //   id: 100,
   //   name: '纯音乐频道'
@@ -34,7 +35,7 @@ export default createStorage('plugins_manager', {
       return plugins.map(item => {
         const node = this.findOne({ id: item.id })
         return Object.assign(item, {
-          hidden: Boolean(node && node.hidden)
+          hidden: Boolean(node ? node.hidden : item.hidden)
         })
       })
     },

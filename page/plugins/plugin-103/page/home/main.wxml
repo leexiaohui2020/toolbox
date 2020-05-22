@@ -1,2 +1,21 @@
-<!--page/plugins/plugin-103/page/home/main.wxml-->
-<text>page/plugins/plugin-103/page/home/main.wxml</text>
+<view class="padding" wx:if="{{ init }}">
+  <!-- 用户数据面板 -->
+  <view class="panel">
+    <view class="panel-title">用户数据</view>
+    <!-- 今日、本周、本月新增用户量 -->
+    <view class="userdata">
+      <block wx:for="{{ userdata }}" wx:key="label">
+        <view class="userdata-item">
+          <view class="userdata-label">{{ item.label }}</view>
+          <view class="userdata-value">{{ item.count }}</view>
+        </view>
+      </block>
+    </view>
+    <!-- 累计用户量 -->
+    <cell custom="userdata-count" label="累计用户" align="right">
+      <text>{{ countUser }}</text>
+      <text class="icon-arrow-right" slot="suffix"></text>
+    </cell>
+  </view>
+  <!-- 用户数据面板END -->
+</view>

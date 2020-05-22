@@ -1,1 +1,33 @@
-/* page/plugins/plugin-103/page/home/main.wxss */
+/* 面板 */
+.panel {
+  padding: 0 30rpx;
+  background-color: #FFF;
+  border-radius: 8rpx;
+  box-shadow: 2rpx 2rpx 2rpx rgba(0, 0, 0, .15);
+}
+.panel-title {
+  font-weight: 600;
+  padding: 30rpx 0;
+}
+
+/* 用户数据 */
+.userdata {
+  display: flex;
+  padding: 30rpx 0;
+  border-bottom: 2rpx solid var(--color-grey);
+}
+.userdata-item {
+  flex: 1;
+  width: 0;
+}
+.userdata-label {
+  color: var(--color-gray);
+  margin-bottom: 20rpx;
+}
+.userdata-value {
+  font-weight: 600;
+  font-size: 12pt;
+}
+.userdata-count {
+  padding: 0 !important;
+}
