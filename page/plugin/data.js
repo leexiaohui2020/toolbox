@@ -2,6 +2,11 @@ const { createStorage } = App.$utils
 
 const plugins = [
   {
+    id: 103,
+    name: '管理后台',
+    path: '/page/plugins/plugin-103/page/home/main'
+  },
+  {
     id: 102,
     name: '许愿树',
     path: '/page/plugins/plugin-102/home/main'
@@ -16,7 +21,8 @@ const plugins = [
   // },
 ].map(item => Object.assign({
   path: `/page/plugins/plugin-${item.id}/main`,
-  image: `/page/plugins/plugin-${item.id}/main.png`
+  // image: `/page/plugins/plugin-${item.id}/main.png`,
+  image: `/img/plugins/${item.id}.png`
 }, item))
 
 export default createStorage('plugins_manager', {

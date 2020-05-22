@@ -74,6 +74,9 @@ page {
 .button_block {
   display: block;
 }
+.button_round {
+  border-radius: var(--h);
+}
 .button-color_blue {
   color: #FFF;
   background: var(--color-blue);

@@ -66,6 +66,24 @@
     "page/plugins/plugin-102/home/main",
     "page/plugins/plugin-102/detail/main"
   ],
+  "subpackages": [
+    {
+      "name": "admin-plugin",
+      "root": "page/plugins/plugin-103",
+      "pages": [
+        "page/login/main",
+        "page/home/main"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "page/home/main": {
+      "network": "all",
+      "packages": [
+        "admin-plugin"
+      ]
+    }
+  },
   "window": {
     "navigationBarBackgroundColor": "#2196f3"
   },

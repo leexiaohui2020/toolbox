@@ -159,3 +159,9 @@
 .icon-plugin::before {
   content: '\e633';
 }
+.icon-userfill::before {
+  content: '\e634';
+}
+.icon-lockfill::before {
+  content: '\e635';
+}

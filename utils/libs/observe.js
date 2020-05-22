@@ -25,7 +25,6 @@ class Observe {
   // 添加监听函数
   watch() {
     const { name, fn, runWhenBind } = parseArgs(arguments)
-    console.info(arguments, { name, fn, runWhenBind })
     if (!fn) throw new Error('fn must be a function')
     this[WATCHER].push({ name, fn })
     if (runWhenBind) fn(this)
@@ -39,7 +38,7 @@ class Observe {
       if (name && item.name !== name) return false
       return fn === item.fn 
     }).forEach(item => {
-      const index = this[WATCHER].findIndex(item)
+      const index = this[WATCHER].indexOf(item)
       this[WATCHER].splice(index, 1)
     })
     return this

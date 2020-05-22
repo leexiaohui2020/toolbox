@@ -1,0 +1,37 @@
+page {
+  color: #FFF;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #2196f3 100%);
+}
+
+.content {
+  padding: 200rpx 40rpx 40rpx;
+}
+.brand {
+  text-align: center;
+  font-size: 14pt;
+  font-weight: 600;
+  margin-bottom: 120rpx;
+}
+
+/* 表单 */
+.form-item {
+  --h: 100rpx;
+  height: var(--h);
+  border-radius: var(--h);
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 60rpx;
+}
+.form-icon {
+  color: var(--color-gray);
+  margin-right: 20rpx;
+}
+.form-input {
+  flex: 1;
+  width: 0;
+  color: #333;
+}
