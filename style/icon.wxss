@@ -169,3 +169,6 @@
 .icon-feedback::before {
   content: '\e636';
 }
+.icon-video::before {
+  content: '\e637';
+}
