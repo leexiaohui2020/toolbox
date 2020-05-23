@@ -25,9 +25,9 @@ function request(opts = {}) {
 }
 
 const requestCache = Symbol('Request#Cache')
-const getKey = (data = {}, header = {}) => {
-  const objStr = JSON.stringify({ data, header })
-  return Crypto.SHA256(objStr).toString()
+const getKey = (url, data = {}, header = {}) => {
+  const objStr = JSON.stringify({ url, data, header })
+  return Crypto.MD5(objStr).toString()
 }
 
 export default {
@@ -38,7 +38,7 @@ export default {
   },
 
   get(url, data = {}, header = {}, useCache = true) {
-    const key = getKey(data, header)
+    const key = getKey(url, data, header)
     const getCache = this[requestCache].get
     if (getCache[key] && useCache) {
       return Promise.resolve(getCache[key])
@@ -52,7 +52,7 @@ export default {
   },
 
   post(url, data = {}, header = {}, useCache = true) {
-    const key = getKey(data, header)
+    const key = getKey(url, data, header)
     const postCache = this[requestCache].post
     if (postCache[key] && useCache) {
       return Promise.resolve(postCache[key])

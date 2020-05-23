@@ -43,6 +43,7 @@ Page({
 
   async getChapter(mid) {
     const { data } = await App.$api.cartoon.getChapter(mid)
+    console.info(data)
     if (data.status === 'ok') {
       this.setData(data.data)
     }
