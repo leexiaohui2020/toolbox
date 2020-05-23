@@ -7,10 +7,12 @@ exports.getDateDistance = function(dateStr) {
   var cha = Math.floor(Math.abs(current - date) / 1000);
   var str = '';
 
-  if (date.getFullYear() !== current.getFullYear()) {
+  if (cha === 0) {
+    str = '刚刚';
+  } else if (date.getFullYear() !== current.getFullYear()) {
     str = Math.abs(date.getFullYear() - current.getFullYear()) + '年';
   } else if (date.getMonth() !== current.getMonth()) {
-    str = Math.abs(date.getMonth() - current.getMonth()) + '月';
+    str = Math.abs(date.getMonth() - current.getMonth()) + '个月';
   } else if (date.getDate() !== current.getDate()) {
     str = Math.abs(date.getDate() - current.getDate()) + '天';
   } else {
@@ -19,7 +21,6 @@ exports.getDateDistance = function(dateStr) {
     else str = Math.floor(cha / 60 / 60) + '小时';
   }
 
-  str += cha > 0 ? '前' : '后';
+  str += cha > 0 ? '前' :  str < 0 ? '后' : '';
   return str;
 };
-
