@@ -42,3 +42,8 @@ export function getNokiaMessageImage(sms) {
 export function getArticleRandOne(category) {
   return this.request.post(this.getURL('/proxy/getArticleRandOne'), { category }, {}, false)
 }
+
+// 印章图案生成器
+export function getSealImage(opts) {
+  return this.request.post(this.getURL('/proxy/getSealImage'), opts)
+}

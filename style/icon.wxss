@@ -165,3 +165,7 @@
 .icon-lockfill::before {
   content: '\e635';
 }
+
+.icon-feedback::before {
+  content: '\e636';
+}

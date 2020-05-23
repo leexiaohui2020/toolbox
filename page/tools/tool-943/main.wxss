@@ -1,0 +1,46 @@
+@import "../tool.wxss";
+
+/* 生成图章展示区域 */
+.result {
+  margin-bottom: 30rpx;
+  position: relative;
+}
+.result-image {
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+/* 弹窗 */
+.drawer {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+.drawer-caption {
+  font-size: 12pt;
+  font-weight: 600;
+  padding: 30rpx;
+}
+.drawer-content {
+  flex: 1;
+  height: 0;
+}
+.drawer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+}
+.drawer-item {
+  width: calc(100% / 3);
+  box-sizing: border-box;
+  padding: 10rpx;
+  position: relative;
+}
+.drawer-item > image {
+  width: 100%;
+}
+.drawer-item > view {
+  font-size: 8pt;
+  line-height: 60rpx;
+  text-align: center;
+}

@@ -27,7 +27,7 @@
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.8.1",
+	"libVersion": "2.11.0",
 	"appid": "wxa3a1ed7e9913ca17",
 	"projectname": "toolbox",
 	"cloudfunctionTemplateRoot": "",

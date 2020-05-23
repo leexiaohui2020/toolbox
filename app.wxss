@@ -121,6 +121,9 @@ page {
 .wordcard > view + view {
   margin-top: 30rpx;
 }
+.wordcard-label {
+  font-weight: 600;
+}
 
 /* flex */
 .flex {

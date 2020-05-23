@@ -1,0 +1,93 @@
+<view class="padding">
+  <!-- 图章文字 -->
+  <cell custom="margin-bottom" label="图章文字" align="right">
+    <input
+      type="text"
+      placeholder="图章文字"
+      value="{{ content }}"
+      data-key="content"
+      bindinput="inputHandler"
+    />
+  </cell>
+
+  <!-- 文字字体 -->
+  <picker
+    range="{{ fonts }}"
+    range-key="text"
+    checked="{{ fontSelected }}"
+    data-key="fontSelected"
+    bindchange="inputHandler"
+  >
+    <cell custom="margin-bottom" label="文字字体" align="right">
+      <text>{{ fonts[fontSelected].text }}</text>
+      <text class="addon icon-dropdown" slot="suffix"></text>
+    </cell>
+  </picker>
+
+  <!-- 图章样式 -->
+  <picker
+    range="{{ styles }}"
+    range-key="text"
+    checked="{{ styleSelected }}"
+    data-key="styleSelected"
+    bindchange="inputHandler"
+  >
+    <cell custom="margin-bottom" label="图章样式" align="right">
+      <text class="margin-right-xs icon-feedback" slot="prefix" catchtap="showStyleDrawer"></text>
+      <text>{{ styles[styleSelected].text }}</text>
+      <text class="addon icon-dropdown" slot="suffix"></text>
+    </cell>
+  </picker>
+
+  <!-- 简体繁体 -->
+  <picker
+    range="{{ st }}"
+    range-key="text"
+    checked="{{ stSelected }}"
+    data-key="stSelected"
+    bindchange="inputHandler"
+  >
+    <cell custom="margin-bottom" label="简体繁体" align="right">
+      <text>{{ st[stSelected].text }}</text>
+      <text class="addon icon-dropdown" slot="suffix"></text>
+    </cell>
+  </picker>
+
+  <button
+    class="button button_block button-color_blue margin-bottom"
+    bindtap="submitHandler"
+  >生成图章</button>
+
+  <!-- 显示生成图案 -->
+  <view class="result" wx:if="{{ imgDataUrl }}">
+    <image class="result-image" src="{{ imgDataUrl }}" mode="widthFix"></image>
+    <button class="button button_block button-color_blue" bindtap="showVideoAd">保存至相册</button>
+  </view>
+  <!-- 显示生成图案END -->
+
+  <!-- Banner广告 -->
+  <cuad custom="margin-bottom" />
+
+  <view class="wordcard">
+    <view>印章，亦称图章，用作印于文件上表示鉴定或签署的文具，一般印章都会先沾上颜料再印上，不沾颜料、印上平面后会呈现凹凸的称为钢印，有些是印于蜡或火漆上、信封上的蜡印。制作材质有 金属、木头、石头、玉石等。</view>
+
+    <view>印章图案生成器，输入汉字（比如：你的名字），选择印章样式和印章字体后就可生成得到一枚属于你自己的个性印章图案，有阴刻阳刻、仿古风汉印等样式，字体有印篆、方篆等，支持输出背景透明PNG印章图片。</view>
+
+    <view class="wordcard-label">版权声明</view>
+    <view>本工具所生成的图像仅供娱乐、学习、研究和测试之用，请勿应用于商业用途之中。如需商用，请自行购买相关字体的商用授权（部分字体可免费商用），否则由此引起的法律责任自行承担。</view>
+  </view>
+</view>
+
+<!-- 样式列表弹窗 -->
+<drawer id="style" custom="drawer" direction="bottom" round>
+  <view class="drawer-caption">图章样式预览</view>
+  <scroll-view class="drawer-content" scroll-y>
+    <view class="drawer-grid">
+      <view class="drawer-item" wx:for="{{ styles }}" wx:key="id">
+        <image src="{{ item.img }}" mode="widthFix"></image>
+        <view>{{ item.text }}</view>
+      </view>
+    </view>
+  </scroll-view>
+</drawer>
+<!-- 样式列表弹窗END -->
