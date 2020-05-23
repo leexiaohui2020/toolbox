@@ -60,21 +60,21 @@
     "page/tools/tool-657/main",
     "page/tools/tool-656/main",
     "page/tools/tool-655/main",
-    "page/tools/tool-654/main",
-    "page/plugins/plugin-100/main",
-    "page/plugins/plugin-101/main",
-    "page/plugins/plugin-101/pager/main",
-    "page/plugins/plugin-101/detail/main",
-    "page/plugins/plugin-102/home/main",
-    "page/plugins/plugin-102/detail/main"
+    "page/tools/tool-654/main"
   ],
   "subpackages": [
     {
-      "name": "admin-plugin",
-      "root": "page/plugins/plugin-103",
+      "name": "plugin",
+      "root": "page/plugins",
       "pages": [
-        "page/login/main",
-        "page/home/main"
+        "plugin-100/main",
+        "plugin-101/main",
+        "plugin-101/pager/main",
+        "plugin-101/detail/main",
+        "plugin-102/home/main",
+        "plugin-102/detail/main",
+        "plugin-103/page/login/main",
+        "plugin-103/page/home/main"
       ]
     }
   ],
@@ -82,7 +82,7 @@
     "page/home/main": {
       "network": "all",
       "packages": [
-        "admin-plugin"
+        "plugin"
       ]
     }
   },
