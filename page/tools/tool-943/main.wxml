@@ -61,10 +61,13 @@
   <!-- 显示生成图案 -->
   <view class="result" wx:if="{{ imgDataUrl }}">
     <image class="result-image" src="{{ imgDataUrl }}" mode="widthFix"></image>
-    <button class="button button_block button-color_blue" bindtap="showVideoAd">
-      <text class="icon-video"></text>
-      保存至相册
-    </button>
+    
+    <cu-video-ad ad-unit-id="adunit-5bac4a3026578dd5" bind:ended="savePhoto">
+      <button class="button button_block button-color_blue">
+        <text class="icon-video"></text>
+        保存至相册
+      </button>
+    </cu-video-ad>
   </view>
   <!-- 显示生成图案END -->
 

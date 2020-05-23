@@ -5,10 +5,8 @@ Page.createTool({
   toolCreatedAt: new Date('2019/11/11'),
 
   data: {
-    hatImgList: Array(10).fill(
-      App.$api.proxy.getImage('tool-803')
-    ).map((v, k) => {
-      return `${v}/hat${k}.png`
+    hatImgList: Array(10).fill(0).map((v, k) => {
+      return `http://www.atoolbox.net/Images/MerryChristmas/hat${k}.png`
     }) 
   }
 })

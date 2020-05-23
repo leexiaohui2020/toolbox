@@ -55,22 +55,6 @@ Page.createTool({
 
   onLoad() {
     this.styleDrawer = this.selectComponent('#style')
-
-    // 创建激励式广告
-    if (wx.createRewardedVideoAd) {
-      this.videoAd = wx.createRewardedVideoAd({
-        adUnitId: 'adunit-5bac4a3026578dd5'
-      })
-      this.videoAd.onLoad(() => {})
-      this.videoAd.onError(err => {
-        console.info('error:', err)
-      })
-      this.videoAd.onClose(res => {
-        if (res && res.isEnded) {
-          this.savePhoto()
-        }
-      })
-    }
   },
 
   // 输入简体
@@ -106,20 +90,6 @@ Page.createTool({
 
   showStyleDrawer() {
     this.styleDrawer.open()
-  },
-
-  showVideoAd() {
-    if (this.videoAd) {
-      this.videoAd.show().catch(err => {
-        this.videoAd.load().then(() => this.videoAd.show()).catch(err => {
-          wx.showModal({
-            title: '提示',
-            content: '广告加载失败',
-            showCancel: false
-          })
-        })
-      })
-    }
   },
 
   async savePhoto() {

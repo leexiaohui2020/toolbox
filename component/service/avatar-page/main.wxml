@@ -97,10 +97,12 @@
       <image class="response" src="{{result}}" mode="widthFix"></image>
     </view>
     <view class="dialog-footer">
-      <button
-        class="button button_block button-color_blue"
-        bindtap="saveResult"
-      >保存到相册</button>
+      <cu-video-ad custom="dialog-footer" ad-unit-id="adunit-265491822aebde7d" bind:ended="saveResult">
+        <button class="button button_block button-color_blue">
+          <text class="icon-video"></text>
+          保存到相册
+        </button>
+      </cu-video-ad>
     </view>
   </view>
 </view>

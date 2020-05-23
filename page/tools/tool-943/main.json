@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "cell": "/component/base/cell/main",
-    "drawer": "/component/base/drawer/main"
+    "drawer": "/component/base/drawer/main",
+    "cu-video-ad": "/component/base/video-ad/main"
   },
   "navigationBarTitleText": "印章图案生成器"
 }

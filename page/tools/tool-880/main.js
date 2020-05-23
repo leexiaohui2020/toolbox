@@ -5,10 +5,8 @@ Page.createTool({
   toolCreatedAt: new Date('2020/2/2'),
 
   data: {
-    maskImgList: Array(12).fill(
-      App.$api.proxy.getImage('tool-880')
-    ).map((v, k) => {
-      return `${v}/mask${k}.png`
+    maskImgList: Array(12).fill(0).map((v, k) => {
+      return `http://www.atoolbox.net/Images/Masks/Mask-${k + 1}.png`
     })
   }
 })
