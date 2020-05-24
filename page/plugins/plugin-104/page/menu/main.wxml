@@ -1,0 +1,50 @@
+<view class="padding">
+  <block wx:for="{{ menu }}" wx:key="id">
+    <cell
+      custom="margin-bottom"
+      data-id="{{ item.id }}"
+      bindtap="openMenuDrawer"
+      wx:if="{{ index < 2 }}"
+      label-hide
+    >
+      <text>{{ item.text }}</text>
+      <text class="icon-menu" slot="suffix"></text>
+    </cell>
+
+    <cu-video-ad
+      custom="margin-bottom"
+      ad-unit-id="adunit-1107c8a53434683c"
+      data-id="{{ item.id }}"
+      bind:ended="openMenuDrawer"
+      wx:else
+    >
+      <cell label-hide>
+        <text>{{ item.text }}</text>
+        <text class="icon-video" slot="suffix"></text>
+      </cell>
+    </cu-video-ad>
+  </block>
+</view>
+
+<!-- 食材分类详情弹窗 -->
+<drawer id="items" custom="drawer" direction="bottom" round>
+  <view class="drawer-title">{{ menuDrawer.title }}</view>
+  <scroll-view class="drawer-content" scroll-y>
+    <view class="padding">
+      <view class="items">
+        <view
+          class="item"
+          wx:for="{{ menuDrawer.items }}"
+          wx:key="id"
+          data-id="{{ item.id }}"
+          data-title="{{ item.text }}"
+          bindtap="gotoItemDetail"
+        >
+          <image class="item-image" src="{{ item.img }}" mode="widthFix"></image>
+          <view class="item-text">{{ item.text }}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</drawer>
+<!-- 食材分类详情弹窗END -->

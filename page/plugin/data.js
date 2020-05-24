@@ -2,6 +2,11 @@ const { createStorage } = App.$utils
 
 const plugins = [
   {
+    id: 104,
+    name: '食谱猫',
+    path: '/page/plugins/plugin-104/page/menu/main'
+  },
+  {
     id: 101,
     name: '漫画屋'
   },

@@ -1,0 +1,147 @@
+@import "../base.wxss";
+
+/* 信息面板 */
+.t {
+  position: relative;
+  background-color: #FFF;
+  box-shadow: 0 2rpx 2rpx rgba(0, 0, 0, .15);
+  margin-bottom: 30rpx;
+}
+.t-img {
+  width: 100%;
+  padding-bottom: 40%;
+  position: relative;
+  overflow: hidden;
+}
+.t-img > image {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.t-content {
+  display: flex;
+  padding: 30rpx;
+}
+.t-content-l {
+  flex: 1;
+  width: 0;
+  margin-right: 20rpx;
+}
+.t-title {
+  font-size: 12pt;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+  color: var(--color-theme);
+}
+.t-desc {
+  text-align: justify;
+  color: #666;
+}
+.t-content-r {
+  --w: 160rpx;
+  width: var(--w);
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.t-avatar {
+  --w: 100rpx;
+  width: var(--w);
+  height: var(--w);
+  border-radius: 100%;
+  margin-bottom: 20rpx;
+}
+.t-author {
+  font-size: 8pt;
+  font-weight: 600;
+}
+
+/* 普通面板 */
+.p {
+  background-color: #FFF;
+  box-shadow: 0 2rpx 2rpx rgba(0, 0, 0, .15);
+}
+.p-caption {
+  --h: 100rpx;
+  height: var(--h);
+  line-height: var(--h);
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid var(--border-color);
+  font-weight: 600;
+  color: var(--color-theme);
+}
+.p-content {
+  padding: 30rpx;
+  position: relative;
+}
+.p-intro {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+.p-intro-l {
+  color: var(--color-theme);
+  margin-right: 10rpx;
+  font-weight: 600;
+}
+.p-intro-r {
+  --h: 100rpx;
+  flex: 1;
+  width: 0;
+  min-height: var(--h);
+  text-align: justify;
+}
+
+/* 表格 */
+.tb {
+  border: 2rpx solid var(--border-color);
+}
+.th, .td {
+  --h: 100rpx;
+  height: var(--h);
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.th {
+  font-weight: 600;
+  background-color: #f8f8f8;
+  border-bottom: 2rpx solid var(--border-color);
+}
+.tb > .td:not(:last-child) {
+  border-bottom: 2rpx solid var(--border-color);
+}
+
+/* 轮播 */
+.swiper {
+  --h: 400rpx;
+  width: 100%;
+  height: var(--h);
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.swiper-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.swiper-item image {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.swiper-pages {
+  right: 0;
+  bottom: 0;
+  padding: 10rpx 30rpx;
+  background-color: var(--color-theme);
+  color: #fff;
+  position: absolute;
+}

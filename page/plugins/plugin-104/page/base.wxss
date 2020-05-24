@@ -1,0 +1,21 @@
+page {
+  --color-theme: #ff871e;
+  --border-color: #e8e8e8;
+}
+
+/* 弹窗相关样式 */
+.drawer {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+.drawer-title {
+  font-size: 12pt;
+  font-weight: 600;
+  padding: 30rpx;
+}
+.drawer-content {
+  flex: 1;
+  height: 0;
+}
+/* 弹窗相关样式END */

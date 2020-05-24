@@ -1,0 +1,32 @@
+<view class="padding" wx:if="{{ init }}">
+  <!-- 食材介绍 -->
+  <view class="shicai">
+    <view class="shicai-image">
+      <image src="{{ coverImg }}" mode="widthFix"></image>
+    </view>
+    <view class="shicai-intro">
+      <view wx:for="{{ intro }}" wx:key="*this">{{ item }}</view>
+    </view>
+  </view>
+  <!-- 食材介绍END -->
+
+  <cuad custom="margin-bottom" />
+
+  <!-- 做法大全 -->
+  <view class="list">
+    <block wx:for="{{ list }}" wx:key="id">
+      <view
+        class="item"
+        data-id="{{ item.id }}"
+        data-title="{{ item.text }}"
+        bindtap="gotoContentPage"
+      >
+        <image class="item-image" src="{{ item.img }}" mode="widthFix"></image>
+        <view class="item-text">{{ item.text }}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="nomore" wx:if="{{ !nextId }}">- 没有更多了 -</view>
+  <!-- 做法大全END -->
+</view>

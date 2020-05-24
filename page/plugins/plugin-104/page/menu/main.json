@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "cell": "/component/base/cell/main",
+    "drawer": "/component/base/drawer/main",
+    "cu-video-ad": "/component/base/video-ad/main"
+  },
+  "navigationBarTitleText": "食材分类",
+  "navigationBarBackgroundColor": "#ff871e"
+}

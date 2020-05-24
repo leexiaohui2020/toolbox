@@ -74,7 +74,10 @@
         "plugin-102/home/main",
         "plugin-102/detail/main",
         "plugin-103/page/login/main",
-        "plugin-103/page/home/main"
+        "plugin-103/page/home/main",
+        "plugin-104/page/menu/main",
+        "plugin-104/page/detail/main",
+        "plugin-104/page/content/main"
       ]
     }
   ],

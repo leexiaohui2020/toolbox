@@ -1,5 +1,7 @@
 Component({
 
+  externalClasses: ['custom'],
+
   properties: {
     adUnitId: String
   },

@@ -51,6 +51,9 @@ page {
 .padding {
   padding: 30rpx;
 }
+.padding-sm {
+  padding: 20rpx;
+}
 
 /* button 按钮 */
 .button {

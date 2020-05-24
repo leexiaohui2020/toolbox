@@ -1,0 +1,59 @@
+<view wx:if="{{ init }}">
+  <!-- 菜谱信息 -->
+  <view class="t">
+    <view class="t-img">
+      <image src="{{ baseInfo.cover }}" mode="widthFix"></image>
+    </view>
+    <view class="t-content">
+      <view class="t-content-l">
+        <view class="t-title">{{ baseInfo.title }}</view>
+        <view class="t-desc">{{ baseInfo.intro }}</view>
+      </view>
+      <view class="t-content-r">
+        <image class="t-avatar" src="{{ author.avatarUrl }}" mode="widthFix"></image>
+        <view class="t-author">{{ author.name }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 菜谱信息END -->
+
+  <!-- 配方 -->
+  <view class="p">
+    <view class="p-caption">配方</view>
+    <view class="p-content">
+      <view class="tb">
+        <block wx:for="{{ material }}" wx:key="index">
+          <view class="th">{{ item.tagName }}</view>
+          <view class="td" wx:for="{{ item.material }}" wx:for-item="v" wx:key="name">
+            <view>{{ v.name }}</view>
+            <view>{{ v.amount }}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+  <!-- 配方END -->
+
+  <cuad margin />
+
+  <!-- 步骤 -->
+  <view class="p">
+    <view class="p-caption">做法 共{{ steps.length }}个步骤</view>
+    <view class="p-content">
+      <view style="position: relative">
+        <swiper class="swiper" current="{{ currentStep }}" bindchange="onCurrentStepChange">
+          <swiper-item class="swiper-item" wx:for="{{ steps }}" wx:key="img">
+            <image src="{{ item.img }}" mode="widthFix"></image>
+          </swiper-item>
+        </swiper>
+        <view class="swiper-pages">{{ currentStep + 1 }}/{{ steps.length }}</view>
+      </view>
+
+      <view class="p-intro">
+        <view class="p-intro-l">{{ currentStep + 1 }}.</view>
+        <view class="p-intro-r">{{ steps[currentStep].text }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 步骤END -->
+</view>

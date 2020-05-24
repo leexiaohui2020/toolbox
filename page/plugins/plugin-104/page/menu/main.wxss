@@ -1,0 +1,22 @@
+@import "../base.wxss";
+
+/* 食材分类详情 */
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.item {
+  width: calc(100% / 3);
+  padding: 10rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.item-image {
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.item-text {
+  text-align: center;
+}
+/* 食材分类详情END */
