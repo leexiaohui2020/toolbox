@@ -8,7 +8,7 @@ Page.createTool({
   toolName: '图片隐写术',
   toolCate: [105],
   toolCreatedAt: new Date('2020/5/17'),
-  toolCover: '/img/cover/699.png',
+  toolCover: 'https://s1.ax1x.com/2020/05/25/t9S4de.md.png',
 
   data: {
     canvasWidth: 100,

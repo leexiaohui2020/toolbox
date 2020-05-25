@@ -4,7 +4,7 @@ Page.createTool({
   toolName: '毒鸡汤',
   toolCate: [107],
   toolCreatedAt: new Date('2020/05/19'),
-  toolCover: '/img/cover/869.png',
+  toolCover: 'https://s1.ax1x.com/2020/05/25/t9SWqO.md.png',
 
   data: {
     showCanvas: false

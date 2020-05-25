@@ -2,34 +2,41 @@ const { createStorage } = App.$utils
 
 const plugins = [
   {
-    id: 104,
-    name: '食谱猫',
-    path: '/page/plugins/plugin-104/page/menu/main'
+    id: 100,
+    name: '纯音乐频道',
+    path: '/page/plugins/plugin-100/main',
+    image: 'https://s1.ax1x.com/2020/05/25/t99tBT.png',
+    hidden: false
   },
   {
     id: 101,
-    name: '漫画屋'
+    name: '漫画屋',
+    path: '/page/plugins/plugin-101/main',
+    image: 'https://s1.ax1x.com/2020/05/25/t998cq.png',
+    hidden: false
+  },
+  {
+    id: 102,
+    name: '许愿树',
+    path: '/page/plugins/plugin-102/home/main',
+    image: 'https://s1.ax1x.com/2020/05/25/t99YuV.png',
+    hidden: false
   },
   {
     id: 103,
     name: '管理后台',
     path: '/page/plugins/plugin-103/page/home/main',
+    image: 'https://s1.ax1x.com/2020/05/25/t9933n.png',
     hidden: true
   },
-  // {
-  //   id: 102,
-  //   name: '许愿树',
-  //   path: '/page/plugins/plugin-102/home/main'
-  // },
-  // {
-  //   id: 100,
-  //   name: '纯音乐频道'
-  // },
-].map(item => Object.assign({
-  path: `/page/plugins/plugin-${item.id}/main`,
-  // image: `/page/plugins/plugin-${item.id}/main.png`,
-  image: `/img/plugins/${item.id}.png`
-}, item))
+  {
+    id: 104,
+    name: '食谱猫',
+    path: '/page/plugins/plugin-104/page/menu/main',
+    image: 'https://s1.ax1x.com/2020/05/25/t99Gj0.png',
+    hidden: false
+  },
+];
 
 export default createStorage('plugins_manager', {
 

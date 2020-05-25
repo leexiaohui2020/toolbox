@@ -4,7 +4,7 @@ Page.createTool({
   toolName: '印章图案生成器',
   toolCate: [105],
   toolCreatedAt: new Date('2020/05/23'),
-  toolCover: '/img/cover/943.png',
+  toolCover: 'https://s1.ax1x.com/2020/05/25/t9ShZD.md.png',
 
   data: {
     // 图章文字

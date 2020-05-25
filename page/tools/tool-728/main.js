@@ -9,7 +9,7 @@ Page.createTool({
   toolName: '抽奖转盘',
   toolCate: [107],
   toolCreatedAt: new Date('2020/05/19'),
-  toolCover: '/img/cover/728.png',
+  toolCover: 'https://s1.ax1x.com/2020/05/25/t9S5IH.md.png',
 
   data: {
 
