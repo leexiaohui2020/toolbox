@@ -73,6 +73,7 @@ Component({
       if (!avatarURL || !imgURL) return
       const ctx = wx.createCanvasContext('canvas', this)
       ctx.drawImage(avatarURL, 0, 0, 260, 260)
+      wx.showLoading({ title: '图片合成中' })
       wx.getImageInfo({
         src: imgURL,
         success: res => {
@@ -80,7 +81,6 @@ Component({
           ctx.translate(centerX, centerY)
           ctx.rotate(rotate * Math.PI / 180)
           ctx.drawImage(res.path, -size/2, -size/2, size, size)
-          wx.showLoading({ title: '图片合成中' })
           ctx.draw(false, () => {
             wx.canvasToTempFilePath({
               canvasId: 'canvas',
