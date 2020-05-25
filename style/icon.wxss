@@ -172,3 +172,7 @@
 .icon-video::before {
   content: '\e637';
 }
+
+.icon-toolbox::before {
+  content: '\e638';
+}

@@ -15,6 +15,12 @@ Page({
         icon: 'icon-plugin',
         title: '插件管理',
         link: '/page/plugin/manage/main'
+      },
+      // 关于ToolPlus
+      {
+        icon: 'icon-toolbox',
+        title: '关于ToolPlus',
+        link: '/page/about/main'
       }
     ]
   }

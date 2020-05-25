@@ -1,0 +1,18 @@
+<view class="content">
+  <view class="brand">
+    <view class="brand-logo">
+      <image src="/img/tabbar/home-select.png" mode="widthFix"></image>
+    </view>
+    <view class="brand-name">ToolPlus</view>
+    <view class="brand-version">Version 1.8.5</view>
+  </view>
+
+  <view class="options">
+    <block wx:for="{{ options }}" wx:key="text">
+      <cell custom="options-item" label-hide>
+        <text>{{ item.text }}</text>
+        <text class="icon-arrow-right" slot="suffix"></text>
+      </cell>
+    </block>
+  </view>
+</view>

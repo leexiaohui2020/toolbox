@@ -2,6 +2,7 @@
   "pages": [
     "page/home/main",
     "page/mine/main",
+    "page/about/main",
     "page/plugin/main",
     "page/plugin/manage/main",
     "page/search/main",

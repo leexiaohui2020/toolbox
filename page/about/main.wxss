@@ -1,0 +1,43 @@
+.content {
+  padding: 60rpx 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.brand {
+  margin-bottom: 60rpx;
+  text-align: center;
+}
+.brand-logo {
+  --size: 100rpx;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 8rpx;
+  background-color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 40rpx;
+}
+.brand-logo > image {
+  --s: calc(var(--size) * 0.618);
+  width: var(--s);
+  height: var(--s);
+}
+.brand-name {
+  font-size: 12pt;
+  font-weight: 600;
+  margin-bottom: 10rpx;
+}
+
+.options {
+  width: 100%;
+  position: relative;
+  border-top: 2rpx solid #d5d5d5;
+}
+.options-item {
+  border-bottom: 2rpx solid #d5d5d5;
+  background-color: transparent !important;
+}
