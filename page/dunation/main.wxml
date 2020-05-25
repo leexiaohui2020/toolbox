@@ -1,0 +1,26 @@
+<!-- 正反面收款码 -->
+<view class="container">
+  <view class="content {{ showBack ? 'showback' : '' }}" bindtap="switchCard">
+    <!-- 正面 -->
+    <view class="content-1" bindlongtap="savePhoto" data-photo="https://s1.ax1x.com/2020/05/25/t9QDoj.png">
+      <image class="qrcode" src="https://s1.ax1x.com/2020/05/25/t9QDoj.png" mode="widthFix"></image>
+      <view class="tip">微信捐赠</view>
+    </view>
+    <!-- 背面 -->
+    <view class="content-2" bindlongtap="savePhoto" data-photo="https://s1.ax1x.com/2020/05/25/t9QgS0.jpg">
+      <image class="qrcode" src="https://s1.ax1x.com/2020/05/25/t9QgS0.jpg" mode="widthFix"></image>
+      <view class="tip">支付宝捐赠</view>
+    </view>
+  </view>
+</view>
+
+<view class="mark">* 单击翻面，长按保存至相册</view>
+<view class="padding" wx:if="{{ dunation.length }}">
+  <view class="tb">
+    <view class="th">捐赠鸣谢</view>
+    <view class="td" wx:for="{{ dunation }}" wx:key="name">
+      <view>{{ item.name }}</view>
+      <view>{{ item.amount }}</view>
+    </view>
+  </view>
+</view>

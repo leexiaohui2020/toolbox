@@ -1,0 +1,62 @@
+page {
+  background-color: #FFF;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 40rpx;
+}
+.content {
+  width: 100%;
+  height: 750rpx;
+  border-radius: 16rpx;
+  overflow: hidden;
+  position: relative;
+}
+.content-1, .content-2 {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  box-sizing: border-box;
+  padding: 40rpx;
+  transform-style: preserve-3d;
+  transition: all .618s ease;
+  backface-visibility: hidden;
+  border-radius: 16rpx;
+}
+.content-1 {
+  background-color: #25ab38;
+}
+.content-2 {
+  background-color: #01a9e8;
+  transform: rotateY(180deg);
+}
+.content.showback > .content-1 {
+  transform: rotateY(-180deg);
+}
+.content.showback > .content-2 {
+  transform: rotateY(0);
+}
+
+.qrcode {
+  width: 100%;
+}
+.tip {
+  right: 0;
+  bottom: 0;
+  padding: 20rpx 30rpx;
+  background-color: rgba(0, 0, 0, .6);
+  position: absolute;
+  border-radius: 16rpx 0 0 16rpx;
+  color: #fff;
+}
+
+.mark {
+  font-size: 8pt;
+  color: var(--color-red);
+  text-align: center;
+}

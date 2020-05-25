@@ -9,7 +9,7 @@
 
   <view class="options">
     <block wx:for="{{ options }}" wx:key="text">
-      <cell custom="options-item" label-hide>
+      <cell custom="options-item" link="{{ item.path }}" label-hide>
         <text>{{ item.text }}</text>
         <text class="icon-arrow-right" slot="suffix"></text>
       </cell>

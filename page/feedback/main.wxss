@@ -1,0 +1,11 @@
+.email {
+  --h: 100rpx;
+  height: var(--h);
+  line-height: var(--h);
+  text-align: center;
+  margin-top: 30rpx;
+  color: var(--color-blue);
+  text-decoration: underline;
+  font-size: 12pt;
+  font-weight: 600;
+}

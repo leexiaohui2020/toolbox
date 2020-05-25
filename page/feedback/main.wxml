@@ -1,0 +1,5 @@
+<view class="padding">
+  <view class="text">广告投放、商务合作、问题反馈请联系邮箱：</view>
+  <view class="email" bindtap="copyEmail">1287338537@qq.com</view>
+</view>
+<cuad margin/>

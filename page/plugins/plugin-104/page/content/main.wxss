@@ -95,27 +95,6 @@
   text-align: justify;
 }
 
-/* 表格 */
-.tb {
-  border: 2rpx solid var(--border-color);
-}
-.th, .td {
-  --h: 100rpx;
-  height: var(--h);
-  padding: 0 30rpx;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.th {
-  font-weight: 600;
-  background-color: #f8f8f8;
-  border-bottom: 2rpx solid var(--border-color);
-}
-.tb > .td:not(:last-child) {
-  border-bottom: 2rpx solid var(--border-color);
-}
-
 /* 轮播 */
 .swiper {
   --h: 400rpx;

@@ -4,11 +4,11 @@ Page({
     options: [
       {
         text: '问题反馈',
-        path: '',
+        path: '/page/feedback/main',
       },
       {
-        text: '打赏作者',
-        path: '',
+        text: '捐赠打赏',
+        path: '/page/dunation/main',
       },
     ]
   }
