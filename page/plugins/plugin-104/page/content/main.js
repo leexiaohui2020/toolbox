@@ -17,6 +17,15 @@ Page({
     this.getCaiPu(this.id)
   },
 
+  // 转发设置
+  onShareAppMessage() {
+    return {
+      title: `${this.title}的做法`,
+      path: `/page/plugins/plugin-104/page/content/main?id=${this.id}&title=${this.title}`,
+      imageUrl: this.data.baseInfo.cover,
+    };
+  },
+
   // 获取菜谱做法
   async getCaiPu(id) {
     wx.showLoading({ title: '正在加载' })
