@@ -84,14 +84,6 @@
       ]
     }
   ],
-  "preloadRule": {
-    "page/home/main": {
-      "network": "all",
-      "packages": [
-        "plugin"
-      ]
-    }
-  },
   "window": {
     "navigationBarBackgroundColor": "#2196f3"
   },
