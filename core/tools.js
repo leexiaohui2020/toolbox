@@ -61,19 +61,21 @@ function createTool(opts = {}) {
     }
   })
 
-  tools.push({
-    id: config.toolId,
-    name: config.toolName,
-    cates: config.toolCate,
-    cover: config.toolCover,
-    createdAt: config.toolCreatedAt,
-    get isNew() {
-      if (!this.createdAt) {
-        return false;
+  if (!config.toolDisabled) {
+    tools.push({
+      id: config.toolId,
+      name: config.toolName,
+      cates: config.toolCate,
+      cover: config.toolCover,
+      createdAt: config.toolCreatedAt,
+      get isNew() {
+        if (!this.createdAt) {
+          return false;
+        }
+        return new Date() - this.createdAt <= 1000 * 60 * 60 * 24 * 30
       }
-      return new Date() - this.createdAt <= 1000 * 60 * 60 * 24 * 30
-    }
-  })
+    })
+  }
 
   delete config.methods
   return Page(config)

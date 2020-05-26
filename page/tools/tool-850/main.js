@@ -6,6 +6,7 @@ Page.createTool({
   toolName: '社会主义价值观加密/解密',
   toolCate: [100],
   toolCreatedAt: new Date('2019/11/27'),
+  toolDisabled: true,
 
   data: {
     value: '',
